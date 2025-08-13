@@ -9,7 +9,7 @@ import Foundation
 
 struct CategoriesResponse: Decodable {
     
-    let categories: [CategoriesResponse]
+    let categories: [CategoryResponse]
     
 }
 
