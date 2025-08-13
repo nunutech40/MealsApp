@@ -8,8 +8,10 @@
 import Foundation
 
 struct API {
+    
     static let baseURL = "https://www.themealdb.com/api/json/v1/1/"
 }
+
 
 protocol EndPoint {
     var url: String { get }
