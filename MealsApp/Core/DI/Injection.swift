@@ -10,7 +10,7 @@ import Foundation
 final class Injection: NSObject {
     
     // Provide Repository
-    private func provideRepository() -> MealRepositoryProtocol {
+    func provideRepository() -> MealRepositoryProtocol {
         let remote: RemoteDataSource = RemoteDataSource.sharedInstance
         
         return MealRepository.sharedInstance(remote)
@@ -18,7 +18,7 @@ final class Injection: NSObject {
     
     
     // Provide UseCase
-    private func provideGetCategories() -> GetCategoriesProtocol {
+    func provideGetCategories() -> GetCategoriesProtocol {
         let repository: MealRepositoryProtocol = provideRepository()
         
         return GetCategoriesUseCase(repository: repository)
