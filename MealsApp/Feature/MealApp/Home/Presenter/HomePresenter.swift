@@ -10,13 +10,13 @@ import SwiftUI
 class HomePresenter: ObservableObject {
     
     private let router = HomeRouter()
-    private let getCategoriesUseCase: GetCategoriesUseCase
+    private let getCategoriesUseCase: GetCategoriesProtocol
     
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     @Published var categories: [CategoryModel] = []
     
-    init(getCategoriesUseCase: GetCategoriesUseCase) {
+    init(getCategoriesUseCase: GetCategoriesProtocol) {
         self.getCategoriesUseCase = getCategoriesUseCase
     }
     

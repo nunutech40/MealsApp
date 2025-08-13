@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MealsAppApp: App {
+    let homePresenter = HomePresenter(getCategoriesUseCase: Injection.init().provideGetCategories())
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(homePresenter)
         }
     }
 }
