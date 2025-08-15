@@ -1,8 +1,8 @@
 
 ## Project Architecture
-<img width="454" height="525" alt="Screenshot 2025-08-11 at 13 50 12" src="https://github.com/user-attachments/assets/4cb78e62-1f9f-4063-97f5-5af2f5492a64" />
-Change URLSession to Alamaofire
 <img width="414" height="514" alt="Screenshot 2025-08-15 at 11 11 11" src="https://github.com/user-attachments/assets/a8625630-9d00-49c4-ab79-e0a7ec8bfc64" />
+Add Local DB (REALM)
+<img width="439" height="562" alt="Screenshot 2025-08-15 at 13 27 20" src="https://github.com/user-attachments/assets/d03d61c2-0ad0-428c-8ad4-bb3f628a471c" />
 
 
 ### flow hubungan antar object per fitur
