@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A05E50052E49C923005A1DE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = MealsApp;
 			packageProductDependencies = (
+				A00E5E2C2E4F003B009B5564 /* Alamofire */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = A05E4FEB2E49C921005A1DE2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A00E5E2C2E4F003B009B5564 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A05E4FEC2E49C921005A1DE2 /* Project object */;
 }
