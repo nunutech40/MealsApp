@@ -7,7 +7,8 @@ Add Local DB (REALM)
 
 ### flow hubungan antar object per fitur
 <img width="982" height="528" alt="Screenshot 2025-08-13 at 14 46 19" src="https://github.com/user-attachments/assets/02a188dc-cdd8-40ac-a0a8-c0139629e07c" />
-
+Menambahn object localDataSource
+<img width="822" height="431" alt="Screenshot 2025-08-16 at 11 27 53" src="https://github.com/user-attachments/assets/f00dd6f4-cc67-49ef-a0b6-76d0ef80ea37" />
 
 </br>
 Link Flowchart
