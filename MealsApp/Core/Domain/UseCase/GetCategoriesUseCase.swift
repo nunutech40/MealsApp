@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol GetCategoriesProtocol {
     
-    func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+    func getCategories() -> Observable<[CategoryModel]>
     
 }
 
@@ -21,10 +22,8 @@ class GetCategoriesUseCase: GetCategoriesProtocol {
         self.repository = repository
     }
     
-    func getCategories(completion: @escaping (Result<[CategoryModel], any Error>) -> Void) {
-        repository.getCategories { result in
-            completion(result)
-        }
+    func getCategories() -> Observable<[CategoryModel]> {
+        return repository.getCategories()
     }
     
 }
