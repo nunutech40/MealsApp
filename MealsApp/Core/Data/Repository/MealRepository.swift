@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol MealRepositoryProtocol {
     
-    func getCategories(result: @escaping (Result<[CategoryModel], Error>) -> Void)
+    func getCategories() -> Observable<[CategoryModel]>
     
 }
 
@@ -31,62 +32,19 @@ final class MealRepository: NSObject {
 }
 
 extension MealRepository: MealRepositoryProtocol {
-    func getCategories(result: @escaping (Result<[CategoryModel], any Error>) -> Void) {
-        
-        // get categories dari localdb
-        self.local.getCategories { localResponse in
-            switch localResponse {
-            case.success(let categoryEntity):
-                let categoryList = CategoryMapper.mapCategoryEntityToDomains(input: categoryEntity)
-                // cek jika kosong, ambil data dari remote jika tidak kosong result teruskan ke success (masuk ke usecase)
-                if categoryList.isEmpty {
-                    // ambil dari remote
-                    self.remote.getCategories { remoteResult in
-                        switch remoteResult {
-                        case .success(let categoryResponses):
-                            let categoryEntity = CategoryMapper.mapCategoryResponseToEntities(input: categoryResponses)
-                            // masukka ke local db
-                            self.local.addCategories(from: categoryEntity) { addState in
-                                switch addState {
-                                case .success(let resultFromAdd):
-                                    if resultFromAdd {
-                                        // ambil data dari local db dan teruskan ke success utk di pake di usecase
-                                        self.local.getCategories { localResponse in
-                                            switch localResponse {
-                                            case .success(let categoryEntity):
-                                                let categoryList = CategoryMapper.mapCategoryEntityToDomains(input: categoryEntity)
-                                                result(.success(categoryList))
-                                            case .failure(let error):
-                                                result(.failure(error))
-                                            }
-                                        }
-                                    }
-                                case .failure(let error):
-                                    result(.failure(error))
-                                }
-                                
-                            }
-                        case .failure(let error):
-                            result(.failure(error))
-                        }
-                    }
-                } else { // ini kondisi awal ambil dari remote dan ada datanya, maka langsung teruskan ke success -> di pake di usecase
-                    result(.success(categoryList))
+    
+    func getCategories() -> Observable<[CategoryModel]> {
+        return self.local.getCategories() // get categories dari localdb
+            .map { CategoryMapper.mapCategoryEntityToDomains(input: $0) }
+            .filter { !$0.isEmpty }  // cek jika kosong, ambil data dari remote jika tidak kosong result teruskan ke success (masuk ke usecase)
+            .ifEmpty(switchTo: self.remote.getCategories() // ambil dari remote karena kosong
+                .map { CategoryMapper.mapCategoryResponseToEntities(input: $0) }
+                .flatMap { self.local.addCategories(from: $0) } // after ambil dari remote, save ke local categories
+                .filter { $0 }
+                .flatMap { _ in self.local.getCategories() // ambil dari local categories dan map ke model
+                        .map { CategoryMapper.mapCategoryEntityToDomains(input: $0) }
                 }
-                
-            case.failure(let error):
-                result(.failure(error))
-            }
-        }
-        
-        self.remote.getCategories { remoteResponse in
-            switch remoteResponse {
-            case .success(let categoryResponse):
-                let resultList = CategoryMapper.mapCategoryResponseToDomains(input: categoryResponse)
-                result(.success(resultList))
-            case .failure(let error):
-                result(.failure(error))
-            }
-        }
+            )
     }
+    
 }
