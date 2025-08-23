@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Combine
 
 protocol GetCategoriesProtocol {
     
-    func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+    func getCategories() -> AnyPublisher<[CategoryModel], Error>
     
 }
 
@@ -21,10 +22,8 @@ class GetCategoriesUseCase: GetCategoriesProtocol {
         self.repository = repository
     }
     
-    func getCategories(completion: @escaping (Result<[CategoryModel], any Error>) -> Void) {
-        repository.getCategories { result in
-            completion(result)
-        }
+    func getCategories() -> AnyPublisher<[CategoryModel], Error> {
+        return repository.getCategories()
     }
     
 }
