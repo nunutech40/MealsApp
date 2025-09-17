@@ -1,8 +1,7 @@
 
 ## Project Architecture
-<img width="414" height="514" alt="Screenshot 2025-08-15 at 11 11 11" src="https://github.com/user-attachments/assets/a8625630-9d00-49c4-ab79-e0a7ec8bfc64" />
-Add Local DB (REALM)
-<img width="439" height="562" alt="Screenshot 2025-08-15 at 13 27 20" src="https://github.com/user-attachments/assets/d03d61c2-0ad0-428c-8ad4-bb3f628a471c" />
+
+<img width="836" height="581" alt="Screenshot 2025-09-17 at 09 01 38" src="https://github.com/user-attachments/assets/ee68eacc-622c-4892-8dd1-6c96029ce08b" />
 
 Flowchart Alur Callback and WithCombine
 <img width="386" height="507" alt="Screenshot 2025-08-23 at 17 37 59" src="https://github.com/user-attachments/assets/c9c97595-6796-4cdf-91b1-fef1e6056ddc" />
