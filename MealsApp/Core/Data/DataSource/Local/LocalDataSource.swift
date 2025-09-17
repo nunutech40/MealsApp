@@ -11,8 +11,14 @@ import Combine
 
 protocol LocalDataSourceProtocol: AnyObject {
     
+    // Categories
     func getCategories() -> AnyPublisher<[CategoryEntity], Error>
     func addCategories(from categories: [CategoryEntity]) -> AnyPublisher<Bool, Error>
+    
+    
+    // Meal
+    func getMeals(by category: String) -> AnyPublisher<[MealEntity], Error>
+    func addMeals(by category: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error>
 }
 
 final class LocalDataSource: NSObject {
@@ -27,6 +33,9 @@ final class LocalDataSource: NSObject {
 }
 
 extension LocalDataSource: LocalDataSourceProtocol {
+    
+    
+    // category
     func getCategories() -> AnyPublisher<[CategoryEntity], Error> {
         return Future<[CategoryEntity], Error> { completion in
             if let realm = self.realm {
@@ -48,6 +57,42 @@ extension LocalDataSource: LocalDataSourceProtocol {
                     try realm.write {
                         for category in categories {
                             realm.add(category, update: .all)
+                        }
+                        completion(.success(true))
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    
+    // meals
+    func getMeals(by category: String) -> AnyPublisher<[MealEntity], Error> {
+        return Future<[MealEntity], Error> { completion in
+            if let realm = self.realm {
+                let meals: Results<MealEntity> = {
+                    realm.objects(MealEntity.self)
+                        .filter("category = '\(category)'")
+                        .sorted(byKeyPath: "title", ascending: true)
+                }()
+                completion(.success(meals.toArray(ofType: MealEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func addMeals(by category: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realm {
+                do {
+                    try realm.write {
+                        for meal in meals {
+                            realm.add(meal, update: .all)
                         }
                         completion(.success(true))
                     }

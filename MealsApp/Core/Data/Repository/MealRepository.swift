@@ -11,6 +11,7 @@ import Combine
 protocol MealRepositoryProtocol {
     
     func getCategories() -> AnyPublisher<[CategoryModel], Error>
+    func getMeals(by category: String) -> AnyPublisher<[MealModel], Error>
     
 }
 
@@ -53,4 +54,26 @@ extension MealRepository: MealRepositoryProtocol {
             }.eraseToAnyPublisher()
         
     }
+    
+    func getMeals(by category: String) -> AnyPublisher<[MealModel], Error> {
+        return self.local.getMeals(by: category)
+            .flatMap { result -> AnyPublisher<[MealModel], Error> in
+                if result.isEmpty {
+                    return self.remote.getMeals(by: category)
+                        .map { MealMapper.mapMealResponsesToEntities(by: category, input: $0) }
+                        .catch { _ in self.local.getMeals(by: category) }
+                        .flatMap { self.local.addMeals(by: category, from: $0) }
+                        .filter { $0 }
+                        .flatMap { _ in self.local.getMeals(by: category)
+                                .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+                        }.eraseToAnyPublisher()
+                } else {
+                    return self.local.getMeals(by: category)
+                        .map { MealMapper.mapMealEntitiesToDomains(input: $0)
+                        }.eraseToAnyPublisher()
+                        
+                }
+            }.eraseToAnyPublisher()
+    }
+    
 }

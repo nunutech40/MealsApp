@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class DetailCategoryInteractor: GetCategoryUseCase {
     
@@ -19,6 +20,10 @@ class DetailCategoryInteractor: GetCategoryUseCase {
     
     func getCategory() -> CategoryModel {
         return category
+    }
+    
+    func getMeals() -> AnyPublisher<[MealModel], Error> {
+        return repository.getMeals(by: category.title)
     }
     
 }

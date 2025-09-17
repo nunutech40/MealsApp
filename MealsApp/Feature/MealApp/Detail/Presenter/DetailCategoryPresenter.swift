@@ -6,20 +6,42 @@
 //
 
 import SwiftUI
+import Combine
 
 class DetailCategoryPresenter: ObservableObject {
     
+    private var cancellable: Set<AnyCancellable> = []
     private let getCategoryUseCase: GetCategoryUseCase
     
-    @Published var meals: [String] = []
+    @Published var meals: [MealModel] = []
     @Published var category: CategoryModel
     @Published var errorMessage: String = ""
-    @Published var loadingState: Bool = false
+    @Published var isLoading: Bool = false
     @Published var isError: Bool = false
     
     init(getCategoryUseCase: GetCategoryUseCase) {
         self.getCategoryUseCase = getCategoryUseCase
         self.category = getCategoryUseCase.getCategory()
+    }
+    
+    func getMeals() {
+        isLoading = true
+        getCategoryUseCase.getMeals()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                    self.isError = true
+                    self.isError = false
+                case .finished:
+                    self.isLoading = false
+                }
+            }, receiveValue: { meals in
+                self.meals = meals
+                print("cek data meals: \(self.meals)")
+            })
+            .store(in: &cancellable)
     }
     
 }

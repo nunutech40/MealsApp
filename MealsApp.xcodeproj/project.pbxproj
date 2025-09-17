@@ -10,6 +10,7 @@
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
+		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,9 +47,22 @@
 		FB8F6DA96AA98A50A959785D /* Pods-MealsApp-MealsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp-MealsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A0A982CB2E7A9AB900ED6C7A /* Exceptions for "MealsApp" folder in "MealsApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A05E4FF32E49C921005A1DE2 /* MealsApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A05E4FF62E49C921005A1DE2 /* MealsApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A0A982CB2E7A9AB900ED6C7A /* Exceptions for "MealsApp" folder in "MealsApp" target */,
+			);
 			path = MealsApp;
 			sourceTree = "<group>";
 		};
@@ -70,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
+				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 			);
@@ -163,6 +178,7 @@
 			packageProductDependencies = (
 				A00E5E2C2E4F003B009B5564 /* Alamofire */,
 				A00E5EB52E504854009B5564 /* RealmSwift */,
+				A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -248,6 +264,7 @@
 			packageReferences = (
 				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -558,6 +575,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -589,6 +607,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -741,6 +760,14 @@
 				kind = branch;
 			};
 		};
+		A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -753,6 +780,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
