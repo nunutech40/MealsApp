@@ -47,7 +47,8 @@ extension MealRepository: MealRepositoryProtocol {
                         }.eraseToAnyPublisher()
                     
                 } else {
-                    return self.local.getCategories()
+                    return Just(result)
+                        .setFailureType(to: Error.self)
                         .map { CategoryMapper.mapCategoryEntityToDomains(input: $0) }
                         .eraseToAnyPublisher()
                 }
@@ -68,10 +69,12 @@ extension MealRepository: MealRepositoryProtocol {
                                 .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
                         }.eraseToAnyPublisher()
                 } else {
-                    return self.local.getMeals(by: category)
-                        .map { MealMapper.mapMealEntitiesToDomains(input: $0)
-                        }.eraseToAnyPublisher()
-                        
+                    // ⬇️ pakai result yang sudah ada, jangan query ulang
+                    return Just(result)
+                        .setFailureType(to: Error.self)
+                        .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+                        .eraseToAnyPublisher()
+                    
                 }
             }.eraseToAnyPublisher()
     }

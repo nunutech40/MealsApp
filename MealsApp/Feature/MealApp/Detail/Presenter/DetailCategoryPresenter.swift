@@ -39,7 +39,6 @@ class DetailCategoryPresenter: ObservableObject {
                 }
             }, receiveValue: { meals in
                 self.meals = meals
-                print("cek data meals: \(self.meals)")
             })
             .store(in: &cancellable)
     }
