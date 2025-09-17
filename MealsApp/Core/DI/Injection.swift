@@ -22,15 +22,15 @@ final class Injection: NSObject {
     
     
     // Provide UseCase
-    func provideGetCategories() -> GetCategoriesProtocol {
+    func provideGetCategories() -> GetCategoriesUseCase {
         let repository: MealRepositoryProtocol = provideRepository()
         
-        return GetCategoriesUseCase(repository: repository)
+        return HomeInteractor(repository: repository)
     }
     
-    func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryProtocol {
+    func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
         let repository: MealRepositoryProtocol = provideRepository()
-        return GetCategoryUseCase(repository: repository, category: category)
+        return DetailCategoryInteractor(repository: repository, category: category)
     }
     
 }

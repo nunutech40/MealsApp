@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-class DetailPresenter: ObservableObject {
+class DetailCategoryPresenter: ObservableObject {
     
-    private let getCategoryUseCase: GetCategoryProtocol
+    private let getCategoryUseCase: GetCategoryUseCase
     
+    @Published var meals: [String] = []
     @Published var category: CategoryModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
+    @Published var isError: Bool = false
     
-    init(getCategoryUseCase: GetCategoryProtocol) {
+    init(getCategoryUseCase: GetCategoryUseCase) {
         self.getCategoryUseCase = getCategoryUseCase
         self.category = getCategoryUseCase.getCategory()
     }

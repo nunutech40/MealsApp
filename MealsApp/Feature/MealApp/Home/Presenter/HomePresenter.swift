@@ -11,14 +11,14 @@ import Combine
 class HomePresenter: ObservableObject {
     
     private let router = HomeRouter()
-    private let getCategoriesUseCase: GetCategoriesProtocol
+    private let getCategoriesUseCase: GetCategoriesUseCase
     private var cancellables: Set<AnyCancellable> = []
     
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     @Published var categories: [CategoryModel] = []
     
-    init(getCategoriesUseCase: GetCategoriesProtocol) {
+    init(getCategoriesUseCase: GetCategoriesUseCase) {
         self.getCategoriesUseCase = getCategoriesUseCase
     }
     

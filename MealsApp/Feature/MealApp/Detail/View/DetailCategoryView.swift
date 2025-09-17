@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @ObservedObject var presenter: DetailPresenter
+    @ObservedObject var presenter: DetailCategoryPresenter
     
     var body: some View {
         ZStack {
