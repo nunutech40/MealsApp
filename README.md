@@ -9,8 +9,13 @@ Flowchart Alur Callback and WithCombine
 ### flow hubungan antar object per fitur
 <img width="916" height="489" alt="Screenshot 2025-09-17 at 16 18 01" src="https://github.com/user-attachments/assets/ed5363b1-3789-478e-b210-52ac4aef33e6" />
 
-FlowChart Get Categories in MeaRepository:
+FlowChart Get Categories in MealRepository:
 <img width="779" height="485" alt="Screenshot 2025-08-23 at 17 37 30" src="https://github.com/user-attachments/assets/b7275491-0da9-41fb-8665-9cb5d1f0aa51" />
+
+FlowChart Get Meals in MealRepository:
+<img width="841" height="525" alt="Screenshot 2025-09-17 at 16 41 13" src="https://github.com/user-attachments/assets/d3f2b8a3-e8ef-4a24-a3ad-ef7b9b528f52" />
+
+
 
 
 
