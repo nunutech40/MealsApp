@@ -4,7 +4,8 @@
 <img width="836" height="581" alt="Screenshot 2025-09-17 at 09 01 38" src="https://github.com/user-attachments/assets/ee68eacc-622c-4892-8dd1-6c96029ce08b" />
 
 Flowchart Alur Callback and WithCombine
-<img width="836" height="581" alt="Screenshot 2025-09-17 at 09 01 38" src="https://github.com/user-attachments/assets/4b9675d5-02eb-432b-b710-b6dc299df0cf" />
+<img width="424" height="597" alt="Screenshot 2025-09-17 at 16 11 49" src="https://github.com/user-attachments/assets/3ff2a5db-9010-41c5-b73a-a88e1dedb7f9" />
+
 
 ### flow hubungan antar object per fitur
 <img width="982" height="528" alt="Screenshot 2025-08-13 at 14 46 19" src="https://github.com/user-attachments/assets/02a188dc-cdd8-40ac-a0a8-c0139629e07c" />
