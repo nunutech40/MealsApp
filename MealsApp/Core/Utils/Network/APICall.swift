@@ -4,90 +4,88 @@
 //
 //  Created by Nunu Nugraha on 12/08/25.
 //
-
 import Foundation
+import Alamofire
 
 struct API {
-    
-    static let baseURL = "https://www.themealdb.com/api/json/v1/1/"
+    // URL, bukan String
+    static let baseURL = URL(string: "https://www.themealdb.com/api/json/v1/1/")!
 }
 
-
-protocol EndPoint {
-    var url: URL { get }
-}
+protocol EndPoint { var url: URL { get } }
 
 enum EndPoints {
+
+    // Builder seragam (hindari concat mentah)
+    static func build(path: String, query: [URLQueryItem] = []) -> URL {
+        // pakai isDirectory: false → gak kena overload 'conformingTo'
+        let url = API.baseURL.appendingPathComponent(path, isDirectory: false)
+        var comps = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+        comps.queryItems = query.isEmpty ? nil : query
+        return comps.url!
+    }
+
+    // MARK: - GET
     enum Gets: EndPoint {
         case categories
-        case meals
-        case meal
-        case search
-        
-        public var urlString: String {
+        case meals(category: String?)
+        case meal(id: String?)
+        case search(query: String?)
+
+        var url: URL {
             switch self {
             case .categories:
-                return "\(API.baseURL)categories.php"
-            case .meals:
-                return "\(API.baseURL)filter.php?c="
-            case .meal:
-                return "\(API.baseURL)lookup.php?i="
-            case .search:
-                return "\(API.baseURL)search.php?s="
+                return EndPoints.build(path: "categories.php")
+
+            case .meals(let c):
+                return EndPoints.build(
+                    path: "filter.php",
+                    query: c.map { [URLQueryItem(name: "c", value: $0)] } ?? []
+                )
+
+            case .meal(let id):
+                return EndPoints.build(
+                    path: "lookup.php",
+                    query: id.map { [URLQueryItem(name: "i", value: $0)] } ?? []
+                )
+
+            case .search(let q):
+                return EndPoints.build(
+                    path: "search.php",
+                    query: q.map { [URLQueryItem(name: "s", value: $0)] } ?? []
+                )
             }
-        }
-        
-        // Sebuah computed property yang mengembalikan objek URL
-        public var url: URL {
-            // URL(string:) adalah failable initializer, jadi kita harus menanganinya.
-            // Menggunakan preconditionFailure adalah cara yang baik untuk crash
-            // saat development jika URL-nya salah ketik, mencegah bug di produksi.
-            guard let url = URL(string: self.urlString) else {
-                preconditionFailure("Invalid URL string: \(self.urlString)")
-            }
-            return url
         }
     }
-    
+
+    // MARK: - POST (contoh)
     enum Post: EndPoint {
         case addFavorite(mealId: String, userId: String)
         case createMeal(name: String, category: String)
-        
-        // 1. Buat string URL di properti privat
-        private var urlString: String {
+
+        var url: URL {
             switch self {
             case .addFavorite(let mealId, let userId):
-                return "\(API.baseURL)addFavorite.php?mealID=\(mealId)&userID=\(userId)"
+                return EndPoints.build(
+                    path: "addFavorite.php",
+                    query: [
+                        URLQueryItem(name: "mealID", value: mealId),
+                        URLQueryItem(name: "userID", value: userId)
+                    ]
+                )
             case .createMeal(let name, let category):
-                return "\(API.baseURL)createMeal.php?name=\(name)&category=\(category)"
+                return EndPoints.build(
+                    path: "createMeal.php",
+                    query: [
+                        URLQueryItem(name: "name", value: name),
+                        URLQueryItem(name: "category", value: category)
+                    ]
+                )
             }
-        }
-        
-        // 2. Kembalikan URL non-opsional yang aman
-        public var url: URL {
-            guard let url = URL(string: self.urlString) else {
-                preconditionFailure("Invalid URL string: \(self.urlString)")
-            }
-            return url
-        }
-    }
-    
-    enum Deletes: EndPoint {
-        case removeFavorites(mealId: String, userId: String)
-        
-        private var urlString: String {
-            switch self {
-            case .removeFavorites(let mealId, let userId):
-                return "\(API.baseURL)removeFavorite.php?mealID=\(mealId)&userID=\(userId)"
-            }
-        }
-        
-        // 3. DIPERBAIKI: Sekarang mengembalikan URL, sesuai kontrak.
-        public var url: URL {
-            guard let url = URL(string: self.urlString) else {
-                preconditionFailure("Invalid URL string: \(self.urlString)")
-            }
-            return url
         }
     }
 }
+
+// Alamofire sugar: langsung bisa dipakai tanpa .url
+extension EndPoints.Gets: URLConvertible { func asURL() throws -> URL { url } }
+extension EndPoints.Post: URLConvertible { func asURL() throws -> URL { url } }

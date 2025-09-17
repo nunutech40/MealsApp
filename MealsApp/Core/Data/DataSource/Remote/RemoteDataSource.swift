@@ -11,6 +11,7 @@ import Combine
 
 protocol RemoteDataSourceProtocol {
     func getCategories() -> AnyPublisher<[CategoryResponse], Error>
+    func getMeals(by category: String) -> AnyPublisher<[MealResponse], Error>
 }
 
 final class RemoteDataSource: NSObject {
@@ -22,6 +23,7 @@ final class RemoteDataSource: NSObject {
 }
 
 extension RemoteDataSource: RemoteDataSourceProtocol {
+    
     func getCategories() -> AnyPublisher<[CategoryResponse], Error> {
         return Future<[CategoryResponse], Error> { completion in
             let url = EndPoints.Gets.categories.url
@@ -38,5 +40,19 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
 
-    
+    func getMeals(by category: String) -> AnyPublisher<[MealResponse], Error> {
+        return Future<[MealResponse], Error> { completion in
+            let url = EndPoints.Gets.meals(category: category).url
+            AF.request(url)
+                .validate()
+                .responseDecodable(of: MealsResponse.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(.success(value.meals))
+                    case .failure:
+                        completion(.failure(URLError.invalidResponse))
+                    }
+                }
+        }.eraseToAnyPublisher()
+    }
 }

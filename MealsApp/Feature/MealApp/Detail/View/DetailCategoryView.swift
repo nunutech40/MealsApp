@@ -9,13 +9,16 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @ObservedObject var presenter: DetailPresenter
+    @ObservedObject var presenter: DetailCategoryPresenter
     
     var body: some View {
         ZStack {
-            if presenter.loadingState {
+            if presenter.isLoading {
                 loadingIndicator
-            } else {
+            } else if presenter.isError {
+                errorIndicator
+            }
+            else {
                 ScrollView(.vertical) {
                     VStack {
                         imageCategory
@@ -25,13 +28,24 @@ struct DetailView: View {
                     }.padding()
                 }
             }
-        }
+        }.onAppear {
+            if self.presenter.meals.count == 0 {
+                self.presenter.getMeals()
+            }
+        }.navigationBarTitle(Text(self.presenter.category.title), displayMode: .large)
     }
 }
 
 extension DetailView {
     var spacer: some View {
         Spacer()
+    }
+    
+    var errorIndicator: some View {
+        CustomEmptyView(
+            image: "assetSearchNotFound",
+            title: presenter.errorMessage
+        ).offset(y: 80)
     }
     
     var loadingIndicator: some View {
@@ -59,8 +73,27 @@ extension DetailView {
             .font(.headline)
     }
     
+    var mealsHorizontal: some View {
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(self.presenter.meals, id: \.id) { meal in
+                    ZStack {
+                        MealRow(meal: meal)
+                            .frame(width: 150, height: 150)
+                    }.buttonStyle(PlainButtonStyle())
+                }
+            }
+        }
+    }
+    
     var content: some View {
         VStack(alignment: .leading, spacing: 0) {
+            if !presenter.meals.isEmpty {
+                headerTitle("Meals from \(self.presenter.category.title)")
+                    .padding(.bottom)
+                mealsHorizontal
+            }
+            spacer
             headerTitle("Description")
                 .padding([.top, .bottom])
             description

@@ -11,7 +11,7 @@ class HomeRouter {
     
     func makeDetailView(for category: CategoryModel) -> some View {
         let detailUseCase = Injection.init().provideGetCategoryDetail(category: category)
-        let presenter = DetailPresenter(getCategoryUseCase: detailUseCase)
+        let presenter = DetailCategoryPresenter(getCategoryUseCase: detailUseCase)
         return DetailView(presenter: presenter)
     }
 }
