@@ -6,11 +6,8 @@
 Flowchart Alur Callback and WithCombine
 <img width="424" height="597" alt="Screenshot 2025-09-17 at 16 11 49" src="https://github.com/user-attachments/assets/3ff2a5db-9010-41c5-b73a-a88e1dedb7f9" />
 
-
 ### flow hubungan antar object per fitur
-<img width="982" height="528" alt="Screenshot 2025-08-13 at 14 46 19" src="https://github.com/user-attachments/assets/02a188dc-cdd8-40ac-a0a8-c0139629e07c" />
-Menambahn object localDataSource
-<img width="822" height="431" alt="Screenshot 2025-08-16 at 11 27 53" src="https://github.com/user-attachments/assets/f00dd6f4-cc67-49ef-a0b6-76d0ef80ea37" />
+<img width="916" height="489" alt="Screenshot 2025-09-17 at 16 18 01" src="https://github.com/user-attachments/assets/ed5363b1-3789-478e-b210-52ac4aef33e6" />
 
 FlowChart Get Categories in MeaRepository:
 <img width="779" height="485" alt="Screenshot 2025-08-23 at 17 37 30" src="https://github.com/user-attachments/assets/b7275491-0da9-41fb-8665-9cb5d1f0aa51" />
