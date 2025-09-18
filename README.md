@@ -48,6 +48,9 @@ _(Flow hubungan antar object per fitur)_
 _(FlowChart fungsi `getCategories` → `HomePresenter`)_
 ![FlowChart getCategories in presenter](https://github.com/user-attachments/assets/50aa48d6-142d-4efa-9d47-0c6675bb60ed)
 
+_(FlowChart fungsi `getMeals` → `DetailCategoryPresenter`)_
+![FlowChart getCategories in presenter](https://github.com/user-attachments/assets/4fdcf582-25c5-4f8f-8b9a-a0a1cb743d8d)
+
 ---
 
 ## Figma Board
