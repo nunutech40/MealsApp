@@ -16,6 +16,8 @@ FlowChart Get Meals in MealRepository:
 <img width="841" height="525" alt="Screenshot 2025-09-17 at 16 41 13" src="https://github.com/user-attachments/assets/d3f2b8a3-e8ef-4a24-a3ad-ef7b9b528f52" />
 
 
+FlowChart fungsi get Categories -> HomePresenter 
+<img width="438" height="618" alt="Screenshot 2025-09-18 at 14 43 43" src="https://github.com/user-attachments/assets/2c69f309-d373-4050-b39d-65808a139098" />
 
 
 
