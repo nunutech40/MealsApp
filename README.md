@@ -42,6 +42,11 @@ _(Flow hubungan antar object per fitur)_
 ### Get Meals (MealRepository)
 ![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/d3f2b8a3-e8ef-4a24-a3ad-ef7b9b528f52)
 
+
+### Get Meal(by idMeal) (MealRepository) -> MealModel
+![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/3dc232ec-7792-40b1-94f3-a3f73a30a019)
+
+
 ---
 
 ## Presenter Flow
