@@ -32,6 +32,7 @@ final class MealRepository: NSObject {
     static let sharedInstance: MealInstance = { remoteRepo, localRepo in
         return MealRepository(remote: remoteRepo, local: localRepo)
     }
+    
 }
 
 extension MealRepository: MealRepositoryProtocol {
