@@ -12,6 +12,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 - [Repository Flows](#repository-flows)
   - [Get Categories (MealRepository)](#get-categories-mealrepository)
   - [Get Meals (MealRepository)](#get-meals-mealrepository)
+  - [Get Meal(by idMeal) (MealRepository)](#get-meals-mealrepository)
 - [Presenter Flow](#presenter-flow)
 - [Figma Board](#figma-board)
 - [Notes](#notes)
