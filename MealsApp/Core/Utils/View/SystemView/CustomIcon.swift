@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomIcon {
+struct CustomIcon: View {
     
     var imageName: String
     var title: String

@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter // Inject menggunakan environment object, dimana environment object ini adalah file sharing, jadi view child dibawah view parent yang memiliki EnvironmentObject bisa menggunakan ini (tinggal declare variablenya) tanpa harus di inject dari depan. (DI versi swiftui dan cuma utk view)
     
+    @EnvironmentObject var mealPresenter: MealPresenter
+    
     var body: some View {
         TabView {
             NavigationStack {

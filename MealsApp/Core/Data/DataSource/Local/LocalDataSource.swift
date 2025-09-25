@@ -91,7 +91,9 @@ extension LocalDataSource: LocalDataSourceProtocol {
     
     func getMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error> {
         return Future<MealEntity, Error> { completion in
+            
             if let realm = self.realm {
+                
                 let meals: Results<MealEntity> = {
                     realm.objects(MealEntity.self)
                         .filter("id = '\(idMeal)'")
@@ -103,15 +105,20 @@ extension LocalDataSource: LocalDataSourceProtocol {
                 }
                 
                 completion(.success(meal))
+                
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }
         }.eraseToAnyPublisher()
     }
     
-    func updateMeal(by idMeal: String, meal: MealEntity) -> AnyPublisher<Bool, Error> {
+    
+    func updateMeal(
+        by idMeal: String,
+        meal: MealEntity
+    ) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
-            if let realm = meal.realm, let mealEntity = {
+            if let realm = self.realm, let mealEntity = {
                 realm.objects(MealEntity.self).filter("id = '\(idMeal)'")
             }().first {
                 do {
@@ -136,6 +143,7 @@ extension LocalDataSource: LocalDataSourceProtocol {
     
     func addMeals(by category: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
+            
             if let realm = self.realm {
                 do {
                     try realm.write {
@@ -152,4 +160,6 @@ extension LocalDataSource: LocalDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    
 }

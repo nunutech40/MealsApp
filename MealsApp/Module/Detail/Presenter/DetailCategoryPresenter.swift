@@ -12,6 +12,7 @@ class DetailCategoryPresenter: ObservableObject {
     
     private var cancellable: Set<AnyCancellable> = []
     private let getCategoryUseCase: GetCategoryUseCase
+    private let router = DetailRouter()
     
     @Published var meals: [MealModel] = []
     @Published var category: CategoryModel
@@ -43,4 +44,10 @@ class DetailCategoryPresenter: ObservableObject {
             .store(in: &cancellable)
     }
     
+    func linkBuilder<Content: View>(
+      for meal: MealModel,
+      @ViewBuilder content: () -> Content
+    ) -> some View {
+      NavigationLink(destination: router.makeMealView(for: meal)) { content() }
+    }
 }

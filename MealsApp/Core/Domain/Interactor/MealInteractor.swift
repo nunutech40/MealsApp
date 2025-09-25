@@ -10,10 +10,10 @@ import Combine
 
 class MealInteractor: MealUseCase { //MealFavoriteUseCase
     
-    private let mealRepository: MealRepository
+    private let mealRepository: MealRepositoryProtocol
     private let meal: MealModel
     
-    required init(mealRepository: MealRepository, meal: MealModel) {
+    required init(mealRepository: MealRepositoryProtocol, meal: MealModel) {
         self.mealRepository = mealRepository
         self.meal = meal
     }

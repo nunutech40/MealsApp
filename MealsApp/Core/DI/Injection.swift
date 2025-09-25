@@ -12,9 +12,9 @@ final class Injection: NSObject {
     
     // Provide Repository
     func provideRepository() -> MealRepositoryProtocol {
-        let remote: RemoteDataSource = RemoteDataSource.sharedInstance
-        
         let realm = try? Realm()
+        
+        let remote: RemoteDataSource = RemoteDataSource.sharedInstance
         let locale: LocalDataSource = LocalDataSource.sharedInstance(realm)
         
         return MealRepository.sharedInstance(remote, locale)
@@ -31,6 +31,11 @@ final class Injection: NSObject {
     func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
         let repository: MealRepositoryProtocol = provideRepository()
         return DetailCategoryInteractor(repository: repository, category: category)
+    }
+    
+    func provideMealUseCase(meal: MealModel) -> MealUseCase {
+        let repository = provideRepository()
+        return MealInteractor(mealRepository: repository, meal: meal)
     }
     
 }

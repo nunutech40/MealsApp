@@ -14,9 +14,9 @@ struct DetailView: View {
     var body: some View {
         ZStack {
             if presenter.isLoading {
-                loadingIndicator
+                LoadingIndicatorViewCustom()
             } else if presenter.isError {
-                errorIndicator
+                ErrorIndicatorView(title: presenter.errorMessage)
             }
             else {
                 ScrollView(.vertical) {
@@ -41,19 +41,7 @@ extension DetailView {
         Spacer()
     }
     
-    var errorIndicator: some View {
-        CustomEmptyView(
-            image: "assetSearchNotFound",
-            title: presenter.errorMessage
-        ).offset(y: 80)
-    }
-    
-    var loadingIndicator: some View {
-        VStack {
-            Text("Loading...")
-            ProgressView()
-        }
-    }
+ 
     
     var imageCategory: some View {
         AsyncImage(url: URL(string: self.presenter.category.image)) { image in
@@ -78,9 +66,11 @@ extension DetailView {
             HStack {
                 ForEach(self.presenter.meals, id: \.id) { meal in
                     ZStack {
-                        MealRow(meal: meal)
+                        self.presenter.linkBuilder(for: meal) {
+                          MealRow(meal: meal)
                             .frame(width: 150, height: 150)
-                    }.buttonStyle(PlainButtonStyle())
+                        }.buttonStyle(PlainButtonStyle())
+                    }
                 }
             }
         }

@@ -36,52 +36,34 @@ final class MealRepository: NSObject {
 }
 
 extension MealRepository: MealRepositoryProtocol {
-    
-    func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error> {
-        return self.local.getMeal(by: idMeal)
-            .flatMap { result -> AnyPublisher<MealModel, Error> in
-                if result.ingredients.isEmpty {
-                   return self.remote.getMeal(by: idMeal)
-                        .map { MealMapper.mapDetailMealResponseToEntity(by: idMeal, input: $0) }
-                        .catch { _ in self.local.getMeal(by: idMeal) }
-                        .flatMap { self.local.updateMeal(by: idMeal, meal: $0) }
-                        .filter { $0 }
-                        .flatMap { _ in self.local.getMeal(by: idMeal)
-                                .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
-                        }.eraseToAnyPublisher()
-                } else {
-                    return Just(result)
-                        .setFailureType(to: Error.self)
-                        .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
-                        .eraseToAnyPublisher()
-                }
-            }.eraseToAnyPublisher()
-    }
-    
-    
+   
     func getCategories() -> AnyPublisher<[CategoryModel], Error> {
         return self.local.getCategories()
             .flatMap { result -> AnyPublisher<[CategoryModel], Error> in
                 if result.isEmpty {
                     return self.remote.getCategories()
-                        .map { CategoryMapper.mapCategoryResponseToEntities(input: $0) }
+                        .map { CategoryMapper.mapCategoryResponsesToEntities(input: $0) }
+                        .catch { _ in self.local.getCategories() }
                         .flatMap { self.local.addCategories(from: $0) }
                         .filter { $0 }
                         .flatMap { _ in self.local.getCategories()
-                                .map { CategoryMapper.mapCategoryEntityToDomains(input: $0) }
+                                .map { CategoryMapper.mapCategoryEntitiesToDomains(input: $0) }
                         }.eraseToAnyPublisher()
                     
                 } else {
+                    
                     return Just(result)
                         .setFailureType(to: Error.self)
-                        .map { CategoryMapper.mapCategoryEntityToDomains(input: $0) }
+                        .map { CategoryMapper.mapCategoryEntitiesToDomains(input: $0) }
                         .eraseToAnyPublisher()
                 }
             }.eraseToAnyPublisher()
         
     }
     
-    func getMeals(by category: String) -> AnyPublisher<[MealModel], Error> {
+    func getMeals(
+        by category: String
+    ) -> AnyPublisher<[MealModel], Error> {
         return self.local.getMeals(by: category)
             .flatMap { result -> AnyPublisher<[MealModel], Error> in
                 if result.isEmpty {
@@ -91,19 +73,47 @@ extension MealRepository: MealRepositoryProtocol {
                         .flatMap { self.local.addMeals(by: category, from: $0) }
                         .filter { $0 }
                         .flatMap { _ in self.local.getMeals(by: category)
-                                .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+                                .map {  MealMapper.mapMealEntitiesToDomains(input: $0) }
+                        }.eraseToAnyPublisher()
+                } else {
+                    return Just(result)
+                        .setFailureType(to: Error.self)
+                        .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+                        .eraseToAnyPublisher()
+                }
+            }.eraseToAnyPublisher()
+    }
+    
+    func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error> {
+        return self.local.getMeal(by: idMeal)
+            .handleEvents(receiveSubscription: { _ in
+                print("DEBUG: subscription started for idMeal = \(idMeal)")
+            }, receiveOutput: { output in
+                print("DEBUG: local.getMeal returned = \(output)")
+            }, receiveCompletion: { completion in
+                print("DEBUG: local.getMeal completion = \(completion)")
+            })
+            .flatMap { result -> AnyPublisher<MealModel, Error> in
+                if result.ingredients.isEmpty {
+                    return self.remote.getMeal(by: idMeal)
+                        .map { MealMapper.mapDetailMealResponseToEntity(by: idMeal, input: $0) }
+                        .catch { _ in
+                            self.local.getMeal(by: idMeal)
+                        }
+                        .flatMap { self.local.updateMeal(by: idMeal, meal: $0) }
+                        .filter { $0 }
+                        .flatMap { _ in self.local.getMeal(by: idMeal)
+                                .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
                         }.eraseToAnyPublisher()
                 } else {
                     // ⬇️ pakai result yang sudah ada, jangan query ulang
                     return Just(result)
                         .setFailureType(to: Error.self)
-                        .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+                        .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
                         .eraseToAnyPublisher()
-                    
                 }
             }.eraseToAnyPublisher()
     }
-    
     
     
 }
