@@ -12,6 +12,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 - [Repository Flows](#repository-flows)
   - [Get Categories (MealRepository)](#get-categories-mealrepository)
   - [Get Meals (MealRepository)](#get-meals-mealrepository)
+  - [Get Meal(by idMeal) (MealRepository)](#get-meals-mealrepository)
 - [Presenter Flow](#presenter-flow)
 - [Figma Board](#figma-board)
 - [Notes](#notes)
@@ -19,7 +20,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 ---
 
 ## Project Architecture
-![Project Architecture](https://github.com/user-attachments/assets/ee68eacc-622c-4892-8dd1-6c96029ce08b)
+![Project Architecture](https://github.com/user-attachments/assets/adf2b59a-2b69-4d45-8a69-bd3d4c11cca9)
 
 ---
 
@@ -41,6 +42,11 @@ _(Flow hubungan antar object per fitur)_
 
 ### Get Meals (MealRepository)
 ![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/d3f2b8a3-e8ef-4a24-a3ad-ef7b9b528f52)
+
+
+### Get Meal(by idMeal) (MealRepository) -> MealModel
+![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/3dc232ec-7792-40b1-94f3-a3f73a30a019)
+
 
 ---
 

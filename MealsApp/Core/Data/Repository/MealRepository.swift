@@ -13,6 +13,8 @@ protocol MealRepositoryProtocol {
     func getCategories() -> AnyPublisher<[CategoryModel], Error>
     func getMeals(by category: String) -> AnyPublisher<[MealModel], Error>
     
+    func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
+    
 }
 
 final class MealRepository: NSObject {
@@ -33,6 +35,28 @@ final class MealRepository: NSObject {
 }
 
 extension MealRepository: MealRepositoryProtocol {
+    
+    func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error> {
+        return self.local.getMeal(by: idMeal)
+            .flatMap { result -> AnyPublisher<MealModel, Error> in
+                if result.ingredients.isEmpty {
+                   return self.remote.getMeal(by: idMeal)
+                        .map { MealMapper.mapDetailMealResponseToEntity(by: idMeal, input: $0) }
+                        .catch { _ in self.local.getMeal(by: idMeal) }
+                        .flatMap { self.local.updateMeal(by: idMeal, meal: $0) }
+                        .filter { $0 }
+                        .flatMap { _ in self.local.getMeal(by: idMeal)
+                                .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
+                        }.eraseToAnyPublisher()
+                } else {
+                    return Just(result)
+                        .setFailureType(to: Error.self)
+                        .map { MealMapper.mapDetailMealEntityToDomain(input: $0) }
+                        .eraseToAnyPublisher()
+                }
+            }.eraseToAnyPublisher()
+    }
+    
     
     func getCategories() -> AnyPublisher<[CategoryModel], Error> {
         return self.local.getCategories()
@@ -78,5 +102,7 @@ extension MealRepository: MealRepositoryProtocol {
                 }
             }.eraseToAnyPublisher()
     }
+    
+    
     
 }

@@ -19,6 +19,9 @@ protocol LocalDataSourceProtocol: AnyObject {
     // Meal
     func getMeals(by category: String) -> AnyPublisher<[MealEntity], Error>
     func addMeals(by category: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error>
+    func getMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error>
+    func updateMeal(by idMeal: String, meal: MealEntity) -> AnyPublisher<Bool, Error>
+    
 }
 
 final class LocalDataSource: NSObject {
@@ -80,6 +83,51 @@ extension LocalDataSource: LocalDataSourceProtocol {
                         .sorted(byKeyPath: "title", ascending: true)
                 }()
                 completion(.success(meals.toArray(ofType: MealEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func getMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error> {
+        return Future<MealEntity, Error> { completion in
+            if let realm = self.realm {
+                let meals: Results<MealEntity> = {
+                    realm.objects(MealEntity.self)
+                        .filter("id = '\(idMeal)'")
+                }()
+                
+                guard let meal = meals.first else {
+                    completion(.failure(DatabaseError.requestFailed))
+                    return
+                }
+                
+                completion(.success(meal))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func updateMeal(by idMeal: String, meal: MealEntity) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = meal.realm, let mealEntity = {
+                realm.objects(MealEntity.self).filter("id = '\(idMeal)'")
+            }().first {
+                do {
+                    try realm.write {
+                        mealEntity.setValue(meal.area, forKey: "area")
+                        mealEntity.setValue(meal.instructions, forKey: "instructions")
+                        mealEntity.setValue(meal.tag, forKey: "tag")
+                        mealEntity.setValue(meal.youtube, forKey: "youtube")
+                        mealEntity.setValue(meal.source, forKey: "source")
+                        mealEntity.setValue(meal.favorite, forKey: "favorite")
+                        mealEntity.setValue(meal.ingredients, forKey: "ingredients")
+                    }
+                    completion(.success(true))
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }
