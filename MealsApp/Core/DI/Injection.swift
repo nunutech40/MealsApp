@@ -38,6 +38,11 @@ final class Injection: NSObject {
         return MealInteractor(mealRepository: repository, meal: meal)
     }
     
+    func provideMealUpdateFavoriteUseCase(meal: MealModel) -> MealUpdateFavoriteUseCase {
+        let repository = provideRepository()
+        return MealInteractor(mealRepository: repository, meal: meal)
+    }
+    
     func provideMealFetchFavoriteUseCase() -> MealFetchFavoriteUseCase {
         let repository: MealRepositoryProtocol = provideRepository()
         

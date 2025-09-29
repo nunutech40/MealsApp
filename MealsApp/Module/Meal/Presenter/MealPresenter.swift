@@ -12,7 +12,7 @@ class MealPresenter: ObservableObject {
     
     private var cancelable: Set<AnyCancellable> = []
     private let mealUseCase: MealUseCase
-    //private let mealFavoriteUseCase: MealFavoriteUseCase
+    private let mealUpdateFavoriteUseCase: MealUpdateFavoriteUseCase
     
     @Published var meal: MealModel
     @Published var errorMessage: String = ""
@@ -20,11 +20,11 @@ class MealPresenter: ObservableObject {
     @Published var isError: Bool = false
     
     init(
-        mealUseCase: MealUseCase
-        //mealFavoriteUseCase: MealFavoriteUseCase
+        mealUseCase: MealUseCase,
+        mealUpdateFavoriteUseCase: MealUpdateFavoriteUseCase
     ) {
         self.mealUseCase = mealUseCase
-        //self.mealFavoriteUseCase = mealFavoriteUseCase
+        self.mealUpdateFavoriteUseCase = mealUpdateFavoriteUseCase
         meal = mealUseCase.getMeal()
     }
     
@@ -36,9 +36,7 @@ class MealPresenter: ObservableObject {
                 switch completion {
                 case .failure(let error):
                     self.errorMessage = error.localizedDescription
-                    print("cek error: \(error)")
                     self.isError = true
-                    self.isLoading = false
                 case .finished:
                     self.isLoading = false
                 }
@@ -46,6 +44,22 @@ class MealPresenter: ObservableObject {
                 self.meal = meal
             })
             .store(in: &cancelable)
+    }
+    
+    func updateFavoriteMeal() {
+        mealUpdateFavoriteUseCase.updateFavoriteMeal()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                    self.isError = true
+                case .finished:
+                    self.isError = false
+                }
+            }, receiveValue: { meal in
+                self.meal = meal
+            }).store(in: &cancelable)
     }
     
 }

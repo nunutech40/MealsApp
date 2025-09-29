@@ -24,6 +24,7 @@ protocol LocalDataSourceProtocol: AnyObject {
     
     // Favorites
     func getFavoritesMeals() -> AnyPublisher<[MealEntity], Error>
+    func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error>
     
 }
 
@@ -172,6 +173,25 @@ extension LocalDataSource: LocalDataSourceProtocol {
                         .sorted(byKeyPath: "title", ascending: true)
                 }()
                 completion(.success(mealEntities.toArray(ofType: MealEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error> {
+        return Future<MealEntity, Error> { completion in
+            if let realm = self.realm, let mealEntity = {
+                realm.objects(MealEntity.self).filter("id = '\(idMeal)'")
+            }().first {
+                do {
+                    try realm.write {
+                        mealEntity.setValue(!mealEntity.favorite, forKey: "favorite")
+                    }
+                    completion(.success(mealEntity))
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }

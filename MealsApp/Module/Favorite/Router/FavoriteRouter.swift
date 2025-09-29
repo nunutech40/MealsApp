@@ -12,7 +12,8 @@ class FavoriteRouter {
     
     func makeMealView(for meal: MealModel) -> some View {
         let mealUsecase = Injection.init().provideMealUseCase(meal: meal)
-        let presenter = MealPresenter(mealUseCase: mealUsecase)
+        let mealUpdateFavoriteMeal = Injection.init().provideMealUpdateFavoriteUseCase(meal: meal)
+        let presenter = MealPresenter(mealUseCase: mealUsecase, mealUpdateFavoriteUseCase: mealUpdateFavoriteMeal)
         return MealView(presenter: presenter)
     }
     

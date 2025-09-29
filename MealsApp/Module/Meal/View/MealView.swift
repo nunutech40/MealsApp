@@ -68,14 +68,14 @@ extension MealView {
             imageName: "heart.fill",
             title: "Favorited"
           ).onTapGesture {
-              // self.presenter.updateFavoriteMeal()
+              self.presenter.updateFavoriteMeal()
           }
         } else {
           CustomIcon(
             imageName: "heart",
             title: "Favorite"
           ).onTapGesture {
-              // self.presenter.updateFavoriteMeal()
+              self.presenter.updateFavoriteMeal()
           }
         }
         Spacer()

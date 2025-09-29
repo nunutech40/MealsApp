@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MealInteractor: MealUseCase { //MealFavoriteUseCase
+class MealInteractor: MealUseCase, MealUpdateFavoriteUseCase {
     
     private let mealRepository: MealRepositoryProtocol
     private let meal: MealModel
@@ -24,5 +24,9 @@ class MealInteractor: MealUseCase { //MealFavoriteUseCase
     
     func getMeal() -> MealModel {
         return meal
+    }
+    
+    func updateFavoriteMeal() -> AnyPublisher<MealModel, Error> {
+        return mealRepository.updateFavoriteMeal(by: meal.id)
     }
 }

@@ -17,6 +17,7 @@ protocol MealRepositoryProtocol {
     
     // favorites
     func getFavoriteMeals() -> AnyPublisher<[MealModel], Error>
+    func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
     
 }
 
@@ -124,4 +125,11 @@ extension MealRepository: MealRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
+    func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealModel, Error> {
+        return self.local.updateFavoriteMeal(by: idMeal)
+            .map {
+                MealMapper.mapDetailMealEntityToDomain(input: $0)
+            }
+            .eraseToAnyPublisher()
+    }
 }
