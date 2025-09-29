@@ -19,6 +19,9 @@ protocol MealRepositoryProtocol {
     func getFavoriteMeals() -> AnyPublisher<[MealModel], Error>
     func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
     
+    // search
+    func searchMeal(by title: String) -> AnyPublisher<[MealModel], Error>
+    
 }
 
 final class MealRepository: NSObject {
@@ -40,7 +43,7 @@ final class MealRepository: NSObject {
 }
 
 extension MealRepository: MealRepositoryProtocol {
-   
+  
     func getCategories() -> AnyPublisher<[CategoryModel], Error> {
         return self.local.getCategories()
             .flatMap { result -> AnyPublisher<[CategoryModel], Error> in
@@ -131,5 +134,29 @@ extension MealRepository: MealRepositoryProtocol {
                 MealMapper.mapDetailMealEntityToDomain(input: $0)
             }
             .eraseToAnyPublisher()
+    }
+    
+    func searchMeal(
+      by title: String
+    ) -> AnyPublisher<[MealModel], Error> {
+      return self.remote.searchMeal(by: title)
+        .map { MealMapper.mapDetailMealResponseToEntity(input: $0) }
+        .catch { _ in self.local.getMealsBy(title) }
+        .flatMap { responses  in
+          self.local.getMealsBy(title)
+            .flatMap { local -> AnyPublisher<[MealModel], Error> in
+              if responses.count > local.count {
+                return self.local.addMealsBy(title, from: responses)
+                  .filter { $0 }
+                  .flatMap { _ in self.local.getMealsBy(title)
+                    .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
+                  }.eraseToAnyPublisher()
+              } else {
+                return self.local.getMealsBy(title)
+                  .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
+                  .eraseToAnyPublisher()
+              }
+            }
+        }.eraseToAnyPublisher()
     }
 }

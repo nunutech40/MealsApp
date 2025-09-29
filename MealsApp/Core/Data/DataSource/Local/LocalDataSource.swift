@@ -22,6 +22,10 @@ protocol LocalDataSourceProtocol: AnyObject {
     func getMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error>
     func updateMeal(by idMeal: String, meal: MealEntity) -> AnyPublisher<Bool, Error>
     
+    // search
+    func addMealsBy(_ title: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error>
+    func getMealsBy(_ title: String) -> AnyPublisher<[MealEntity], Error>
+    
     // Favorites
     func getFavoritesMeals() -> AnyPublisher<[MealEntity], Error>
     func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error>
@@ -198,4 +202,49 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
+    // Search Meal
+    func addMealsBy(_ title: String, from meals: [MealEntity]) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realm {
+                do {
+                    try realm.write {
+                        for meal in meals {
+                            if let mealEntity = realm.object(ofType: MealEntity.self, forPrimaryKey: meal.id) {
+                                if mealEntity.title == meal.title {
+                                    meal.favorite = mealEntity.favorite
+                                    realm.add(meal, update: .all)
+                                } else {
+                                    realm.add(meal)
+                                }
+                            } else {
+                                realm.add(meal)
+                            }
+                        }
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    
+    func getMealsBy(
+      _ title: String
+    ) -> AnyPublisher<[MealEntity], Error> {
+      return Future<[MealEntity], Error> { completion in
+        if let realm = self.realm {
+          let meals: Results<MealEntity> = {
+            realm.objects(MealEntity.self)
+              .filter("title contains[c] %@", title)
+              .sorted(byKeyPath: "title", ascending: true)
+          }()
+          completion(.success(meals.toArray(ofType: MealEntity.self)))
+        } else {
+          completion(.failure(DatabaseError.invalidInstance))
+        }
+      }.eraseToAnyPublisher()
+    }
 }

@@ -14,6 +14,8 @@ struct ContentView: View {
     
     @EnvironmentObject var mealPresenter: MealPresenter
     
+    @EnvironmentObject var searchPresenter: SearchPresenter
+    
     var body: some View {
         TabView {
             NavigationStack {
@@ -23,7 +25,7 @@ struct ContentView: View {
             }
             
             NavigationStack {
-                SearchView()
+                SearchView(presenter: searchPresenter)
             }.tabItem {
                 TabItem(imageName: "magnifyingglass", title: "Search")
             }

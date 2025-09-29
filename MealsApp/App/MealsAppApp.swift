@@ -11,12 +11,15 @@ import SwiftUI
 struct MealsAppApp: App {
     let homePresenter = HomePresenter(getCategoriesUseCase: Injection.init().provideGetCategories())
     let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
+    let searchPresenter = SearchPresenter(searchUseCase: Injection.init().provideSearchMealUseCase())
+    
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(homePresenter)
                 .environmentObject(favoritePresenter)
+                .environmentObject(searchPresenter)
         }
     }
 }

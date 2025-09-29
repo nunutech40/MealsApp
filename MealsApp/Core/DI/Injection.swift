@@ -49,4 +49,9 @@ final class Injection: NSObject {
         return MealFavoriteInteractor(repository: repository)
     }
     
+    func provideSearchMealUseCase() -> SearchUseCase {
+        let repository = provideRepository()
+        return SearchInteractor(repository: repository)
+    }
+    
 }
