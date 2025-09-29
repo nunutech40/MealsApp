@@ -51,8 +51,10 @@ extension FavoriteView {
                 id: \.id
             ) { meal in
                 ZStack {
-                    FavoriteRow(meal: meal)
-                }.buttonStyle(PlainButtonStyle())
+                    self.presenter.linkBuilder(for: meal) {
+                        FavoriteRow(meal: meal)
+                    }.buttonStyle(PlainButtonStyle())
+                }
             }
         }
     }
