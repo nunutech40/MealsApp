@@ -8,6 +8,6 @@
 
 import Combine
 
-protocol MealFavoriteUseCase {
+protocol MealUpdateFavoriteUseCase {
     func updateFavoriteMeal() -> AnyPublisher<MealModel, Error>
 }

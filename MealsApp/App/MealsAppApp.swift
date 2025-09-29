@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct MealsAppApp: App {
     let homePresenter = HomePresenter(getCategoriesUseCase: Injection.init().provideGetCategories())
+    let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(homePresenter)
+                .environmentObject(favoritePresenter)
         }
     }
 }

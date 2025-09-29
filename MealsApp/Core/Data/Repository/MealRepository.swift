@@ -15,6 +15,9 @@ protocol MealRepositoryProtocol {
     
     func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
     
+    // favorites
+    func getFavoriteMeals() -> AnyPublisher<[MealModel], Error>
+    
 }
 
 final class MealRepository: NSObject {
@@ -115,5 +118,10 @@ extension MealRepository: MealRepositoryProtocol {
             }.eraseToAnyPublisher()
     }
     
+    func getFavoriteMeals() -> AnyPublisher<[MealModel], any Error> {
+        return self.local.getFavoritesMeals()
+            .map { MealMapper.mapMealEntitiesToDomains(input: $0) }
+            .eraseToAnyPublisher()
+    }
     
 }

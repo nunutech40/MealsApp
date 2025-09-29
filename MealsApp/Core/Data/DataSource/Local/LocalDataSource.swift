@@ -22,6 +22,9 @@ protocol LocalDataSourceProtocol: AnyObject {
     func getMeal(by idMeal: String) -> AnyPublisher<MealEntity, Error>
     func updateMeal(by idMeal: String, meal: MealEntity) -> AnyPublisher<Bool, Error>
     
+    // Favorites
+    func getFavoritesMeals() -> AnyPublisher<[MealEntity], Error>
+    
 }
 
 final class LocalDataSource: NSObject {
@@ -36,7 +39,6 @@ final class LocalDataSource: NSObject {
 }
 
 extension LocalDataSource: LocalDataSourceProtocol {
-    
     
     // category
     func getCategories() -> AnyPublisher<[CategoryEntity], Error> {
@@ -161,5 +163,19 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
+    func getFavoritesMeals() -> AnyPublisher<[MealEntity], Error> {
+        return Future<[MealEntity], Error> { completion in
+            if let realm = self.realm {
+                let mealEntities = {
+                    realm.objects(MealEntity.self)
+                        .filter("favorite = \(true)")
+                        .sorted(byKeyPath: "title", ascending: true)
+                }()
+                completion(.success(mealEntities.toArray(ofType: MealEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
     
 }
