@@ -12,7 +12,8 @@ This document captures the high-level architecture and the event/data flows (Cal
 - [Repository Flows](#repository-flows)
   - [Get Categories (MealRepository)](#get-categories-mealrepository)
   - [Get Meals (MealRepository)](#get-meals-mealrepository)
-  - [Get Meal(by idMeal) (MealRepository)](#get-meals-mealrepository)
+  - [Get Meal(by idMeal) (MealRepository)](#get-mealbyid-mealrepository)
+  - [Get FavoriteMeals (MealRepository)](#get-favoritemeals-mealrepository)
 - [Presenter Flow](#presenter-flow)
 - [Figma Board](#figma-board)
 - [Notes](#notes)
@@ -44,9 +45,11 @@ _(Flow hubungan antar object per fitur)_
 ![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/d3f2b8a3-e8ef-4a24-a3ad-ef7b9b528f52)
 
 
-### Get Meal(by idMeal) (MealRepository) -> MealModel
+### Get Mealbydid (MealRepository) -> MealModel
 ![FlowChart Get Meals in MealRepository](https://github.com/user-attachments/assets/3dc232ec-7792-40b1-94f3-a3f73a30a019)
 
+### Get FavoriteMeals() (MealRepository) -> [MealModel]
+![FlowChart Get FavoriteMeals in MealRepository](https://github.com/user-attachments/assets/d73ca415-1502-4feb-b258-e86701bf883c)
 
 ---
 
