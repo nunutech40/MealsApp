@@ -22,7 +22,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 ---
 
 ## Project Architecture
-![Project Architecture](https://github.com/user-attachments/assets/8c90017a-425e-41d6-9b42-a53f8f067384)
+![Project Architecture](https://github.com/user-attachments/assets/6e628dc9-faf5-4592-8d8a-1bd4bb28e090)
 
 
 ---
