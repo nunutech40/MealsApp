@@ -25,6 +25,10 @@ This document captures the high-level architecture and the event/data flows (Cal
 ![Project Architecture](https://github.com/user-attachments/assets/6e628dc9-faf5-4592-8d8a-1bd4bb28e090)
 
 
+## Flow Load View Halaman
+![Project Architecture](https://github.com/user-attachments/assets/add88b85-5822-4c95-9d94-78852c4fbaf0)
+
+
 ---
 
 ## Flow: Callback vs Combine
