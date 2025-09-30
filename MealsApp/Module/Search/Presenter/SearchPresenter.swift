@@ -12,6 +12,7 @@ class SearchPresenter: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     private let searchUseCase: SearchUseCase
+    private let router = SearchRouter()
     
     @Published var meals: [MealModel] = []
     @Published var errorMessage: String = ""
@@ -41,5 +42,14 @@ class SearchPresenter: ObservableObject {
                 self.meals = meals
             })
             .store(in: &cancellables)
+    }
+}
+
+extension SearchPresenter {
+    func linkBuilder<Content: View>(
+        for meal: MealModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: router.makeMealView(meal: meal)) { content() }
     }
 }
