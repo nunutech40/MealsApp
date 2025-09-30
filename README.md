@@ -57,6 +57,8 @@ _(Flow hubungan antar object per fitur)_
 ### Update FavoriteMeal() (MealRepository) -> [MealModel]
 ![FlowChart Update FavoriteMeals in MealRepository](https://github.com/user-attachments/assets/190bc399-c0d6-43d0-b287-e0ffb0b874c1)
 
+### Search Meals() (MealRepository) -> [MealModel]
+![FlowChart Search Meals in MealRepository](https://github.com/user-attachments/assets/3f28e9c3-6fc2-4de7-8a1a-0e5d4d553eb3)
 
 ---
 
