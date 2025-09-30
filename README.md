@@ -7,6 +7,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 
 ## Table of Contents
 - [Project Architecture](#project-architecture)
+- [Template Flow UI - Halaman](#load-view-halaman)
 - [Flow: Callback vs Combine](#flow-callback-vs-combine)
 - [Per-Feature Object Relationships](#per-feature-object-relationships)
 - [Repository Flows](#repository-flows)
@@ -26,7 +27,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 
 
 ## Flow Load View Halaman
-![Project Architecture](https://github.com/user-attachments/assets/add88b85-5822-4c95-9d94-78852c4fbaf0)
+![Load View Halaman](https://github.com/user-attachments/assets/add88b85-5822-4c95-9d94-78852c4fbaf0)
 
 
 ---
