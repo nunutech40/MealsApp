@@ -34,21 +34,24 @@ final class Injection: NSObject {
     }
     
     // provide category from module category
+    // Inject dari package local
     func provideCategory<U: UseCase>() -> U where U.Request == Any, U.Response == [CategoryDomainModel] {
         
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
         
-        let endpointURL = EndPoints.Gets.categories.url
-        let urlString = endpointURL.absoluteString
-        let remote = GetCategoriesRemoteDataSource(endpoint: urlString)
+        let remote = GetCategoriesRemoteDataSource(endpoint: EndPoints.Gets.categories.url)
+        print("cek remote in DI: \(remote)")
         
         let mapper = CategoryTransformer()
+        
+        print("cek mapper in DI: \(mapper)")
         
         let repository = GetCategoriesRepository(
             localeDataSource: locale,
             remoteDataSource: remote,
             mapper: mapper
         )
+        print("cek repository in DI: \(repository)")
         
         return Interactor(repository: repository) as! U
     }
