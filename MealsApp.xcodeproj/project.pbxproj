@@ -11,7 +11,8 @@
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
-		A0EADF752E94FA1C00C87E25 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADF742E94FA1C00C87E25 /* Core */; };
+		A0C53AC02E950171003BF52C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53ABF2E950171003BF52C /* Core */; };
+		A0C53AC22E950176003BF52C /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53AC12E950176003BF52C /* Category */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,11 +70,15 @@
 		};
 		A05E50072E49C923005A1DE2 /* MealsAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MealsAppTests;
 			sourceTree = "<group>";
 		};
 		A05E50112E49C923005A1DE2 /* MealsAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MealsAppUITests;
 			sourceTree = "<group>";
 		};
@@ -86,8 +91,9 @@
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
+				A0C53AC22E950176003BF52C /* Category in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
-				A0EADF752E94FA1C00C87E25 /* Core in Frameworks */,
+				A0C53AC02E950171003BF52C /* Core in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +173,6 @@
 				A05E4FF02E49C921005A1DE2 /* Sources */,
 				A05E4FF12E49C921005A1DE2 /* Frameworks */,
 				A05E4FF22E49C921005A1DE2 /* Resources */,
-				2AE60F853AE840E6BC7BE8F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,7 +186,8 @@
 				A00E5E2C2E4F003B009B5564 /* Alamofire */,
 				A00E5EB52E504854009B5564 /* RealmSwift */,
 				A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */,
-				A0EADF742E94FA1C00C87E25 /* Core */,
+				A0C53ABF2E950171003BF52C /* Core */,
+				A0C53AC12E950176003BF52C /* Category */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -217,7 +223,6 @@
 				A05E500A2E49C923005A1DE2 /* Sources */,
 				A05E500B2E49C923005A1DE2 /* Frameworks */,
 				A05E500C2E49C923005A1DE2 /* Resources */,
-				E773E265C18EF8FE43BAC462 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,8 +273,8 @@
 				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				A0EADF732E94FA1C00C87E25 /* XCLocalSwiftPackageReference "../Modules/Core" */,
-				A0EADF762E94FA8600C87E25 /* XCLocalSwiftPackageReference "../Modules/Category" */,
+				A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */,
+				A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -308,23 +313,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2AE60F853AE840E6BC7BE8F8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MealsApp/Pods-MealsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MealsApp/Pods-MealsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealsApp/Pods-MealsApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		497C9315156388EF4D64EEB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,23 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E773E265C18EF8FE43BAC462 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -749,11 +720,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A0EADF732E94FA1C00C87E25 /* XCLocalSwiftPackageReference "../Modules/Core" */ = {
+		A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Core;
 		};
-		A0EADF762E94FA8600C87E25 /* XCLocalSwiftPackageReference "../Modules/Category" */ = {
+		A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Category;
 		};
@@ -802,9 +773,15 @@
 			package = A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
-		A0EADF742E94FA1C00C87E25 /* Core */ = {
+		A0C53ABF2E950171003BF52C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */;
 			productName = Core;
+		};
+		A0C53AC12E950176003BF52C /* Category */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */;
+			productName = Category;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

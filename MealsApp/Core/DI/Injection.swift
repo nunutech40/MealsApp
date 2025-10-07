@@ -38,7 +38,9 @@ final class Injection: NSObject {
         
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
         
-        let remote = GetCategoriesRemoteDataSource(endpoint: String(EndPoints.Gets.categories.url))
+        let endpointURL = EndPoints.Gets.categories.url
+        let urlString = endpointURL.absoluteString
+        let remote = GetCategoriesRemoteDataSource(endpoint: urlString)
         
         let mapper = CategoryTransformer()
         
