@@ -11,6 +11,7 @@
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
+		A0EADF752E94FA1C00C87E25 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADF742E94FA1C00C87E25 /* Core */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
+				A0EADF752E94FA1C00C87E25 /* Core in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +181,7 @@
 				A00E5E2C2E4F003B009B5564 /* Alamofire */,
 				A00E5EB52E504854009B5564 /* RealmSwift */,
 				A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */,
+				A0EADF742E94FA1C00C87E25 /* Core */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -265,6 +268,8 @@
 				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				A0EADF732E94FA1C00C87E25 /* XCLocalSwiftPackageReference "../Modules/Core" */,
+				A0EADF762E94FA8600C87E25 /* XCLocalSwiftPackageReference "../Modules/Category" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -743,6 +748,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		A0EADF732E94FA1C00C87E25 /* XCLocalSwiftPackageReference "../Modules/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Core;
+		};
+		A0EADF762E94FA8600C87E25 /* XCLocalSwiftPackageReference "../Modules/Category" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Category;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -785,6 +801,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		A0EADF742E94FA1C00C87E25 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

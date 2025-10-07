@@ -7,8 +7,13 @@
 
 import Foundation
 import RealmSwift
+import Core
+import Category
+import UIKit
 
 final class Injection: NSObject {
+    
+    private let realm = try? Realm()
     
     // Provide Repository
     func provideRepository() -> MealRepositoryProtocol {
@@ -26,6 +31,24 @@ final class Injection: NSObject {
         let repository: MealRepositoryProtocol = provideRepository()
         
         return HomeInteractor(repository: repository)
+    }
+    
+    // provide category from module category
+    func provideCategory<U: UseCase>() -> U where U.Request == Any, U.Response == [CategoryDomainModel] {
+        
+        let locale = GetCategoriesLocaleDataSource(realm: realm!)
+        
+        let remote = GetCategoriesRemoteDataSource(endpoint: String(EndPoints.Gets.categories.url))
+        
+        let mapper = CategoryTransformer()
+        
+        let repository = GetCategoriesRepository(
+            localeDataSource: locale,
+            remoteDataSource: remote,
+            mapper: mapper
+        )
+        
+        return Interactor(repository: repository) as! U
     }
     
     func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
