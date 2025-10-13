@@ -40,7 +40,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - you@example.com
+          - nunutech4.0@gmail.com
         notify:
           success: false
           failure: true
