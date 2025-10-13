@@ -1,6 +1,6 @@
 workflows:
   ios_ci:
-    name: iOS CI (tanpa CocoaPods)
+    name: iOS CI (auto-detect path)
     max_build_duration: 60
     environment:
       xcode: latest
@@ -17,23 +17,18 @@ workflows:
       - name: Debug layout
         script: |
           echo "PWD=$(pwd)"
-          ls -la
-          echo "=== Cari workspace/project ==="
-          git ls-files | grep -E '\.xcworkspace$|\.xcodeproj$' || true
+          echo "=== Struktur repo ==="
+          find . -maxdepth 2 -type f \( -name "*.xcodeproj" -o -name "*.xcworkspace" -o -name "Podfile" \)
 
-      - name: Build for iOS Simulator (xcodebuild)
+      - name: Build for iOS Simulator (auto detect)
         script: |
           set -euo pipefail
-
-          # Cari .xcworkspace dulu, kalau tidak ada gunakan .xcodeproj
-          WORKSPACE_PATH="$(git ls-files | grep -E '\.xcworkspace$' | head -n1 || true)"
-          PROJECT_PATH=""
-          if [ -z "$WORKSPACE_PATH" ]; then
-            PROJECT_PATH="$(git ls-files | grep -E '\.xcodeproj$' | head -n1 || true)"
-          fi
+          # Cari file proyek di root atau di subfolder MealsApp
+          PROJECT_PATH="$(find . -maxdepth 2 -name '*.xcodeproj' | head -n1 || true)"
+          WORKSPACE_PATH="$(find . -maxdepth 2 -name '*.xcworkspace' | head -n1 || true)"
 
           if [ -z "$WORKSPACE_PATH" ] && [ -z "$PROJECT_PATH" ]; then
-            echo "❌ Tidak menemukan .xcworkspace maupun .xcodeproj di repo."
+            echo "❌ Tidak menemukan .xcodeproj / .xcworkspace."
             exit 1
           fi
 
