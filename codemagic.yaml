@@ -1,14 +1,13 @@
-
 workflows:
   ios_ci:
     name: iOS CI
     max_build_duration: 60
     environment:
-      xcode: 15.4            # atau 'latest'
+      xcode: latest          # perlu iOS 18 SDK untuk iPhone 16
       cocoapods: default
+
     triggering:
-      events:
-        - push
+      events: [ push ]
       branch_patterns:
         - pattern: main
           include: true
@@ -17,21 +16,42 @@ workflows:
     cache:
       cache_paths:
         - ~/.cocoapods
-        - Pods
+        - **/Pods
+        - ~/Library/Caches/CocoaPods
+        - ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
 
     scripts:
+      - name: Debug layout
+        script: |
+          echo "PWD=$(pwd)"
+          ls -la
+          echo "=== Cari Podfile ==="
+          git ls-files | grep -E '/Podfile$|^Podfile$' || true
+          echo "=== Cari workspaces ==="
+          git ls-files | grep -E '\.xcworkspace$' || true
+          echo "=== Daftar scheme (jika ada workspace) ==="
+          if [ -d "MealsApp/MealsApp.xcodeproj" ]; then
+            xcodebuild -list -project MealsApp/MealsApp.xcodeproj || true
+          fi
+          if [ -d "MealsApp/MealsApp.xcworkspace" ]; then
+            xcodebuild -list -workspace MealsApp/MealsApp.xcworkspace || true
+          fi
+
       - name: Install dependencies (CocoaPods)
         script: |
+          set -e
           pod --version
-          pod install --project-directory=MealsApp
+          test -f "MealsApp/Podfile" || { echo "❌ Podfile tidak ada di MealsApp/. Cek path!"; exit 1; }
+          (cd MealsApp && pod install)
 
       - name: Build for iOS Simulator (xcodebuild)
         script: |
+          set -euo pipefail
           xcodebuild \
             -workspace MealsApp/MealsApp.xcworkspace \
             -scheme MealsApp \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
             clean build | xcpretty
 
     artifacts:
