@@ -1,10 +1,9 @@
 workflows:
   ios_ci:
-    name: iOS CI
+    name: iOS CI (tanpa CocoaPods)
     max_build_duration: 60
     environment:
-      xcode: latest          # iOS 18 SDK
-      cocoapods: default
+      xcode: latest
 
     triggering:
       events:
@@ -14,43 +13,21 @@ workflows:
           include: true
           source: true
 
-    cache:
-      cache_paths:
-        - ~/.cocoapods
-        - "Pods"
-        - "**/Pods"
-        - ~/Library/Caches/CocoaPods
-        - "~/Library/Developer/Xcode/DerivedData/**/SourcePackages"
-
     scripts:
       - name: Debug layout
         script: |
           echo "PWD=$(pwd)"
           ls -la
-          echo "=== Cari Podfile ==="
-          git ls-files | grep -E '/Podfile$|^Podfile$' || true
-          echo "=== Cari workspaces ==="
-          git ls-files | grep -E '\.xcworkspace$' || true
-          echo "=== Daftar scheme (jika ada workspace) ==="
-          if [ -d "MealsApp/MealsApp.xcodeproj" ]; then
-            xcodebuild -list -project MealsApp/MealsApp.xcodeproj || true
-          fi
-          if [ -d "MealsApp/MealsApp.xcworkspace" ]; then
-            xcodebuild -list -workspace MealsApp/MealsApp.xcworkspace || true
-          fi
-
-      - name: Install dependencies (CocoaPods)
-        script: |
-          set -e
-          pod --version
-          test -f "MealsApp/Podfile" || { echo "❌ Podfile tidak ada di MealsApp/. Cek path!"; exit 1; }
-          (cd MealsApp && pod install)
+          echo "=== Cari workspace/project ==="
+          git ls-files | grep -E '\.xcworkspace$|\.xcodeproj$' || true
 
       - name: Build for iOS Simulator (xcodebuild)
         script: |
           set -euo pipefail
+          # Jika kamu punya .xcworkspace (karena pernah pakai pods), gunakan itu.
+          # Kalau tidak, langsung gunakan .xcodeproj seperti di screenshotmu.
           xcodebuild \
-            -workspace MealsApp/MealsApp.xcworkspace \
+            -project MealsApp/MealsApp.xcodeproj \
             -scheme MealsApp \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
