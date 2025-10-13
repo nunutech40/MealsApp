@@ -3,196 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 71;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0169F2FF321973F5D39233068457DC1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		03D936DE3432595577D6410B6294BF77 /* SwinjectStoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7833B0EC8A1084DE49CAA693708B0 /* SwinjectStoryboardProtocol.swift */; };
+		029805F1FFCE2966C06972A8AE796141 /* Pods-MealsApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0125BC61402A5E93A029A4D6F4A87A2B /* Pods-MealsApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		042025FEAC032BC4CD99C30019CB949B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		0AE5A66BE1053B7585CFF70DA86CDB88 /* _Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79E159A758CAA66E50BC5D70F16E40 /* _Resolver.swift */; };
-		0AED061334CE604A2F11BE638C96E29D /* Container+SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55905A4120C3F1EBCA43ADFBA66A41D /* Container+SwinjectStoryboard.swift */; };
-		0CDE7D63B802929F15FA2F763992557E /* Container.Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC91E5AFC524812C9D3E5974107E54A /* Container.Arguments.swift */; };
-		1649A18393FC03E78FEDF4AB3DC8F4ED /* Swinject.h in Headers */ = {isa = PBXBuildFile; fileRef = F303CF1C93055DAE597F1F494B8E2AF7 /* Swinject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1878EA88E82C1BAE75716AB6E40FF0E9 /* RegistrationNameAssociatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84FC85D9E9FAA4564FDE8A1DD3633C /* RegistrationNameAssociatable.swift */; };
-		231CB1652977409365B22CA34BC6CFF7 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A977AD2784271E906B78EE8C3779B /* DispatchQueue+Once.swift */; };
-		2B4FB8A1986848F98EB740DD24F21B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		2C27B27255EF4108EA8567F9F7400850 /* ServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C8335880E90D9377766B8FE19FCE09 /* ServiceKey.swift */; };
-		3102252B63C377C77BD1BA7ED0C0A01C /* SwinjectStoryboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA7EC25C3989CCEBA321FB555D64C24 /* SwinjectStoryboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		321E1BC84B4694A3BB952DCC0EA1E0AF /* Pods-MealsAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BE6FC4CA49DA2A99320C86E13B18E98 /* Pods-MealsAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3293B7E5C824EC9ACA1C709366430C4C /* UnavailableItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797E4B491383A75D95D4269E2D66230 /* UnavailableItems.swift */; };
-		3BED6C79CE0D9C88E4D08867FCF1A9DF /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43CBB20D119F0EBD974AF34E286D81 /* DebugHelper.swift */; };
-		4261A5A54281C445A7E91066581C13CA /* ViewController+Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69295B4938AC30801C878162982A0F /* ViewController+Swinject.swift */; };
-		431435FDF1AF6483292466A73E9D635E /* Pods-MealsAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2088D7D4DD5A85595E2AD91BCDD518A /* Pods-MealsAppTests-dummy.m */; };
-		4710A4B056A64F5C8C5A311F70C2074E /* GraphIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C578991D79518DEC2645F29D83C38C0 /* GraphIdentifier.swift */; };
-		52AD180A0C2A345DDA99E7DB8D1AC719 /* ServiceEntry.TypeForwarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E49E2B363409FB3657EC95B76201A /* ServiceEntry.TypeForwarding.swift */; };
-		55A03C83327D99845C7B977701FE79FB /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AADA49707FC5921A35098584769793 /* SwinjectStoryboard.swift */; };
-		5BE596C5F417874E4B1B3A488403775E /* _SwinjectStoryboardBase(iOS-tvOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE03D7CA272567BE140B7A0C252D30 /* _SwinjectStoryboardBase(iOS-tvOS).swift */; };
-		5FC6C8C986B4D38D30C176BB559AFB94 /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA2B8B2CE48A122BF795101E7FE575 /* SpinLock.swift */; };
-		6084C01F44B78B860244B97F95DFD0D5 /* Pods-MealsApp-MealsAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ACD003484DDF7A56D2D9F900202BEE /* Pods-MealsApp-MealsAppUITests-dummy.m */; };
-		6085453EA01DDDB3A1CDB36EB1C6B3D6 /* UnavailableItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58C614284D51E6116A3815CC1B93D68 /* UnavailableItems.swift */; };
-		60B8C90440DEDE9AF0AF77B598947D36 /* Container.TypeForwarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D512A6B9B79EB9C7E7B6BF85E4E4F6 /* Container.TypeForwarding.swift */; };
-		6F193DD83E68F7E5B718FBF5FE8339E9 /* InstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E8485BA2B22FD6FCF8541B1A32F18C /* InstanceStorage.swift */; };
-		7258394E9A67346BDE52C05A7B1BFEB0 /* Swinject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EACAC2AB12D08CC501899FEF35A1D911 /* Swinject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		762E2D3E6B1A0A3E44FE14F87F8F693B /* Pods-MealsApp-MealsAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72DCFC84C4487D76FB201FA8B6474EB5 /* Pods-MealsApp-MealsAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B899CC32E98AD081C4D95B35791FE8F /* Container.Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137BB19C00F6AFED09A57B83BD32345 /* Container.Logging.swift */; };
-		7DBF924EBF9FDF51763CA685A6979E89 /* InjectionVerifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D339F9449116932ED039F2CE1B16B /* InjectionVerifiable.swift */; };
-		82D247435C87658924E5E51CB1FFDD1E /* Swinject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A16C88E77D1D6B9188FC39241430D9 /* Swinject-dummy.m */; };
-		85F91AA8F9E7BCE2732D87BB27E267DC /* SynchronizedResolver.Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0DAD1BEC9A66F5A88B821ED8E6E869 /* SynchronizedResolver.Arguments.swift */; };
-		8918921823E6964544870D29D859C2F8 /* Pods-MealsApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 837DCE444F9240F2AA32DC4EE45365D5 /* Pods-MealsApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AE0FCA832F7E1C064DB785C4DCFD0E0 /* SynchronizedResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D94C1476DF1E40B8932EE46A709618 /* SynchronizedResolver.swift */; };
-		8EF3BB4200FC546C6DA32D24302EE4BE /* ServiceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F225BDC34B407BFB32F4761F16CD6A /* ServiceEntry.swift */; };
-		94DC328F63017D4C12102EC74AE48961 /* InstanceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27790B8AF2F698FFF95B744C99C6559 /* InstanceWrapper.swift */; };
-		A387FAAADF9CB38EC95DA43CC2D00749 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76704385C8416734D065A39031F6A88 /* Resolver.swift */; };
-		B3B8FE58628CFBF57E0E8BBFB66BEB54 /* SwinjectStoryboard+SetUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD985AF1E4E981AC1DE64A3728E9D7F /* SwinjectStoryboard+SetUp.m */; };
-		C0ABAEA6B5FCA58A84428D76F66C8AB2 /* SwinjectStoryboard+StoryboardReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8F83BEAA78FBCAB7383767AD6949E7 /* SwinjectStoryboard+StoryboardReference.swift */; };
-		C470B0B618913875ED2DC70A97CB2D2D /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497A49AC3794175C5E229CF35688D72 /* Assembler.swift */; };
-		C72F49501298FB8B9D293CF8F0EFC6EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		C969041C1AB899AAD6E4612D2AF3824F /* UIStoryboard+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0352E0792850A994899C4BDF170381B /* UIStoryboard+Swizzling.swift */; };
-		CE3918D8BAB0D5279B8B5F26AE8F6834 /* SwinjectStoryboardOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF4A552AF65A58F435221A4A0CA65C1 /* SwinjectStoryboardOption.swift */; };
-		CEDA3CBCDDE50212A394A05FEE4BD75D /* SwinjectStoryboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E41BBC8502642409200CBCAFD3F36 /* SwinjectStoryboard-dummy.m */; };
-		E1F74F175EE1DF62388528297F555799 /* Pods-MealsApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D6900ACACD10ABB02001F6E8C0BDF5 /* Pods-MealsApp-dummy.m */; };
-		E2A45A4A08415D5B1B01AEB075B6FDAF /* ObjectScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB6EC7C82CA6E1F93608187F42E27F /* ObjectScope.swift */; };
-		E6B1E4BA445BFCA53700ED7219B4F95A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		E6C6B0E6214302929F43FA0B39F8F57D /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5A77282D4D07699EE22318E088E6B4 /* Assembly.swift */; };
-		E7AAEAB8269C592C724E292579AAB03A /* FunctionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5D05447FBE295FFA4557D57192C80 /* FunctionType.swift */; };
-		E9CD34C9CB009F4E64EEE49512FF940B /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5EE3EC39F12A23B3B110604C7B979 /* Box.swift */; };
-		EAEF18EF2DD4546E74CEE074A56A3A55 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2E064E9EAFE7C6BBEAEFD4A2E4AA0 /* Container.swift */; };
-		F0F9194E9859BD07212A873E52D92847 /* ObjectScope.Standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D766F8591F87F2EBA08F2C2DADD0F83 /* ObjectScope.Standard.swift */; };
-		F91EFED58AC1BEF1A57EEECEF6414747 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7D4F6D90D3DE9E830B9FDA90E42F3 /* Behavior.swift */; };
+		321E1BC84B4694A3BB952DCC0EA1E0AF /* Pods-MealsAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FC7F6AFE8993EFA6DDFC6503D25AAC /* Pods-MealsAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		429B29C00F48F6B946D061CACFF9609E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		431435FDF1AF6483292466A73E9D635E /* Pods-MealsAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04651F3ADD73AC39899CC1422D428B28 /* Pods-MealsAppTests-dummy.m */; };
+		55D990B4C14B39A31FC27F1CA4B59E8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		B200574796F6D288ABDB9F4DA0C29972 /* Pods-MealsApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA05F53E4F544336CCC719BE592D1F /* Pods-MealsApp-dummy.m */; };
+		E383B0418EB6EC68DAAFCCE20CC5C2A6 /* Pods-MealsApp-MealsAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A181C871BC0C337657C8D0E800DD4A /* Pods-MealsApp-MealsAppUITests-dummy.m */; };
+		F49B7EE823C4E8158DBF5A83A0FF0D03 /* Pods-MealsApp-MealsAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA768103DA254A2503ED940F820624C /* Pods-MealsApp-MealsAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3963305C87B73F4F126C5AD9D12F755F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65AB6C22153B56B1A56B06A3553EB5AA;
-			remoteInfo = SwinjectStoryboard;
-		};
-		416AEA55A691882883A7F07C5F5F29D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 46065AF968A5A92D450BB21F7F24367D;
-			remoteInfo = Swinject;
-		};
-		50152756009D0D08B51960B21B37A309 /* PBXContainerItemProxy */ = {
+		D7AC3BBF37F86FD91056DA37100D2A86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 15527172FA19CB3A2D10D69BB6DD7898;
 			remoteInfo = "Pods-MealsApp";
 		};
-		7322DFB065303C08E32F4F93A2DB09D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65AB6C22153B56B1A56B06A3553EB5AA;
-			remoteInfo = SwinjectStoryboard;
-		};
-		8A5F9638C54C627910317B30CC749C51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 46065AF968A5A92D450BB21F7F24367D;
-			remoteInfo = Swinject;
-		};
-		9D43FDBB6CA0DDC19E8AA633DB520D5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 46065AF968A5A92D450BB21F7F24367D;
-			remoteInfo = Swinject;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0497A49AC3794175C5E229CF35688D72 /* Assembler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembler.swift; path = Sources/Assembler.swift; sourceTree = "<group>"; };
-		061173F7BB24EF12A58B72AEA4B24B76 /* Pods-MealsApp-MealsAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsApp-MealsAppUITests.modulemap"; sourceTree = "<group>"; };
-		08F225BDC34B407BFB32F4761F16CD6A /* ServiceEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceEntry.swift; path = Sources/ServiceEntry.swift; sourceTree = "<group>"; };
-		0B9165C8C28C28EF07A4EEC61E0C9F9C /* Swinject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swinject.release.xcconfig; sourceTree = "<group>"; };
-		11D512A6B9B79EB9C7E7B6BF85E4E4F6 /* Container.TypeForwarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.TypeForwarding.swift; path = Sources/Container.TypeForwarding.swift; sourceTree = "<group>"; };
-		1F84FC85D9E9FAA4564FDE8A1DD3633C /* RegistrationNameAssociatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationNameAssociatable.swift; path = Sources/RegistrationNameAssociatable.swift; sourceTree = "<group>"; };
-		1F8E06A3810A8904A2A69D6ED9A64CEC /* Swinject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swinject.debug.xcconfig; sourceTree = "<group>"; };
-		2AA7EC25C3989CCEBA321FB555D64C24 /* SwinjectStoryboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwinjectStoryboard-umbrella.h"; sourceTree = "<group>"; };
-		2EFF5736A417F61F756C9143A56A5C82 /* Swinject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Swinject-Info.plist"; sourceTree = "<group>"; };
-		3137BB19C00F6AFED09A57B83BD32345 /* Container.Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.Logging.swift; path = Sources/Container.Logging.swift; sourceTree = "<group>"; };
-		357C4AA20CA5BD0953ECF0CF54A0252F /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwinjectStoryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0125BC61402A5E93A029A4D6F4A87A2B /* Pods-MealsApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsApp-umbrella.h"; sourceTree = "<group>"; };
+		04651F3ADD73AC39899CC1422D428B28 /* Pods-MealsAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsAppTests-dummy.m"; sourceTree = "<group>"; };
+		070D4776D1E9ACB1EC2331B90627F3C7 /* Pods-MealsApp-MealsAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-MealsAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		18A785A6B874E7A9E095B346BF064C86 /* Pods-MealsAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		19BD021DDF52C1238954A9E3B587C9C6 /* Pods-MealsApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		1CC8230A6DA8B6B47D6FB443AFE78DDC /* Pods-MealsApp-MealsAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-MealsAppUITests-Info.plist"; sourceTree = "<group>"; };
+		21A2418F1E99CC2B865CD1636C3689F9 /* Pods-MealsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		22A181C871BC0C337657C8D0E800DD4A /* Pods-MealsApp-MealsAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsApp-MealsAppUITests-dummy.m"; sourceTree = "<group>"; };
+		2321E768EB13F0C14AFC901A4AE1810F /* Pods-MealsApp-MealsAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsApp-MealsAppUITests.modulemap"; sourceTree = "<group>"; };
+		340862C9444696C58E7DB7330EC37A91 /* Pods-MealsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp.release.xcconfig"; sourceTree = "<group>"; };
+		3717285F2DDF6B18BF12BC1D5730D6BD /* Pods-MealsApp-MealsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp-MealsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3D766F8591F87F2EBA08F2C2DADD0F83 /* ObjectScope.Standard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.Standard.swift; path = Sources/ObjectScope.Standard.swift; sourceTree = "<group>"; };
-		49443021635A1F5F5FF14660AE23A225 /* Pods-MealsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4BD985AF1E4E981AC1DE64A3728E9D7F /* SwinjectStoryboard+SetUp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwinjectStoryboard+SetUp.m"; path = "Sources/ObjectiveC/Others/SwinjectStoryboard+SetUp.m"; sourceTree = "<group>"; };
-		4BF7D4F6D90D3DE9E830B9FDA90E42F3 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Behavior.swift; sourceTree = "<group>"; };
-		4DAA777227BCD6084C6375D7C42E3595 /* Pods-MealsApp-MealsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp-MealsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4E3AC84599548EF8F39A344066E757A1 /* SwinjectStoryboard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwinjectStoryboard-Info.plist"; sourceTree = "<group>"; };
-		4EFE03D7CA272567BE140B7A0C252D30 /* _SwinjectStoryboardBase(iOS-tvOS).swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "_SwinjectStoryboardBase(iOS-tvOS).swift"; path = "Sources/iOS-tvOS/_SwinjectStoryboardBase(iOS-tvOS).swift"; sourceTree = "<group>"; };
-		50A7833B0EC8A1084DE49CAA693708B0 /* SwinjectStoryboardProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardProtocol.swift; path = Sources/SwinjectStoryboardProtocol.swift; sourceTree = "<group>"; };
-		576504CE671DF11E5CBDD4EEA85F3B62 /* Pods-MealsAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5A8540DB5D87DB01FAB2E6E7720D7214 /* Pods-MealsApp-MealsAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsApp-MealsAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5A9D339F9449116932ED039F2CE1B16B /* InjectionVerifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InjectionVerifiable.swift; path = Sources/InjectionVerifiable.swift; sourceTree = "<group>"; };
-		619A977AD2784271E906B78EE8C3779B /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Once.swift"; path = "Sources/DispatchQueue+Once.swift"; sourceTree = "<group>"; };
-		61CB5AA2790BFBCA6D8F00AE767AEF79 /* Pods-MealsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp.debug.xcconfig"; sourceTree = "<group>"; };
-		63DA2B8B2CE48A122BF795101E7FE575 /* SpinLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinLock.swift; path = Sources/SpinLock.swift; sourceTree = "<group>"; };
-		6B3E49E2B363409FB3657EC95B76201A /* ServiceEntry.TypeForwarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceEntry.TypeForwarding.swift; path = Sources/ServiceEntry.TypeForwarding.swift; sourceTree = "<group>"; };
-		6C578991D79518DEC2645F29D83C38C0 /* GraphIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphIdentifier.swift; path = Sources/GraphIdentifier.swift; sourceTree = "<group>"; };
-		72ACD003484DDF7A56D2D9F900202BEE /* Pods-MealsApp-MealsAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsApp-MealsAppUITests-dummy.m"; sourceTree = "<group>"; };
-		72DCFC84C4487D76FB201FA8B6474EB5 /* Pods-MealsApp-MealsAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsApp-MealsAppUITests-umbrella.h"; sourceTree = "<group>"; };
-		762A4F46EF9CBFA91E46FCFAACF71315 /* SwinjectStoryboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwinjectStoryboard-prefix.pch"; sourceTree = "<group>"; };
-		7D29231984E3EA97F51B28FC5A7C7CFB /* Swinject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Swinject.modulemap; sourceTree = "<group>"; };
-		837DCE444F9240F2AA32DC4EE45365D5 /* Pods-MealsApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsApp-umbrella.h"; sourceTree = "<group>"; };
-		84AB6EC7C82CA6E1F93608187F42E27F /* ObjectScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectScope.swift; path = Sources/ObjectScope.swift; sourceTree = "<group>"; };
-		84F4E85344B5B88E7E38AC72DB8D59A1 /* Pods-MealsApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-Info.plist"; sourceTree = "<group>"; };
-		8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AE69BB3EB237D94E019FABA8AAB409A /* Pods_MealsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BE6FC4CA49DA2A99320C86E13B18E98 /* Pods-MealsAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsAppTests-umbrella.h"; sourceTree = "<group>"; };
-		8DF5D05447FBE295FFA4557D57192C80 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/FunctionType.swift; sourceTree = "<group>"; };
-		8E79E159A758CAA66E50BC5D70F16E40 /* _Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = _Resolver.swift; path = Sources/_Resolver.swift; sourceTree = "<group>"; };
-		98E5EE3EC39F12A23B3B110604C7B979 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
-		9A6E203964B43CF77F52B48CECCFA6BC /* Pods-MealsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		9C69295B4938AC30801C878162982A0F /* ViewController+Swinject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ViewController+Swinject.swift"; path = "Sources/ViewController+Swinject.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EC91E5AFC524812C9D3E5974107E54A /* Container.Arguments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.Arguments.swift; path = Sources/Container.Arguments.swift; sourceTree = "<group>"; };
-		A2088D7D4DD5A85595E2AD91BCDD518A /* Pods-MealsAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsAppTests-dummy.m"; sourceTree = "<group>"; };
-		A2FA323D30FE8F5ED9450D3A828EE22B /* Pods_MealsApp_MealsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsApp_MealsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0352E0792850A994899C4BDF170381B /* UIStoryboard+Swizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Swizzling.swift"; path = "Sources/iOS-tvOS/UIStoryboard+Swizzling.swift"; sourceTree = "<group>"; };
-		B26CA9B91FF079159B06A9EF86F963DE /* Pods-MealsApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B27790B8AF2F698FFF95B744C99C6559 /* InstanceWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceWrapper.swift; path = Sources/InstanceWrapper.swift; sourceTree = "<group>"; };
-		B3FAE2FA1788ACFEC17F70CD7A3AF447 /* SwinjectStoryboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwinjectStoryboard.release.xcconfig; sourceTree = "<group>"; };
-		B5531D04C8BBA5CEF28420E65F495460 /* Pods-MealsAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B76704385C8416734D065A39031F6A88 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
-		B797E4B491383A75D95D4269E2D66230 /* UnavailableItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnavailableItems.swift; path = Sources/UnavailableItems.swift; sourceTree = "<group>"; };
-		BB468ABFA916E7370F1BD89F9C6F778F /* Swinject-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-prefix.pch"; sourceTree = "<group>"; };
-		BDBF978CAFECD79587D5BCCA9CE4100F /* Pods_MealsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2AADA49707FC5921A35098584769793 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboard.swift; path = Sources/SwinjectStoryboard.swift; sourceTree = "<group>"; };
-		C2CA0002DF52165113C7A566FDF60F86 /* SwinjectStoryboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwinjectStoryboard.debug.xcconfig; sourceTree = "<group>"; };
-		C5D94C1476DF1E40B8932EE46A709618 /* SynchronizedResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedResolver.swift; path = Sources/SynchronizedResolver.swift; sourceTree = "<group>"; };
-		D2D6900ACACD10ABB02001F6E8C0BDF5 /* Pods-MealsApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsApp-dummy.m"; sourceTree = "<group>"; };
-		D58C614284D51E6116A3815CC1B93D68 /* UnavailableItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnavailableItems.swift; path = Sources/UnavailableItems.swift; sourceTree = "<group>"; };
-		D5E1D189FBF48E111AFE0BAFD63B08F0 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp-MealsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D69ECD1265B2CF5F1EC92FBE3D4824A2 /* Pods-MealsApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsApp.modulemap"; sourceTree = "<group>"; };
-		D9C2E064E9EAFE7C6BBEAEFD4A2E4AA0 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = Sources/Container.swift; sourceTree = "<group>"; };
-		D9C8335880E90D9377766B8FE19FCE09 /* ServiceKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceKey.swift; path = Sources/ServiceKey.swift; sourceTree = "<group>"; };
-		DB1F25E9D75D596105AB6DF53F513506 /* Pods-MealsAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsAppTests.modulemap"; sourceTree = "<group>"; };
-		DBB6EA67B092F361E57E3D31C3D2F99D /* Pods-MealsApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MealsApp-frameworks.sh"; sourceTree = "<group>"; };
-		DE0DAD1BEC9A66F5A88B821ED8E6E869 /* SynchronizedResolver.Arguments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedResolver.Arguments.swift; path = Sources/SynchronizedResolver.Arguments.swift; sourceTree = "<group>"; };
-		E10E41BBC8502642409200CBCAFD3F36 /* SwinjectStoryboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwinjectStoryboard-dummy.m"; sourceTree = "<group>"; };
-		E296B58665A95149E615694A8D8E3382 /* Pods-MealsApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		E3E8485BA2B22FD6FCF8541B1A32F18C /* InstanceStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstanceStorage.swift; path = Sources/InstanceStorage.swift; sourceTree = "<group>"; };
-		E4E318A523AC1336111A4B6496FF7632 /* Pods-MealsAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsAppTests-Info.plist"; sourceTree = "<group>"; };
-		E79BAA312060A721F9B5347E63F2559D /* Pods-MealsApp-MealsAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MealsApp-MealsAppUITests-frameworks.sh"; sourceTree = "<group>"; };
-		E8177D90FB6C98D6548F521AF03A0630 /* Pods-MealsApp-MealsAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-MealsAppUITests-Info.plist"; sourceTree = "<group>"; };
-		E9A16C88E77D1D6B9188FC39241430D9 /* Swinject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Swinject-dummy.m"; sourceTree = "<group>"; };
-		EACAC2AB12D08CC501899FEF35A1D911 /* Swinject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swinject-umbrella.h"; sourceTree = "<group>"; };
-		EE5A77282D4D07699EE22318E088E6B4 /* Assembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assembly.swift; path = Sources/Assembly.swift; sourceTree = "<group>"; };
-		EFF4A552AF65A58F435221A4A0CA65C1 /* SwinjectStoryboardOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardOption.swift; path = Sources/SwinjectStoryboardOption.swift; sourceTree = "<group>"; };
-		F1C4B5340E64A8314B809C5A67FE0916 /* Pods-MealsApp-MealsAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-MealsAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F303CF1C93055DAE597F1F494B8E2AF7 /* Swinject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Swinject.h; path = Sources/Swinject.h; sourceTree = "<group>"; };
-		F5061EB018F5157E774D0446CCC495F9 /* SwinjectStoryboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwinjectStoryboard.modulemap; sourceTree = "<group>"; };
-		F55905A4120C3F1EBCA43ADFBA66A41D /* Container+SwinjectStoryboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Container+SwinjectStoryboard.swift"; path = "Sources/Container+SwinjectStoryboard.swift"; sourceTree = "<group>"; };
-		FB8F83BEAA78FBCAB7383767AD6949E7 /* SwinjectStoryboard+StoryboardReference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwinjectStoryboard+StoryboardReference.swift"; path = "Sources/SwinjectStoryboard+StoryboardReference.swift"; sourceTree = "<group>"; };
-		FE43CBB20D119F0EBD974AF34E286D81 /* DebugHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DebugHelper.swift; path = Sources/DebugHelper.swift; sourceTree = "<group>"; };
-		FF44A46C370C922CE8D2D01116F05BF7 /* Pods-MealsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp.release.xcconfig"; sourceTree = "<group>"; };
+		3EA768103DA254A2503ED940F820624C /* Pods-MealsApp-MealsAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsApp-MealsAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		62FA663116166129354B518D25E65761 /* Pods-MealsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		73A3DA710614B3628BE305CABA8B47F7 /* Pods-MealsAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsAppTests-Info.plist"; sourceTree = "<group>"; };
+		80DA05F53E4F544336CCC719BE592D1F /* Pods-MealsApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MealsApp-dummy.m"; sourceTree = "<group>"; };
+		80FC7F6AFE8993EFA6DDFC6503D25AAC /* Pods-MealsAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MealsAppTests-umbrella.h"; sourceTree = "<group>"; };
+		85910648C33BA6D61BEAC980CC5B34FD /* Pods-MealsAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsAppTests.modulemap"; sourceTree = "<group>"; };
+		87107E810574917BAF444A5176359B81 /* Pods-MealsApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsApp-Info.plist"; sourceTree = "<group>"; };
+		8AE69BB3EB237D94E019FABA8AAB409A /* Pods-MealsApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MealsApp"; path = Pods_MealsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		973232217B622491F7226205D1A10CFB /* Pods-MealsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2FA323D30FE8F5ED9450D3A828EE22B /* Pods-MealsApp-MealsAppUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MealsApp-MealsAppUITests"; path = Pods_MealsApp_MealsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDBF978CAFECD79587D5BCCA9CE4100F /* Pods-MealsAppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MealsAppTests"; path = Pods_MealsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C98B2CCB2CFB0173E74B57E0A7FF5E /* Pods-MealsAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MealsAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB4A635693A999088F164D85E635E5C5 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MealsApp-MealsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDF703E9F943111CA45F230BED272D00 /* Pods-MealsApp-MealsAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsApp-MealsAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E5EADD04E4FE71031B6A8EAC15250314 /* Pods-MealsApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MealsApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC45CD4DB862025DE45F744C081C4D38 /* Pods-MealsApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MealsApp.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,192 +69,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52715B4F6CDCA321E0C20E24B9B7586E /* Frameworks */ = {
+		8E869649283763F1C11408CCEB595345 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0169F2FF321973F5D39233068457DC1B /* Foundation.framework in Frameworks */,
+				429B29C00F48F6B946D061CACFF9609E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75A913EF66BC7720322847A1C65D2858 /* Frameworks */ = {
+		F38A288E31F71FAF4EFB318740AACCB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B1E4BA445BFCA53700ED7219B4F95A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9505F5BF5E90958343C1DC1E042695CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C72F49501298FB8B9D293CF8F0EFC6EB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF0DC8D8D342CDEEEDFA7DA3772C16AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B4FB8A1986848F98EB740DD24F21B3E /* Foundation.framework in Frameworks */,
+				55D990B4C14B39A31FC27F1CA4B59E8E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1ECFB1842EDA2E78076F99DADB19847D /* Pods-MealsApp-MealsAppUITests */ = {
+		2B8B4F7062F85505B62BD83353001AE8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				061173F7BB24EF12A58B72AEA4B24B76 /* Pods-MealsApp-MealsAppUITests.modulemap */,
-				5A8540DB5D87DB01FAB2E6E7720D7214 /* Pods-MealsApp-MealsAppUITests-acknowledgements.markdown */,
-				F1C4B5340E64A8314B809C5A67FE0916 /* Pods-MealsApp-MealsAppUITests-acknowledgements.plist */,
-				72ACD003484DDF7A56D2D9F900202BEE /* Pods-MealsApp-MealsAppUITests-dummy.m */,
-				E79BAA312060A721F9B5347E63F2559D /* Pods-MealsApp-MealsAppUITests-frameworks.sh */,
-				E8177D90FB6C98D6548F521AF03A0630 /* Pods-MealsApp-MealsAppUITests-Info.plist */,
-				72DCFC84C4487D76FB201FA8B6474EB5 /* Pods-MealsApp-MealsAppUITests-umbrella.h */,
-				D5E1D189FBF48E111AFE0BAFD63B08F0 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */,
-				4DAA777227BCD6084C6375D7C42E3595 /* Pods-MealsApp-MealsAppUITests.release.xcconfig */,
+				EB599D7FB4CD6200D0BD2D65CCD02338 /* Pods-MealsApp */,
+				31B1B0EBFF93CE1AE0FC2A1D84C493E5 /* Pods-MealsApp-MealsAppUITests */,
+				5D976C6D87A6A919A08A1CBCC08EAF6A /* Pods-MealsAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		31B1B0EBFF93CE1AE0FC2A1D84C493E5 /* Pods-MealsApp-MealsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2321E768EB13F0C14AFC901A4AE1810F /* Pods-MealsApp-MealsAppUITests.modulemap */,
+				DDF703E9F943111CA45F230BED272D00 /* Pods-MealsApp-MealsAppUITests-acknowledgements.markdown */,
+				070D4776D1E9ACB1EC2331B90627F3C7 /* Pods-MealsApp-MealsAppUITests-acknowledgements.plist */,
+				22A181C871BC0C337657C8D0E800DD4A /* Pods-MealsApp-MealsAppUITests-dummy.m */,
+				1CC8230A6DA8B6B47D6FB443AFE78DDC /* Pods-MealsApp-MealsAppUITests-Info.plist */,
+				3EA768103DA254A2503ED940F820624C /* Pods-MealsApp-MealsAppUITests-umbrella.h */,
+				DB4A635693A999088F164D85E635E5C5 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */,
+				3717285F2DDF6B18BF12BC1D5730D6BD /* Pods-MealsApp-MealsAppUITests.release.xcconfig */,
 			);
 			name = "Pods-MealsApp-MealsAppUITests";
 			path = "Target Support Files/Pods-MealsApp-MealsAppUITests";
 			sourceTree = "<group>";
 		};
-		2483F629FC54AAFBD4736E83337584D0 /* Pods-MealsApp */ = {
+		5D976C6D87A6A919A08A1CBCC08EAF6A /* Pods-MealsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D69ECD1265B2CF5F1EC92FBE3D4824A2 /* Pods-MealsApp.modulemap */,
-				B26CA9B91FF079159B06A9EF86F963DE /* Pods-MealsApp-acknowledgements.markdown */,
-				E296B58665A95149E615694A8D8E3382 /* Pods-MealsApp-acknowledgements.plist */,
-				D2D6900ACACD10ABB02001F6E8C0BDF5 /* Pods-MealsApp-dummy.m */,
-				DBB6EA67B092F361E57E3D31C3D2F99D /* Pods-MealsApp-frameworks.sh */,
-				84F4E85344B5B88E7E38AC72DB8D59A1 /* Pods-MealsApp-Info.plist */,
-				837DCE444F9240F2AA32DC4EE45365D5 /* Pods-MealsApp-umbrella.h */,
-				61CB5AA2790BFBCA6D8F00AE767AEF79 /* Pods-MealsApp.debug.xcconfig */,
-				FF44A46C370C922CE8D2D01116F05BF7 /* Pods-MealsApp.release.xcconfig */,
-			);
-			name = "Pods-MealsApp";
-			path = "Target Support Files/Pods-MealsApp";
-			sourceTree = "<group>";
-		};
-		41590705E035265CCEE25B9B55E2CB43 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D29231984E3EA97F51B28FC5A7C7CFB /* Swinject.modulemap */,
-				E9A16C88E77D1D6B9188FC39241430D9 /* Swinject-dummy.m */,
-				2EFF5736A417F61F756C9143A56A5C82 /* Swinject-Info.plist */,
-				BB468ABFA916E7370F1BD89F9C6F778F /* Swinject-prefix.pch */,
-				EACAC2AB12D08CC501899FEF35A1D911 /* Swinject-umbrella.h */,
-				1F8E06A3810A8904A2A69D6ED9A64CEC /* Swinject.debug.xcconfig */,
-				0B9165C8C28C28EF07A4EEC61E0C9F9C /* Swinject.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Swinject";
-			sourceTree = "<group>";
-		};
-		68A43FCF91E9C996D8C7D9F24D907B56 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2483F629FC54AAFBD4736E83337584D0 /* Pods-MealsApp */,
-				1ECFB1842EDA2E78076F99DADB19847D /* Pods-MealsApp-MealsAppUITests */,
-				A66E564C36CF69DB9FF5CD71ABB4481C /* Pods-MealsAppTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7241E58B982C492F7FBC2923F3C768E3 /* Swinject */ = {
-			isa = PBXGroup;
-			children = (
-				8E79E159A758CAA66E50BC5D70F16E40 /* _Resolver.swift */,
-				0497A49AC3794175C5E229CF35688D72 /* Assembler.swift */,
-				EE5A77282D4D07699EE22318E088E6B4 /* Assembly.swift */,
-				4BF7D4F6D90D3DE9E830B9FDA90E42F3 /* Behavior.swift */,
-				D9C2E064E9EAFE7C6BBEAEFD4A2E4AA0 /* Container.swift */,
-				9EC91E5AFC524812C9D3E5974107E54A /* Container.Arguments.swift */,
-				3137BB19C00F6AFED09A57B83BD32345 /* Container.Logging.swift */,
-				11D512A6B9B79EB9C7E7B6BF85E4E4F6 /* Container.TypeForwarding.swift */,
-				FE43CBB20D119F0EBD974AF34E286D81 /* DebugHelper.swift */,
-				8DF5D05447FBE295FFA4557D57192C80 /* FunctionType.swift */,
-				6C578991D79518DEC2645F29D83C38C0 /* GraphIdentifier.swift */,
-				E3E8485BA2B22FD6FCF8541B1A32F18C /* InstanceStorage.swift */,
-				B27790B8AF2F698FFF95B744C99C6559 /* InstanceWrapper.swift */,
-				84AB6EC7C82CA6E1F93608187F42E27F /* ObjectScope.swift */,
-				3D766F8591F87F2EBA08F2C2DADD0F83 /* ObjectScope.Standard.swift */,
-				B76704385C8416734D065A39031F6A88 /* Resolver.swift */,
-				08F225BDC34B407BFB32F4761F16CD6A /* ServiceEntry.swift */,
-				6B3E49E2B363409FB3657EC95B76201A /* ServiceEntry.TypeForwarding.swift */,
-				D9C8335880E90D9377766B8FE19FCE09 /* ServiceKey.swift */,
-				63DA2B8B2CE48A122BF795101E7FE575 /* SpinLock.swift */,
-				F303CF1C93055DAE597F1F494B8E2AF7 /* Swinject.h */,
-				C5D94C1476DF1E40B8932EE46A709618 /* SynchronizedResolver.swift */,
-				DE0DAD1BEC9A66F5A88B821ED8E6E869 /* SynchronizedResolver.Arguments.swift */,
-				D58C614284D51E6116A3815CC1B93D68 /* UnavailableItems.swift */,
-				41590705E035265CCEE25B9B55E2CB43 /* Support Files */,
-			);
-			path = Swinject;
-			sourceTree = "<group>";
-		};
-		9817200C14EB4BCA92D6C37BE408109A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7241E58B982C492F7FBC2923F3C768E3 /* Swinject */,
-				C87DEF1E7D8B49D15DBDC991E008142D /* SwinjectStoryboard */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A66E564C36CF69DB9FF5CD71ABB4481C /* Pods-MealsAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				DB1F25E9D75D596105AB6DF53F513506 /* Pods-MealsAppTests.modulemap */,
-				B5531D04C8BBA5CEF28420E65F495460 /* Pods-MealsAppTests-acknowledgements.markdown */,
-				576504CE671DF11E5CBDD4EEA85F3B62 /* Pods-MealsAppTests-acknowledgements.plist */,
-				A2088D7D4DD5A85595E2AD91BCDD518A /* Pods-MealsAppTests-dummy.m */,
-				E4E318A523AC1336111A4B6496FF7632 /* Pods-MealsAppTests-Info.plist */,
-				8BE6FC4CA49DA2A99320C86E13B18E98 /* Pods-MealsAppTests-umbrella.h */,
-				49443021635A1F5F5FF14660AE23A225 /* Pods-MealsAppTests.debug.xcconfig */,
-				9A6E203964B43CF77F52B48CECCFA6BC /* Pods-MealsAppTests.release.xcconfig */,
+				85910648C33BA6D61BEAC980CC5B34FD /* Pods-MealsAppTests.modulemap */,
+				18A785A6B874E7A9E095B346BF064C86 /* Pods-MealsAppTests-acknowledgements.markdown */,
+				C6C98B2CCB2CFB0173E74B57E0A7FF5E /* Pods-MealsAppTests-acknowledgements.plist */,
+				04651F3ADD73AC39899CC1422D428B28 /* Pods-MealsAppTests-dummy.m */,
+				73A3DA710614B3628BE305CABA8B47F7 /* Pods-MealsAppTests-Info.plist */,
+				80FC7F6AFE8993EFA6DDFC6503D25AAC /* Pods-MealsAppTests-umbrella.h */,
+				21A2418F1E99CC2B865CD1636C3689F9 /* Pods-MealsAppTests.debug.xcconfig */,
+				973232217B622491F7226205D1A10CFB /* Pods-MealsAppTests.release.xcconfig */,
 			);
 			name = "Pods-MealsAppTests";
 			path = "Target Support Files/Pods-MealsAppTests";
 			sourceTree = "<group>";
 		};
-		C87DEF1E7D8B49D15DBDC991E008142D /* SwinjectStoryboard */ = {
+		627C8894B245109E862B894B812548E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EFE03D7CA272567BE140B7A0C252D30 /* _SwinjectStoryboardBase(iOS-tvOS).swift */,
-				98E5EE3EC39F12A23B3B110604C7B979 /* Box.swift */,
-				F55905A4120C3F1EBCA43ADFBA66A41D /* Container+SwinjectStoryboard.swift */,
-				619A977AD2784271E906B78EE8C3779B /* DispatchQueue+Once.swift */,
-				5A9D339F9449116932ED039F2CE1B16B /* InjectionVerifiable.swift */,
-				1F84FC85D9E9FAA4564FDE8A1DD3633C /* RegistrationNameAssociatable.swift */,
-				C2AADA49707FC5921A35098584769793 /* SwinjectStoryboard.swift */,
-				4BD985AF1E4E981AC1DE64A3728E9D7F /* SwinjectStoryboard+SetUp.m */,
-				FB8F83BEAA78FBCAB7383767AD6949E7 /* SwinjectStoryboard+StoryboardReference.swift */,
-				EFF4A552AF65A58F435221A4A0CA65C1 /* SwinjectStoryboardOption.swift */,
-				50A7833B0EC8A1084DE49CAA693708B0 /* SwinjectStoryboardProtocol.swift */,
-				B0352E0792850A994899C4BDF170381B /* UIStoryboard+Swizzling.swift */,
-				B797E4B491383A75D95D4269E2D66230 /* UnavailableItems.swift */,
-				9C69295B4938AC30801C878162982A0F /* ViewController+Swinject.swift */,
-				CD4E2595C6CD0F5F8A5405A03FBF138E /* Support Files */,
+				8AE69BB3EB237D94E019FABA8AAB409A /* Pods-MealsApp */,
+				A2FA323D30FE8F5ED9450D3A828EE22B /* Pods-MealsApp-MealsAppUITests */,
+				BDBF978CAFECD79587D5BCCA9CE4100F /* Pods-MealsAppTests */,
 			);
-			path = SwinjectStoryboard;
-			sourceTree = "<group>";
-		};
-		CD4E2595C6CD0F5F8A5405A03FBF138E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F5061EB018F5157E774D0446CCC495F9 /* SwinjectStoryboard.modulemap */,
-				E10E41BBC8502642409200CBCAFD3F36 /* SwinjectStoryboard-dummy.m */,
-				4E3AC84599548EF8F39A344066E757A1 /* SwinjectStoryboard-Info.plist */,
-				762A4F46EF9CBFA91E46FCFAACF71315 /* SwinjectStoryboard-prefix.pch */,
-				2AA7EC25C3989CCEBA321FB555D64C24 /* SwinjectStoryboard-umbrella.h */,
-				C2CA0002DF52165113C7A566FDF60F86 /* SwinjectStoryboard.debug.xcconfig */,
-				B3FAE2FA1788ACFEC17F70CD7A3AF447 /* SwinjectStoryboard.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwinjectStoryboard";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -397,9 +145,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9817200C14EB4BCA92D6C37BE408109A /* Pods */,
-				D98B3B702E532569EB8037D7AA041954 /* Products */,
-				68A43FCF91E9C996D8C7D9F24D907B56 /* Targets Support Files */,
+				627C8894B245109E862B894B812548E7 /* Products */,
+				2B8B4F7062F85505B62BD83353001AE8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -411,24 +158,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D98B3B702E532569EB8037D7AA041954 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8AE69BB3EB237D94E019FABA8AAB409A /* Pods_MealsApp.framework */,
-				A2FA323D30FE8F5ED9450D3A828EE22B /* Pods_MealsApp_MealsAppUITests.framework */,
-				BDBF978CAFECD79587D5BCCA9CE4100F /* Pods_MealsAppTests.framework */,
-				8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */,
-				357C4AA20CA5BD0953ECF0CF54A0252F /* SwinjectStoryboard.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB599D7FB4CD6200D0BD2D65CCD02338 /* Pods-MealsApp */ = {
+			isa = PBXGroup;
+			children = (
+				FC45CD4DB862025DE45F744C081C4D38 /* Pods-MealsApp.modulemap */,
+				E5EADD04E4FE71031B6A8EAC15250314 /* Pods-MealsApp-acknowledgements.markdown */,
+				19BD021DDF52C1238954A9E3B587C9C6 /* Pods-MealsApp-acknowledgements.plist */,
+				80DA05F53E4F544336CCC719BE592D1F /* Pods-MealsApp-dummy.m */,
+				87107E810574917BAF444A5176359B81 /* Pods-MealsApp-Info.plist */,
+				0125BC61402A5E93A029A4D6F4A87A2B /* Pods-MealsApp-umbrella.h */,
+				62FA663116166129354B518D25E65761 /* Pods-MealsApp.debug.xcconfig */,
+				340862C9444696C58E7DB7330EC37A91 /* Pods-MealsApp.release.xcconfig */,
+			);
+			name = "Pods-MealsApp";
+			path = "Target Support Files/Pods-MealsApp";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,36 +193,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28AD9F2C16E0C4E26B3CBE9A7953C5AF /* Headers */ = {
+		7081BA7D8F6D6DEF6A6168C0D49B849E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1649A18393FC03E78FEDF4AB3DC8F4ED /* Swinject.h in Headers */,
-				7258394E9A67346BDE52C05A7B1BFEB0 /* Swinject-umbrella.h in Headers */,
+				029805F1FFCE2966C06972A8AE796141 /* Pods-MealsApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9F3EBFDC50C455B34903AACAC1833C /* Headers */ = {
+		D0863140BFD0D7ADC97BC23FB3838580 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				762E2D3E6B1A0A3E44FE14F87F8F693B /* Pods-MealsApp-MealsAppUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB4E8986780158C320D2F3C8696A9BAD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3102252B63C377C77BD1BA7ED0C0A01C /* SwinjectStoryboard-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF31613A528217108EA78DB6D6621C98 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8918921823E6964544870D29D859C2F8 /* Pods-MealsApp-umbrella.h in Headers */,
+				F49B7EE823C4E8158DBF5A83A0FF0D03 /* Pods-MealsApp-MealsAppUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,88 +224,47 @@
 			buildRules = (
 			);
 			dependencies = (
-				7A3C952788C78FB473A66E9E93C418BF /* PBXTargetDependency */,
+				4CC6C6102D550F8ADAADF31C6B1ACB4F /* PBXTargetDependency */,
 			);
 			name = "Pods-MealsAppTests";
 			productName = Pods_MealsAppTests;
-			productReference = BDBF978CAFECD79587D5BCCA9CE4100F /* Pods_MealsAppTests.framework */;
+			productReference = BDBF978CAFECD79587D5BCCA9CE4100F /* Pods-MealsAppTests */;
 			productType = "com.apple.product-type.framework";
 		};
 		15527172FA19CB3A2D10D69BB6DD7898 /* Pods-MealsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D80810760BF9BE3B38996F31687A57E8 /* Build configuration list for PBXNativeTarget "Pods-MealsApp" */;
+			buildConfigurationList = 714AD236678E8BAB917EBBDE90C81858 /* Build configuration list for PBXNativeTarget "Pods-MealsApp" */;
 			buildPhases = (
-				FF31613A528217108EA78DB6D6621C98 /* Headers */,
-				F780C9EF9F71C2B6F6B0266AF59DCD14 /* Sources */,
-				52715B4F6CDCA321E0C20E24B9B7586E /* Frameworks */,
-				F25A98664CF795F3E391E5D62D9E6EFA /* Resources */,
+				7081BA7D8F6D6DEF6A6168C0D49B849E /* Headers */,
+				DAFC4F74625686A9224057AC11E85F07 /* Sources */,
+				8E869649283763F1C11408CCEB595345 /* Frameworks */,
+				2C54242BEAE8524ECE07138300ACC10C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				734A93E4B130081E544355A8D156CD9B /* PBXTargetDependency */,
-				398D2CB0059388E491822A66C37F476F /* PBXTargetDependency */,
 			);
 			name = "Pods-MealsApp";
 			productName = Pods_MealsApp;
-			productReference = 8AE69BB3EB237D94E019FABA8AAB409A /* Pods_MealsApp.framework */;
+			productReference = 8AE69BB3EB237D94E019FABA8AAB409A /* Pods-MealsApp */;
 			productType = "com.apple.product-type.framework";
 		};
 		2E599FB6D66D5BC872C79809D4CB725A /* Pods-MealsApp-MealsAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CD8F0E7CF8492F1A62616109F99CC0D /* Build configuration list for PBXNativeTarget "Pods-MealsApp-MealsAppUITests" */;
+			buildConfigurationList = 5771F06E2AD0ECD204F519D8C28DA711 /* Build configuration list for PBXNativeTarget "Pods-MealsApp-MealsAppUITests" */;
 			buildPhases = (
-				CB9F3EBFDC50C455B34903AACAC1833C /* Headers */,
-				B670F08EF5877F7EBA1A4CA2CD8021C4 /* Sources */,
-				9505F5BF5E90958343C1DC1E042695CB /* Frameworks */,
-				919243D74AD61CE3541E9861C11D4839 /* Resources */,
+				D0863140BFD0D7ADC97BC23FB3838580 /* Headers */,
+				2B447AB8953F5343FF0E70B546DDC291 /* Sources */,
+				F38A288E31F71FAF4EFB318740AACCB9 /* Frameworks */,
+				84B2732B675C743187FA7C1F9A3033B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9293AC536FEAAC236E288E0C401D1912 /* PBXTargetDependency */,
-				A05530BB5807B7193BE4F476DF6CCA9B /* PBXTargetDependency */,
 			);
 			name = "Pods-MealsApp-MealsAppUITests";
 			productName = Pods_MealsApp_MealsAppUITests;
-			productReference = A2FA323D30FE8F5ED9450D3A828EE22B /* Pods_MealsApp_MealsAppUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		46065AF968A5A92D450BB21F7F24367D /* Swinject */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 73B3010EA361E30F52ECDE46EF8F165B /* Build configuration list for PBXNativeTarget "Swinject" */;
-			buildPhases = (
-				28AD9F2C16E0C4E26B3CBE9A7953C5AF /* Headers */,
-				8AABC135090F496140B1759971FBA28E /* Sources */,
-				75A913EF66BC7720322847A1C65D2858 /* Frameworks */,
-				5E0C0974809429C98CA6A0756B6F8326 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Swinject;
-			productName = Swinject;
-			productReference = 8ACA110EF3B35B3FCC08297B3799D9AD /* Swinject.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		65AB6C22153B56B1A56B06A3553EB5AA /* SwinjectStoryboard */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45517F740E26230B8EBB51EE93CCB606 /* Build configuration list for PBXNativeTarget "SwinjectStoryboard" */;
-			buildPhases = (
-				EB4E8986780158C320D2F3C8696A9BAD /* Headers */,
-				A2A0F311498474D36207B775D5B569C5 /* Sources */,
-				BF0DC8D8D342CDEEEDFA7DA3772C16AA /* Frameworks */,
-				166CB9E9189C91CD87483DE78614341E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2482E57D35CBC4231C52F2B93D70461F /* PBXTargetDependency */,
-			);
-			name = SwinjectStoryboard;
-			productName = SwinjectStoryboard;
-			productReference = 357C4AA20CA5BD0953ECF0CF54A0252F /* SwinjectStoryboard.framework */;
+			productReference = A2FA323D30FE8F5ED9450D3A828EE22B /* Pods-MealsApp-MealsAppUITests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -592,27 +285,20 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D98B3B702E532569EB8037D7AA041954 /* Products */;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 627C8894B245109E862B894B812548E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				15527172FA19CB3A2D10D69BB6DD7898 /* Pods-MealsApp */,
 				2E599FB6D66D5BC872C79809D4CB725A /* Pods-MealsApp-MealsAppUITests */,
 				1384208022A34ABB8C97965F5D32703D /* Pods-MealsAppTests */,
-				46065AF968A5A92D450BB21F7F24367D /* Swinject */,
-				65AB6C22153B56B1A56B06A3553EB5AA /* SwinjectStoryboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		166CB9E9189C91CD87483DE78614341E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21BEA95150B353A0163318C7064CB3A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -620,21 +306,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E0C0974809429C98CA6A0756B6F8326 /* Resources */ = {
+		2C54242BEAE8524ECE07138300ACC10C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		919243D74AD61CE3541E9861C11D4839 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F25A98664CF795F3E391E5D62D9E6EFA /* Resources */ = {
+		84B2732B675C743187FA7C1F9A3033B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -644,6 +323,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B447AB8953F5343FF0E70B546DDC291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E383B0418EB6EC68DAAFCCE20CC5C2A6 /* Pods-MealsApp-MealsAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D030A347FEE01A8C787C7C8AA02AC3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,237 +339,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AABC135090F496140B1759971FBA28E /* Sources */ = {
+		DAFC4F74625686A9224057AC11E85F07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE5A66BE1053B7585CFF70DA86CDB88 /* _Resolver.swift in Sources */,
-				C470B0B618913875ED2DC70A97CB2D2D /* Assembler.swift in Sources */,
-				E6C6B0E6214302929F43FA0B39F8F57D /* Assembly.swift in Sources */,
-				F91EFED58AC1BEF1A57EEECEF6414747 /* Behavior.swift in Sources */,
-				EAEF18EF2DD4546E74CEE074A56A3A55 /* Container.swift in Sources */,
-				0CDE7D63B802929F15FA2F763992557E /* Container.Arguments.swift in Sources */,
-				7B899CC32E98AD081C4D95B35791FE8F /* Container.Logging.swift in Sources */,
-				60B8C90440DEDE9AF0AF77B598947D36 /* Container.TypeForwarding.swift in Sources */,
-				3BED6C79CE0D9C88E4D08867FCF1A9DF /* DebugHelper.swift in Sources */,
-				E7AAEAB8269C592C724E292579AAB03A /* FunctionType.swift in Sources */,
-				4710A4B056A64F5C8C5A311F70C2074E /* GraphIdentifier.swift in Sources */,
-				6F193DD83E68F7E5B718FBF5FE8339E9 /* InstanceStorage.swift in Sources */,
-				94DC328F63017D4C12102EC74AE48961 /* InstanceWrapper.swift in Sources */,
-				E2A45A4A08415D5B1B01AEB075B6FDAF /* ObjectScope.swift in Sources */,
-				F0F9194E9859BD07212A873E52D92847 /* ObjectScope.Standard.swift in Sources */,
-				A387FAAADF9CB38EC95DA43CC2D00749 /* Resolver.swift in Sources */,
-				8EF3BB4200FC546C6DA32D24302EE4BE /* ServiceEntry.swift in Sources */,
-				52AD180A0C2A345DDA99E7DB8D1AC719 /* ServiceEntry.TypeForwarding.swift in Sources */,
-				2C27B27255EF4108EA8567F9F7400850 /* ServiceKey.swift in Sources */,
-				5FC6C8C986B4D38D30C176BB559AFB94 /* SpinLock.swift in Sources */,
-				82D247435C87658924E5E51CB1FFDD1E /* Swinject-dummy.m in Sources */,
-				8AE0FCA832F7E1C064DB785C4DCFD0E0 /* SynchronizedResolver.swift in Sources */,
-				85F91AA8F9E7BCE2732D87BB27E267DC /* SynchronizedResolver.Arguments.swift in Sources */,
-				6085453EA01DDDB3A1CDB36EB1C6B3D6 /* UnavailableItems.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2A0F311498474D36207B775D5B569C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BE596C5F417874E4B1B3A488403775E /* _SwinjectStoryboardBase(iOS-tvOS).swift in Sources */,
-				E9CD34C9CB009F4E64EEE49512FF940B /* Box.swift in Sources */,
-				0AED061334CE604A2F11BE638C96E29D /* Container+SwinjectStoryboard.swift in Sources */,
-				231CB1652977409365B22CA34BC6CFF7 /* DispatchQueue+Once.swift in Sources */,
-				7DBF924EBF9FDF51763CA685A6979E89 /* InjectionVerifiable.swift in Sources */,
-				1878EA88E82C1BAE75716AB6E40FF0E9 /* RegistrationNameAssociatable.swift in Sources */,
-				55A03C83327D99845C7B977701FE79FB /* SwinjectStoryboard.swift in Sources */,
-				B3B8FE58628CFBF57E0E8BBFB66BEB54 /* SwinjectStoryboard+SetUp.m in Sources */,
-				C0ABAEA6B5FCA58A84428D76F66C8AB2 /* SwinjectStoryboard+StoryboardReference.swift in Sources */,
-				CEDA3CBCDDE50212A394A05FEE4BD75D /* SwinjectStoryboard-dummy.m in Sources */,
-				CE3918D8BAB0D5279B8B5F26AE8F6834 /* SwinjectStoryboardOption.swift in Sources */,
-				03D936DE3432595577D6410B6294BF77 /* SwinjectStoryboardProtocol.swift in Sources */,
-				C969041C1AB899AAD6E4612D2AF3824F /* UIStoryboard+Swizzling.swift in Sources */,
-				3293B7E5C824EC9ACA1C709366430C4C /* UnavailableItems.swift in Sources */,
-				4261A5A54281C445A7E91066581C13CA /* ViewController+Swinject.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B670F08EF5877F7EBA1A4CA2CD8021C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6084C01F44B78B860244B97F95DFD0D5 /* Pods-MealsApp-MealsAppUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F780C9EF9F71C2B6F6B0266AF59DCD14 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1F74F175EE1DF62388528297F555799 /* Pods-MealsApp-dummy.m in Sources */,
+				B200574796F6D288ABDB9F4DA0C29972 /* Pods-MealsApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2482E57D35CBC4231C52F2B93D70461F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Swinject;
-			target = 46065AF968A5A92D450BB21F7F24367D /* Swinject */;
-			targetProxy = 8A5F9638C54C627910317B30CC749C51 /* PBXContainerItemProxy */;
-		};
-		398D2CB0059388E491822A66C37F476F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwinjectStoryboard;
-			target = 65AB6C22153B56B1A56B06A3553EB5AA /* SwinjectStoryboard */;
-			targetProxy = 3963305C87B73F4F126C5AD9D12F755F /* PBXContainerItemProxy */;
-		};
-		734A93E4B130081E544355A8D156CD9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Swinject;
-			target = 46065AF968A5A92D450BB21F7F24367D /* Swinject */;
-			targetProxy = 416AEA55A691882883A7F07C5F5F29D3 /* PBXContainerItemProxy */;
-		};
-		7A3C952788C78FB473A66E9E93C418BF /* PBXTargetDependency */ = {
+		4CC6C6102D550F8ADAADF31C6B1ACB4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MealsApp";
 			target = 15527172FA19CB3A2D10D69BB6DD7898 /* Pods-MealsApp */;
-			targetProxy = 50152756009D0D08B51960B21B37A309 /* PBXContainerItemProxy */;
-		};
-		9293AC536FEAAC236E288E0C401D1912 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Swinject;
-			target = 46065AF968A5A92D450BB21F7F24367D /* Swinject */;
-			targetProxy = 9D43FDBB6CA0DDC19E8AA633DB520D5E /* PBXContainerItemProxy */;
-		};
-		A05530BB5807B7193BE4F476DF6CCA9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwinjectStoryboard;
-			target = 65AB6C22153B56B1A56B06A3553EB5AA /* SwinjectStoryboard */;
-			targetProxy = 7322DFB065303C08E32F4F93A2DB09D7 /* PBXContainerItemProxy */;
+			targetProxy = D7AC3BBF37F86FD91056DA37100D2A86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		17ECC2E9484A04517F97289C170DD416 /* Release */ = {
+		4F4879EEBE6413A1937A26525014DAC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B9165C8C28C28EF07A4EEC61E0C9F9C /* Swinject.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Swinject/Swinject-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Swinject/Swinject-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Swinject/Swinject.modulemap";
-				PRODUCT_MODULE_NAME = Swinject;
-				PRODUCT_NAME = Swinject;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2D631DE3828368923080B6E62778B0B8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3FAE2FA1788ACFEC17F70CD7A3AF447 /* SwinjectStoryboard.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard.modulemap";
-				PRODUCT_MODULE_NAME = SwinjectStoryboard;
-				PRODUCT_NAME = SwinjectStoryboard;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3CCB5D77155EA591E4D260ACCA81CD7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5E1D189FBF48E111AFE0BAFD63B08F0 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7C21E63B7E2F961F3A962A36AD095198 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF44A46C370C922CE8D2D01116F05BF7 /* Pods-MealsApp.release.xcconfig */;
+			baseConfigurationReference = 340862C9444696C58E7DB7330EC37A91 /* Pods-MealsApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -982,10 +461,12 @@
 			};
 			name = Release;
 		};
-		93E0C71FCCCC9F8C6AEF1E921F9558A7 /* Debug */ = {
+		9290EA7E3F10DF53E2CB31347AEBBD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8E06A3810A8904A2A69D6ED9A64CEC /* Swinject.debug.xcconfig */;
+			baseConfigurationReference = DB4A635693A999088F164D85E635E5C5 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -996,24 +477,102 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Swinject/Swinject-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Swinject/Swinject-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Swinject/Swinject.modulemap";
-				PRODUCT_MODULE_NAME = Swinject;
-				PRODUCT_NAME = Swinject;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9366087B8541199C1C529061E3E6ECA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3717285F2DDF6B18BF12BC1D5730D6BD /* Pods-MealsApp-MealsAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E0A1905D311F13776FB0B1920EDF33C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62FA663116166129354B518D25E65761 /* Pods-MealsApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp/Pods-MealsApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp/Pods-MealsApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1088,7 +647,7 @@
 		};
 		B7289BBDB16296ACB7EFC6D6CA6C3C7E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A6E203964B43CF77F52B48CECCFA6BC /* Pods-MealsAppTests.release.xcconfig */;
+			baseConfigurationReference = 973232217B622491F7226205D1A10CFB /* Pods-MealsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1128,7 +687,7 @@
 		};
 		C619204EADAA9C2648FCF95F48D34729 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49443021635A1F5F5FF14660AE23A225 /* Pods-MealsAppTests.debug.xcconfig */;
+			baseConfigurationReference = 21A2418F1E99CC2B865CD1636C3689F9 /* Pods-MealsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1165,135 +724,9 @@
 			};
 			name = Debug;
 		};
-		C69B99738A3369838D5B648E1A0D4872 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61CB5AA2790BFBCA6D8F00AE767AEF79 /* Pods-MealsApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp/Pods-MealsApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp/Pods-MealsApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D01CC806BB083E01BF1F5BA9B7FE553A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CA0002DF52165113C7A566FDF60F86 /* SwinjectStoryboard.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwinjectStoryboard/SwinjectStoryboard.modulemap";
-				PRODUCT_MODULE_NAME = SwinjectStoryboard;
-				PRODUCT_NAME = SwinjectStoryboard;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E4B2B5AA3A1369D2991D961383E1B1B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DAA777227BCD6084C6375D7C42E3595 /* Pods-MealsApp-MealsAppUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45517F740E26230B8EBB51EE93CCB606 /* Build configuration list for PBXNativeTarget "SwinjectStoryboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D01CC806BB083E01BF1F5BA9B7FE553A /* Debug */,
-				2D631DE3828368923080B6E62778B0B8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1303,20 +736,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CD8F0E7CF8492F1A62616109F99CC0D /* Build configuration list for PBXNativeTarget "Pods-MealsApp-MealsAppUITests" */ = {
+		5771F06E2AD0ECD204F519D8C28DA711 /* Build configuration list for PBXNativeTarget "Pods-MealsApp-MealsAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CCB5D77155EA591E4D260ACCA81CD7F /* Debug */,
-				E4B2B5AA3A1369D2991D961383E1B1B7 /* Release */,
+				9290EA7E3F10DF53E2CB31347AEBBD93 /* Debug */,
+				9366087B8541199C1C529061E3E6ECA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73B3010EA361E30F52ECDE46EF8F165B /* Build configuration list for PBXNativeTarget "Swinject" */ = {
+		714AD236678E8BAB917EBBDE90C81858 /* Build configuration list for PBXNativeTarget "Pods-MealsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93E0C71FCCCC9F8C6AEF1E921F9558A7 /* Debug */,
-				17ECC2E9484A04517F97289C170DD416 /* Release */,
+				9E0A1905D311F13776FB0B1920EDF33C /* Debug */,
+				4F4879EEBE6413A1937A26525014DAC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1326,15 +759,6 @@
 			buildConfigurations = (
 				C619204EADAA9C2648FCF95F48D34729 /* Debug */,
 				B7289BBDB16296ACB7EFC6D6CA6C3C7E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D80810760BF9BE3B38996F31687A57E8 /* Build configuration list for PBXNativeTarget "Pods-MealsApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C69B99738A3369838D5B648E1A0D4872 /* Debug */,
-				7C21E63B7E2F961F3A962A36AD095198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
