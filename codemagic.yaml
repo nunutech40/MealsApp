@@ -24,14 +24,40 @@ workflows:
       - name: Build for iOS Simulator (xcodebuild)
         script: |
           set -euo pipefail
-          # Jika kamu punya .xcworkspace (karena pernah pakai pods), gunakan itu.
-          # Kalau tidak, langsung gunakan .xcodeproj seperti di screenshotmu.
-          xcodebuild \
-            -project MealsApp/MealsApp.xcodeproj \
-            -scheme MealsApp \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
-            clean build | xcpretty
+
+          # Cari .xcworkspace dulu, kalau tidak ada gunakan .xcodeproj
+          WORKSPACE_PATH="$(git ls-files | grep -E '\.xcworkspace$' | head -n1 || true)"
+          PROJECT_PATH=""
+          if [ -z "$WORKSPACE_PATH" ]; then
+            PROJECT_PATH="$(git ls-files | grep -E '\.xcodeproj$' | head -n1 || true)"
+          fi
+
+          if [ -z "$WORKSPACE_PATH" ] && [ -z "$PROJECT_PATH" ]; then
+            echo "❌ Tidak menemukan .xcworkspace maupun .xcodeproj di repo."
+            exit 1
+          fi
+
+          SCHEME_NAME="MealsApp"
+
+          echo "Workspace: ${WORKSPACE_PATH:-<none>}"
+          echo "Project  : ${PROJECT_PATH:-<none>}"
+          echo "Scheme   : $SCHEME_NAME"
+
+          if [ -n "$WORKSPACE_PATH" ]; then
+            xcodebuild \
+              -workspace "$WORKSPACE_PATH" \
+              -scheme "$SCHEME_NAME" \
+              -sdk iphonesimulator \
+              -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
+              clean build | xcpretty
+          else
+            xcodebuild \
+              -project "$PROJECT_PATH" \
+              -scheme "$SCHEME_NAME" \
+              -sdk iphonesimulator \
+              -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
+              clean build | xcpretty
+          fi
 
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
