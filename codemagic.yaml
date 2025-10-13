@@ -1,13 +1,12 @@
 workflows:
   ios_ci:
-    name: iOS CI (auto-detect path)
+    name: iOS CI (tanpa CocoaPods)
     max_build_duration: 60
     environment:
       xcode: latest
 
     triggering:
-      events:
-        - push
+      events: [ push ]
       branch_patterns:
         - pattern: mealsapp-beforemodular
           include: true
@@ -17,50 +16,20 @@ workflows:
       - name: Debug layout
         script: |
           echo "PWD=$(pwd)"
-          echo "=== Struktur repo ==="
-          find . -maxdepth 2 -type f \( -name "*.xcodeproj" -o -name "*.xcworkspace" -o -name "Podfile" \)
+          find . -maxdepth 1 -name "*.xcodeproj" -print
+          find . -maxdepth 1 -name "*.xcworkspace" -print
 
-      - name: Build for iOS Simulator (auto detect)
+      - name: Build for iOS Simulator
         script: |
           set -euo pipefail
-          # Cari file proyek di root atau di subfolder MealsApp
-          PROJECT_PATH="$(find . -maxdepth 2 -name '*.xcodeproj' | head -n1 || true)"
-          WORKSPACE_PATH="$(find . -maxdepth 2 -name '*.xcworkspace' | head -n1 || true)"
-
-          if [ -z "$WORKSPACE_PATH" ] && [ -z "$PROJECT_PATH" ]; then
-            echo "❌ Tidak menemukan .xcodeproj / .xcworkspace."
-            exit 1
-          fi
-
-          SCHEME_NAME="MealsApp"
-
-          echo "Workspace: ${WORKSPACE_PATH:-<none>}"
-          echo "Project  : ${PROJECT_PATH:-<none>}"
-          echo "Scheme   : $SCHEME_NAME"
-
-          if [ -n "$WORKSPACE_PATH" ]; then
-            xcodebuild \
-              -workspace "$WORKSPACE_PATH" \
-              -scheme "$SCHEME_NAME" \
-              -sdk iphonesimulator \
-              -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
-              clean build | xcpretty
-          else
-            xcodebuild \
-              -project "$PROJECT_PATH" \
-              -scheme "$SCHEME_NAME" \
-              -sdk iphonesimulator \
-              -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
-              clean build | xcpretty
-          fi
+          PROJ="$(find . -maxdepth 1 -name '*.xcodeproj' | head -n1)"
+          xcodebuild \
+            -project "$PROJ" \
+            -scheme "MealsApp" \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
+            clean build | xcpretty
 
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Logs/**/*
-    publishing:
-      email:
-        recipients:
-          - nunutech4.0@gmail.com
-        notify:
-          success: false
-          failure: true
