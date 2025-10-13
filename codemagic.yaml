@@ -13,12 +13,14 @@ workflows:
           include: true
           source: true
 
-    cache:
+   cache:
       cache_paths:
         - ~/.cocoapods
-        - **/Pods
+        - "Pods"
+        - "**/Pods"
         - ~/Library/Caches/CocoaPods
         - ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+
 
     scripts:
       - name: Debug layout
