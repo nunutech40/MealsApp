@@ -10,7 +10,7 @@
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
-		A0A37E172E9CEA9F002606C0 /* codemagic.yml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yml */; };
+		A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yaml */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		A0C53AC02E950171003BF52C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53ABF2E950171003BF52C /* Core */; };
 		A0C53AC22E950176003BF52C /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53AC12E950176003BF52C /* Category */; };
@@ -44,7 +44,7 @@
 		A05E4FF42E49C921005A1DE2 /* MealsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05E50042E49C923005A1DE2 /* MealsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05E500E2E49C923005A1DE2 /* MealsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0A37E162E9CEA9F002606C0 /* codemagic.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yml; sourceTree = "<group>"; };
+		A0A37E162E9CEA9F002606C0 /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 		D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsApp_MealsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10FE8E7DD46E8E2AB4C1577 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp-MealsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB79EB26B2CF069750D7DBED /* Pods-MealsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MealsAppTests/Pods-MealsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,15 +72,11 @@
 		};
 		A05E50072E49C923005A1DE2 /* MealsAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MealsAppTests;
 			sourceTree = "<group>";
 		};
 		A05E50112E49C923005A1DE2 /* MealsAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MealsAppUITests;
 			sourceTree = "<group>";
 		};
@@ -122,7 +118,7 @@
 		A05E4FEB2E49C921005A1DE2 = {
 			isa = PBXGroup;
 			children = (
-				A0A37E162E9CEA9F002606C0 /* codemagic.yml */,
+				A0A37E162E9CEA9F002606C0 /* codemagic.yaml */,
 				A05E4FF62E49C921005A1DE2 /* MealsApp */,
 				A05E50072E49C923005A1DE2 /* MealsAppTests */,
 				A05E50112E49C923005A1DE2 /* MealsAppUITests */,
@@ -276,8 +272,8 @@
 				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */,
-				A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */,
+				A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */,
+				A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -296,7 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A37E172E9CEA9F002606C0 /* codemagic.yml in Resources */,
+				A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,11 +720,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */ = {
+		A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Core;
 		};
-		A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */ = {
+		A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Category;
 		};
@@ -779,12 +775,12 @@
 		};
 		A0C53ABF2E950171003BF52C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "Core" */;
+			package = A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */;
 			productName = Core;
 		};
 		A0C53AC12E950176003BF52C /* Category */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "Category" */;
+			package = A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */;
 			productName = Category;
 		};
 /* End XCSwiftPackageProductDependency section */
