@@ -3,24 +3,24 @@ workflows:
     name: iOS CI
     max_build_duration: 60
     environment:
-      xcode: latest          # perlu iOS 18 SDK untuk iPhone 16
+      xcode: latest          # iOS 18 SDK
       cocoapods: default
 
     triggering:
-      events: [ push ]
+      events:
+        - push
       branch_patterns:
         - pattern: main
           include: true
           source: true
 
-   cache:
+    cache:
       cache_paths:
         - ~/.cocoapods
         - "Pods"
         - "**/Pods"
         - ~/Library/Caches/CocoaPods
-        - ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
-
+        - "~/Library/Developer/Xcode/DerivedData/**/SourcePackages"
 
     scripts:
       - name: Debug layout
