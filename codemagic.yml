@@ -1,0 +1,46 @@
+
+workflows:
+  ios_ci:
+    name: iOS CI
+    max_build_duration: 60
+    environment:
+      xcode: 15.4            # atau 'latest'
+      cocoapods: default
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+
+    cache:
+      cache_paths:
+        - ~/.cocoapods
+        - Pods
+
+    scripts:
+      - name: Install dependencies (CocoaPods)
+        script: |
+          pod --version
+          pod install --project-directory=MealsApp
+
+      - name: Build for iOS Simulator (xcodebuild)
+        script: |
+          xcodebuild \
+            -workspace MealsApp/MealsApp.xcworkspace \
+            -scheme MealsApp \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            clean build | xcpretty
+
+    artifacts:
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Logs/**/*
+    publishing:
+      email:
+        recipients:
+          - you@example.com
+        notify:
+          success: false
+          failure: true
