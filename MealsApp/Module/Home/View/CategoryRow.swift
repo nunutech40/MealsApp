@@ -8,65 +8,37 @@
 import SwiftUI
 import CachedAsyncImage
 import Category
- 
 struct CategoryRow: View {
- 
-  var category: CategoryDomainModel
-  var body: some View {
-    VStack {
-      imageCategory
-      content
+    let category: CategoryDomainModel
+    var isHighlighted: Bool = false 
+
+    var body: some View {
+        let key = category.id.isEmpty ? category.title : category.id
+        VStack(spacing: 8) {
+            CachedAsyncImage(url: URL(string: category.image)) { img in
+                img.resizable()
+            } placeholder: { ProgressView() }
+            .scaledToFit()
+            .frame(height: 56)
+            .padding(.top, 8)
+
+            Text(category.title)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(.primary)
+                .lineLimit(1)
+
+            Spacer(minLength: 6)
+        }
+        .padding(.horizontal, 10)
+        .frame(width: 110, height: 120)
+        .background(
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(isHighlighted ? Color(hex: 0xE8F5E9) : tileColor(for: key))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .stroke(Color.black.opacity(0.06), lineWidth: 0.5)
+        )
+        .shadow(color: .black.opacity(0.06), radius: 6, y: 3)
     }
-    .frame(width: UIScreen.main.bounds.width - 32, height: 250)
-    .background(Color.random.opacity(0.3))
-    .cornerRadius(30)
-  }
- 
 }
- 
- 
-extension CategoryRow {
- 
-  var imageCategory: some View {
-    CachedAsyncImage(url: URL(string: category.image)) { image in
-      image.resizable()
-    } placeholder: {
-      ProgressView()
-    }.cornerRadius(30).scaledToFit().frame(width: 200).padding(.top)
-  }
- 
-  var content: some View {
-    VStack(alignment: .leading, spacing: 10) {
-      Text(category.title)
-        .font(.title)
-        .bold()
- 
-      Text(category.description)
-        .font(.system(size: 14))
-        .lineLimit(2)
-    }.padding(
-      EdgeInsets(
-        top: 0,
-        leading: 16,
-        bottom: 16,
-        trailing: 16
-      )
-    )
-  }
- 
-}
- 
-// 
-//struct CategoryRow_Previews: PreviewProvider {
-// 
-//  static var previews: some View {
-//    let meal = CategoryDomainModel(
-//      id: "1",
-//      title: "Beef",
-//      image: "https://www.themealdb.com/images/category/beef.png",
-//      description: "Beef is the culinary name for meat from cattle, particularly skeletal muscle."
-//    )
-//    return CategoryRow(category: meal)
-//  }
-// 
-//}
