@@ -38,6 +38,12 @@ struct ContentView: View {
             }.tabItem {
                 TabItem(imageName: "heart", title: "Favorite")
             }
+            
+            NavigationStack {
+                AboutMeView()
+            }.tabItem {
+                TabItem(imageName: "person.crop.circle", title: "About Me")
+            }
         }
     }
 }
