@@ -19,9 +19,10 @@ let categoryUseCase: Interactor<
     CategoryTransformer>
 > = Injection.init().provideCategory()
 
+
 @main
 struct MealsAppApp: SwiftUI.App {
-    let homePresenter = GetListPresenter(useCase: categoryUseCase)
+    let homePresenter = CoreHomePresenter(useCase: categoryUseCase)
     let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
     let searchPresenter = SearchPresenter(searchUseCase: Injection.init().provideSearchMealUseCase())
     

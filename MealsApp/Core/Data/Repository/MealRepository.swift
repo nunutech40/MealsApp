@@ -15,6 +15,8 @@ protocol MealRepositoryProtocol {
     
     func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
     
+    func getRandomMeal() -> AnyPublisher<MealModel, Error>
+    
     // favorites
     func getFavoriteMeals() -> AnyPublisher<[MealModel], Error>
     func updateFavoriteMeal(by idMeal: String) -> AnyPublisher<MealModel, Error>
@@ -120,6 +122,14 @@ extension MealRepository: MealRepositoryProtocol {
                         .eraseToAnyPublisher()
                 }
             }.eraseToAnyPublisher()
+    }
+    
+    func getRandomMeal() -> AnyPublisher<MealModel, Error> {
+        return self.remote.getRandomMeal()
+            .map {
+                MealMapper.mapDetailMealResponseToDomain(input: $0)
+            }
+            .eraseToAnyPublisher()
     }
     
     func getFavoriteMeals() -> AnyPublisher<[MealModel], any Error> {

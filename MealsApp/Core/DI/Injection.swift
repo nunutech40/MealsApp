@@ -40,18 +40,15 @@ final class Injection: NSObject {
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
         
         let remote = GetCategoriesRemoteDataSource(endpoint: EndPoints.Gets.categories.url)
-        print("cek remote in DI: \(remote)")
         
         let mapper = CategoryTransformer()
         
-        print("cek mapper in DI: \(mapper)")
         
         let repository = GetCategoriesRepository(
             localeDataSource: locale,
             remoteDataSource: remote,
             mapper: mapper
         )
-        print("cek repository in DI: \(repository)")
         
         return Interactor(repository: repository) as! U
     }

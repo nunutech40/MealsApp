@@ -14,6 +14,7 @@ protocol RemoteDataSourceProtocol {
     func getCategories() -> AnyPublisher<[CategoryResponse], Error>
     func getMeals(by category: String) -> AnyPublisher<[MealResponse], Error>
     func getMeal(by id: String) -> AnyPublisher<MealResponse, Error>
+    func getRandomMeal() -> AnyPublisher<MealResponse, Error>
     func searchMeal(by title: String) -> AnyPublisher<[MealResponse], Error>
     
 }
@@ -67,6 +68,22 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                 .validate()
                 .responseDecodable(of: MealsResponse.self) { respone in
                     switch respone.result {
+                    case .success(let value):
+                        completion(.success(value.meals[0]))
+                    case .failure:
+                        completion(.failure(URLError.invalidResponse))
+                    }
+                }
+        }.eraseToAnyPublisher()
+    }
+    
+    func getRandomMeal() -> AnyPublisher<MealResponse, Error> {
+        return Future<MealResponse, Error> { completion in
+            let url = EndPoints.Gets.random.url
+            AF.request(url)
+                .validate()
+                .responseDecodable(of: MealsResponse.self) { response in
+                    switch response.result {
                     case .success(let value):
                         completion(.success(value.meals[0]))
                     case .failure:

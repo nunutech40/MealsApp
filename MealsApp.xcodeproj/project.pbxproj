@@ -10,6 +10,7 @@
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
+		A00EF6892E9FA03E00411337 /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A00EF6882E9FA03E00411337 /* Meal */; };
 		A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yaml */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		A0C53AC02E950171003BF52C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53ABF2E950171003BF52C /* Core */; };
@@ -88,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
+				A00EF6892E9FA03E00411337 /* Meal in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0C53AC22E950176003BF52C /* Category in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
@@ -187,6 +189,7 @@
 				A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */,
 				A0C53ABF2E950171003BF52C /* Core */,
 				A0C53AC12E950176003BF52C /* Category */,
+				A00EF6882E9FA03E00411337 /* Meal */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -274,6 +277,7 @@
 				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */,
 				A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */,
+				A00EF6872E9FA03E00411337 /* XCLocalSwiftPackageReference "../Modules/Meal" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -720,6 +724,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		A00EF6872E9FA03E00411337 /* XCLocalSwiftPackageReference "../Modules/Meal" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Meal;
+		};
 		A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Core;
@@ -767,6 +775,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		A00EF6882E9FA03E00411337 /* Meal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Meal;
 		};
 		A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;

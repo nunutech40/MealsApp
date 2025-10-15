@@ -10,7 +10,7 @@ import Category
 
 struct HomeView: View {
     
-    @ObservedObject var presenter: GetListPresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
+    @ObservedObject var presenter: CoreHomePresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
     
     var body: some View {
         ZStack {

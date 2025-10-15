@@ -31,6 +31,7 @@ enum EndPoints {
         case meals(category: String?)
         case meal(id: String?)
         case search(query: String?)
+        case random
 
         var url: URL {
             switch self {
@@ -54,6 +55,8 @@ enum EndPoints {
                     path: "search.php",
                     query: q.map { [URLQueryItem(name: "s", value: $0)] } ?? []
                 )
+            case .random:
+                return EndPoints.build(path: "random.php")
             }
         }
     }

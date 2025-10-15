@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-import Core
 import Category
+import Core
 
 struct ContentView: View {
 
-    @EnvironmentObject var homePresenter: GetListPresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
+    @EnvironmentObject var homePresenter: CoreHomePresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
     
     @EnvironmentObject var favoritePresenter: FavoritePresenter
     

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class HomeInteractor: GetCategoriesUseCase {
+class HomeInteractor: GetCategoriesUseCase, RandomMealUseCase {
     
     private let repository: MealRepositoryProtocol
     
@@ -18,6 +18,10 @@ class HomeInteractor: GetCategoriesUseCase {
     
     func getCategories() -> AnyPublisher<[CategoryModel], Error> {
         return repository.getCategories()
+    }
+    
+    func randoomMeal() -> AnyPublisher<MealModel, any Error> {
+        return repository.getRandomMeal()
     }
     
 }
