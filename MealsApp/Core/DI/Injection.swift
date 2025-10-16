@@ -10,6 +10,7 @@ import RealmSwift
 import Core
 import Category
 import UIKit
+import Meal
 
 final class Injection: NSObject {
     
@@ -50,6 +51,18 @@ final class Injection: NSObject {
             mapper: mapper
         )
         
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideRandomMeal<U: UseCase>() -> U where U.Request == Any, U.Response == MealDomainModel {
+        let remote = GetRandomMealRemoteDataSource(endpoint: EndPoints.Gets.random.url)
+        
+        let mapper = MealTransformer()
+        
+        let repository = GetRandomMealRepository(
+            remoteDataSource: remote,
+            mapper: mapper
+        )
         return Interactor(repository: repository) as! U
     }
     

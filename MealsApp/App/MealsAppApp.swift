@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 import Core
 import Category
+import Meal
 
 let categoryUseCase: Interactor<
   Any,
@@ -19,6 +20,13 @@ let categoryUseCase: Interactor<
     CategoryTransformer>
 > = Injection.init().provideCategory()
 
+let randomMealUseCase: Interactor<
+  Any,
+  MealDomainModel,
+  GetRandomMealRepository<
+    GetRandomMealRemoteDataSource,
+    MealTransformer>
+> = Injection.init().provideRandomMeal()
 
 @main
 struct MealsAppApp: SwiftUI.App {
