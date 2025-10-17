@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MealInteractor: MealUseCase, MealUpdateFavoriteUseCase {
+class MealInteractor: MealDetailUseCase {
     
     private let mealRepository: MealRepositoryProtocol
     private let meal: MealModel

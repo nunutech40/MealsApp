@@ -71,12 +71,8 @@ final class Injection: NSObject {
         return DetailCategoryInteractor(repository: repository, category: category)
     }
     
-    func provideMealUseCase(meal: MealModel) -> MealUseCase {
-        let repository = provideRepository()
-        return MealInteractor(mealRepository: repository, meal: meal)
-    }
-    
-    func provideMealUpdateFavoriteUseCase(meal: MealModel) -> MealUpdateFavoriteUseCase {
+    // Hanya butuh SATU provider yang mengembalikan TIPE KONKRET-nya
+    func provideMealDetailUseCase(meal: MealModel) -> MealDetailUseCase {
         let repository = provideRepository()
         return MealInteractor(mealRepository: repository, meal: meal)
     }

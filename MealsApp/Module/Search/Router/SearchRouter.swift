@@ -10,9 +10,8 @@ import SwiftUI
 class SearchRouter {
     
     func makeMealView(meal: MealModel) -> some View {
-        let mealUseCase = Injection.init().provideMealUseCase(meal: meal)
-        let mealUpdateFavoriteMeal = Injection.init().provideMealUpdateFavoriteUseCase(meal: meal)
-        let presenter = MealPresenter(mealUseCase: mealUseCase, mealUpdateFavoriteUseCase: mealUpdateFavoriteMeal)
+        let mealUseCase = Injection.init().provideMealDetailUseCase(meal: meal)
+        let presenter = MealPresenter(mealUseCase: mealUseCase)
         return MealView(presenter: presenter)
     }
     

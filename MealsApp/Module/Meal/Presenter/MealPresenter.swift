@@ -11,8 +11,7 @@ import Combine
 class MealPresenter: ObservableObject {
     
     private var cancelable: Set<AnyCancellable> = []
-    private let mealUseCase: MealUseCase
-    private let mealUpdateFavoriteUseCase: MealUpdateFavoriteUseCase
+    private let mealUseCase: MealDetailUseCase
     
     @Published var meal: MealModel
     @Published var errorMessage: String = ""
@@ -20,11 +19,9 @@ class MealPresenter: ObservableObject {
     @Published var isError: Bool = false
     
     init(
-        mealUseCase: MealUseCase,
-        mealUpdateFavoriteUseCase: MealUpdateFavoriteUseCase
+        mealUseCase: MealDetailUseCase
     ) {
         self.mealUseCase = mealUseCase
-        self.mealUpdateFavoriteUseCase = mealUpdateFavoriteUseCase
         meal = mealUseCase.getMeal()
     }
     
@@ -47,7 +44,7 @@ class MealPresenter: ObservableObject {
     }
     
     func updateFavoriteMeal() {
-        mealUpdateFavoriteUseCase.updateFavoriteMeal()
+        mealUseCase.updateFavoriteMeal()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
