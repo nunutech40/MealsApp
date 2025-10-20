@@ -10,27 +10,18 @@ import RealmSwift
 import Core
 import Category
 import Meal
+import Home
 
-let categoryUseCase: Interactor<
-  Any,
-  [CategoryDomainModel],
-  GetCategoriesRepository<
-    GetCategoriesLocaleDataSource,
-    GetCategoriesRemoteDataSource,
-    CategoryTransformer>
-> = Injection.init().provideCategory()
-
-let randomMealUseCase: Interactor<
-  Any,
-  MealDomainModel,
-  GetRandomMealRepository<
-    GetRandomMealRemoteDataSource,
-    MealTransformer>
-> = Injection.init().provideRandomMeal()
 
 @main
 struct MealsAppApp: SwiftUI.App {
-    let homePresenter = CoreHomePresenter(useCase: categoryUseCase)
+    
+    private let injection = Injection.init()
+    
+    private var homePresenter: HomePresenter {
+        injection.provideHomePresenter()
+    }
+    
     let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
     let searchPresenter = SearchPresenter(searchUseCase: Injection.init().provideSearchMealUseCase())
     

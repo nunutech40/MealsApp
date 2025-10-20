@@ -11,6 +11,8 @@
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
 		A00EF6892E9FA03E00411337 /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A00EF6882E9FA03E00411337 /* Meal */; };
+		A00EFA922EA5F3D600411337 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A00EFA912EA5F3D600411337 /* Home */; };
+		A00EFDF62EA6184500411337 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A00EFDF52EA6184500411337 /* Common */; };
 		A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yaml */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		A0C53AC02E950171003BF52C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53ABF2E950171003BF52C /* Core */; };
@@ -93,6 +95,8 @@
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0C53AC22E950176003BF52C /* Category in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
+				A00EFDF62EA6184500411337 /* Common in Frameworks */,
+				A00EFA922EA5F3D600411337 /* Home in Frameworks */,
 				A0C53AC02E950171003BF52C /* Core in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 			);
@@ -190,6 +194,8 @@
 				A0C53ABF2E950171003BF52C /* Core */,
 				A0C53AC12E950176003BF52C /* Category */,
 				A00EF6882E9FA03E00411337 /* Meal */,
+				A00EFA912EA5F3D600411337 /* Home */,
+				A00EFDF52EA6184500411337 /* Common */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -278,6 +284,8 @@
 				A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */,
 				A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */,
 				A00EF6872E9FA03E00411337 /* XCLocalSwiftPackageReference "../Modules/Meal" */,
+				A00EFA902EA5F3D600411337 /* XCLocalSwiftPackageReference "../Modules/Home" */,
+				A00EFDF42EA6184500411337 /* XCLocalSwiftPackageReference "../Modules/Common" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -728,6 +736,14 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Meal;
 		};
+		A00EFA902EA5F3D600411337 /* XCLocalSwiftPackageReference "../Modules/Home" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Home;
+		};
+		A00EFDF42EA6184500411337 /* XCLocalSwiftPackageReference "../Modules/Common" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Common;
+		};
 		A0C538D42E94FC08003BF52C /* XCLocalSwiftPackageReference "../Modules/Core" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Core;
@@ -779,6 +795,14 @@
 		A00EF6882E9FA03E00411337 /* Meal */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Meal;
+		};
+		A00EFA912EA5F3D600411337 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		A00EFDF52EA6184500411337 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
 		};
 		A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;

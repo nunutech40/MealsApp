@@ -8,10 +8,11 @@
 import SwiftUI
 import Category
 import Core
+import Home
 
 struct ContentView: View {
 
-    @EnvironmentObject var homePresenter: CoreHomePresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
+    @EnvironmentObject var homePresenter: HomePresenter
     
     @EnvironmentObject var favoritePresenter: FavoritePresenter
     

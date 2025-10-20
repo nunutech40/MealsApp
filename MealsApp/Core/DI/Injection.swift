@@ -11,10 +11,25 @@ import Core
 import Category
 import UIKit
 import Meal
+import Home
+
 
 final class Injection: NSObject {
     
     private let realm = try? Realm()
+    
+    typealias GetCategoriesUseCase = Interactor<
+        Any,
+        [CategoryDomainModel],
+        GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>
+    >
+    
+    // Lakukan hal yang sama untuk RandomMeal
+    typealias GetRandomMealUseCase = Interactor<
+        Any,
+        MealDomainModel,
+        GetRandomMealRepository<GetRandomMealRemoteDataSource, MealTransformer>
+    >
     
     // Provide Repository
     func provideRepository() -> MealRepositoryProtocol {
@@ -26,24 +41,12 @@ final class Injection: NSObject {
         return MealRepository.sharedInstance(remote, locale)
     }
     
-    
-    // Provide UseCase
-    func provideGetCategories() -> GetCategoriesUseCase {
-        let repository: MealRepositoryProtocol = provideRepository()
-        
-        return HomeInteractor(repository: repository)
-    }
-    
-    // provide category from module category
-    // Inject dari package local
-    func provideCategory<U: UseCase>() -> U where U.Request == Any, U.Response == [CategoryDomainModel] {
+    // Tidak perlu 'any', tidak perlu casting
+    func provideGetCategoriesUseCase() -> GetCategoriesUseCase {
         
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
-        
         let remote = GetCategoriesRemoteDataSource(endpoint: EndPoints.Gets.categories.url)
-        
         let mapper = CategoryTransformer()
-        
         
         let repository = GetCategoriesRepository(
             localeDataSource: locale,
@@ -51,19 +54,46 @@ final class Injection: NSObject {
             mapper: mapper
         )
         
-        return Interactor(repository: repository) as! U
+        // Langsung return. Tidak ada 'as!', tidak ada crash.
+        return Interactor(repository: repository)
     }
     
-    func provideRandomMeal<U: UseCase>() -> U where U.Request == Any, U.Response == MealDomainModel {
+    // Lakukan hal yang sama untuk RandomMeal
+    func provideGetRandomMealUseCase() -> GetRandomMealUseCase {
         let remote = GetRandomMealRemoteDataSource(endpoint: EndPoints.Gets.random.url)
-        
         let mapper = MealTransformer()
         
         let repository = GetRandomMealRepository(
             remoteDataSource: remote,
             mapper: mapper
         )
-        return Interactor(repository: repository) as! U
+        
+        // Langsung return.
+        return Interactor(repository: repository)
+    }
+    
+    func provideHomeInteractor() -> HomeInteractorProtocol {
+        
+        // Ambil 'use case' granular yang sudah jadi
+        let categoriesUseCase = provideGetCategoriesUseCase()
+        let randomMealUseCase = provideGetRandomMealUseCase()
+        
+        // Rakit 'HomeInteractor'-nya
+        return HomeInteractor(
+            getCategoriesUseCase: categoriesUseCase,
+            getRandomMealUseCase: randomMealUseCase
+        )
+    }
+    
+    // 2. Provider untuk 'Presenter'
+    //    Tugasnya: Merakit 'HomePresenter' dengan 'fasad interactor'
+    func provideHomePresenter() -> HomePresenter {
+        
+        // Ambil 'fasad interactor' yang sudah jadi
+        let interactor = provideHomeInteractor()
+        
+        // Rakit 'HomePresenter'-nya
+        return HomePresenter(interactor: interactor)
     }
     
     func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
