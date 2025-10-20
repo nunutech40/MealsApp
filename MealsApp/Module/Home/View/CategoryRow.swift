@@ -8,6 +8,8 @@
 import SwiftUI
 import CachedAsyncImage
 import Category
+import Core
+
 struct CategoryRow: View {
     let category: CategoryDomainModel
     var isHighlighted: Bool = false 
