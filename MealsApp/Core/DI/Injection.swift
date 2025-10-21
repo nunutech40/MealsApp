@@ -24,14 +24,12 @@ final class Injection: NSObject {
         GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>
     >
     
-    // Lakukan hal yang sama untuk RandomMeal
     typealias GetRandomMealUseCase = Interactor<
         Any,
         MealDomainModel,
         GetRandomMealRepository<GetRandomMealRemoteDataSource, MealTransformer>
     >
     
-    // Provide Repository
     func provideRepository() -> MealRepositoryProtocol {
         let realm = try? Realm()
         
@@ -41,7 +39,6 @@ final class Injection: NSObject {
         return MealRepository.sharedInstance(remote, locale)
     }
     
-    // Tidak perlu 'any', tidak perlu casting
     func provideGetCategoriesUseCase() -> GetCategoriesUseCase {
         
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
@@ -54,11 +51,9 @@ final class Injection: NSObject {
             mapper: mapper
         )
         
-        // Langsung return. Tidak ada 'as!', tidak ada crash.
         return Interactor(repository: repository)
     }
     
-    // Lakukan hal yang sama untuk RandomMeal
     func provideGetRandomMealUseCase() -> GetRandomMealUseCase {
         let remote = GetRandomMealRemoteDataSource(endpoint: EndPoints.Gets.random.url)
         let mapper = MealTransformer()
@@ -67,8 +62,6 @@ final class Injection: NSObject {
             remoteDataSource: remote,
             mapper: mapper
         )
-        
-        // Langsung return.
         return Interactor(repository: repository)
     }
     
