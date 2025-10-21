@@ -13,15 +13,25 @@ import Home
 @main
 struct MealsAppApp: SwiftUI.App {
     
-    private let injection = Injection.init()
+    private let injection = Injection()
+    private let homeRouter = HomeRouter()
     
-    private var homePresenter: HomePresenter {
-        injection.provideHomePresenter()
+    private let homePresenter: HomePresenter
+    private let favoritePresenter: FavoritePresenter
+    private let searchPresenter: SearchPresenter
+    
+    init() {
+        self.homePresenter = HomePresenter(
+            interactor: injection.provideHomeInteractor(),
+            router: homeRouter 
+        )
+        self.favoritePresenter = FavoritePresenter(
+            mealFetchFavoriteUseCase: Injection().provideMealFetchFavoriteUseCase()
+        )
+        self.searchPresenter = SearchPresenter(
+            searchUseCase: Injection().provideSearchMealUseCase()
+        )
     }
-    
-    let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
-    let searchPresenter = SearchPresenter(searchUseCase: Injection.init().provideSearchMealUseCase())
-    
     
     var body: some Scene {
         WindowGroup {

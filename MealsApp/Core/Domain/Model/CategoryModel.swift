@@ -15,3 +15,4 @@ struct CategoryModel: Equatable, Identifiable {
     let description: String
     
 }
+
