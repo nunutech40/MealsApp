@@ -7,9 +7,9 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 import Core
 import Category
-import UIKit
 import Meal
 import Home
 
