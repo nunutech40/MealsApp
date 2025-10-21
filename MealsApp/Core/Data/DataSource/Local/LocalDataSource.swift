@@ -223,20 +223,18 @@ extension LocalDataSource: LocalDataSourceProtocol {
     }
     
     
-    func getMealsBy(
-        _ title: String
-    ) -> AnyPublisher<[MealEntity], Error> {
-        return Future<[MealEntity], Error> { completion in
-            if let realm = self.realm {
-                let meals: Results<MealEntity> = {
-                    realm.objects(MealEntity.self)
-                        .filter("title contains[c] %@", title)
-                        .sorted(byKeyPath: "title", ascending: true)
-                }()
-                completion(.success(meals.toArray(ofType: MealEntity.self)))
-            } else {
-                completion(.failure(DatabaseError.invalidInstance))
+    func getMealsBy(_ title: String) -> AnyPublisher<[MealEntity], Error> {
+        Deferred {
+            () -> AnyPublisher<[MealEntity], Error> in
+            guard let realm = self.realm else {
+                return Fail(error: DatabaseError.invalidInstance).eraseToAnyPublisher()
             }
-        }.eraseToAnyPublisher()
+            let results = realm.objects(MealEntity.self)
+                .filter("title CONTAINS[c] %@", title)
+                .sorted(byKeyPath: "title", ascending: true)
+            let items = results.toArray(ofType: MealEntity.self)
+            return Just(items).setFailureType(to: Error.self).eraseToAnyPublisher()
+        }
+        .eraseToAnyPublisher()
     }
 }
