@@ -45,7 +45,7 @@ final class MealRepository: NSObject {
 }
 
 extension MealRepository: MealRepositoryProtocol {
-  
+    
     func getCategories() -> AnyPublisher<[CategoryModel], Error> {
         return self.local.getCategories()
             .flatMap { result -> AnyPublisher<[CategoryModel], Error> in
@@ -95,13 +95,6 @@ extension MealRepository: MealRepositoryProtocol {
     
     func getMeal(by idMeal: String) -> AnyPublisher<MealModel, Error> {
         return self.local.getMeal(by: idMeal)
-            .handleEvents(receiveSubscription: { _ in
-                print("DEBUG: subscription started for idMeal = \(idMeal)")
-            }, receiveOutput: { output in
-                print("DEBUG: local.getMeal returned = \(output)")
-            }, receiveCompletion: { completion in
-                print("DEBUG: local.getMeal completion = \(completion)")
-            })
             .flatMap { result -> AnyPublisher<MealModel, Error> in
                 if result.ingredients.isEmpty {
                     return self.remote.getMeal(by: idMeal)
@@ -147,26 +140,26 @@ extension MealRepository: MealRepositoryProtocol {
     }
     
     func searchMeal(
-      by title: String
+        by title: String
     ) -> AnyPublisher<[MealModel], Error> {
-      return self.remote.searchMeal(by: title)
-        .map { MealMapper.mapDetailMealResponseToEntity(input: $0) }
-        .catch { _ in self.local.getMealsBy(title) }
-        .flatMap { responses  in
-          self.local.getMealsBy(title)
-            .flatMap { local -> AnyPublisher<[MealModel], Error> in
-              if responses.count > local.count {
-                return self.local.addMealsBy(title, from: responses)
-                  .filter { $0 }
-                  .flatMap { _ in self.local.getMealsBy(title)
-                    .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
-                  }.eraseToAnyPublisher()
-              } else {
-                return self.local.getMealsBy(title)
-                  .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
-                  .eraseToAnyPublisher()
-              }
-            }
-        }.eraseToAnyPublisher()
+        return self.remote.searchMeal(by: title)
+            .map { MealMapper.mapDetailMealResponseToEntity(input: $0) }
+            .catch { _ in self.local.getMealsBy(title) }
+            .flatMap { responses  in
+                self.local.getMealsBy(title)
+                    .flatMap { local -> AnyPublisher<[MealModel], Error> in
+                        if responses.count > local.count {
+                            return self.local.addMealsBy(title, from: responses)
+                                .filter { $0 }
+                                .flatMap { _ in self.local.getMealsBy(title)
+                                        .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
+                                }.eraseToAnyPublisher()
+                        } else {
+                            return self.local.getMealsBy(title)
+                                .map { MealMapper.mapDetailMealEntityToDomains(input: $0) }
+                                .eraseToAnyPublisher()
+                        }
+                    }
+            }.eraseToAnyPublisher()
     }
 }

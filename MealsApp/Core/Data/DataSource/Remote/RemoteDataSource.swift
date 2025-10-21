@@ -104,7 +104,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                   switch response.result {
                   case .success(let value):
                       completion(.success(value.meals))
-                  case .failure(let error):
+                  case .failure:
                       completion(.failure(URLError.invalidResponse))
                   }
               }

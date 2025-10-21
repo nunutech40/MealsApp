@@ -213,6 +213,7 @@ extension LocalDataSource: LocalDataSourceProtocol {
                             }
                         }
                     }
+                    completion(.success(true))
                 } catch {
                     completion(.failure(DatabaseError.requestFailed))
                 }
