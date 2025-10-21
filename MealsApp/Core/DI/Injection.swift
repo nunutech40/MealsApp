@@ -13,7 +13,6 @@ import Category
 import Meal
 import Home
 
-
 final class Injection: NSObject {
     
     private let realm = try? Realm()
@@ -76,17 +75,6 @@ final class Injection: NSObject {
             getCategoriesUseCase: categoriesUseCase,
             getRandomMealUseCase: randomMealUseCase
         )
-    }
-    
-    // 2. Provider untuk 'Presenter'
-    //    Tugasnya: Merakit 'HomePresenter' dengan 'fasad interactor'
-    func provideHomePresenter() -> HomePresenter {
-        
-        // Ambil 'fasad interactor' yang sudah jadi
-        let interactor = provideHomeInteractor()
-        
-        // Rakit 'HomePresenter'-nya
-        return HomePresenter(interactor: interactor)
     }
     
     func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
