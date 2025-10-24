@@ -49,4 +49,3 @@ public final class HomeRouter: HomeRouting {
 public extension View {
     func eraseToAnyView() -> AnyView { AnyView(self) }
 }
-

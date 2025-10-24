@@ -7,13 +7,12 @@
 
 import Foundation
 
-public struct CategoriesResponse: Decodable {
+struct CategoriesResponse: Decodable {
     
     let categories: [CategoryResponse]
     
 }
-
-public struct CategoryResponse: Decodable {
+struct CategoryResponse: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case id = "idCategory"
