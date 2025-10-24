@@ -30,10 +30,9 @@ struct SearchView: View {
                             id: \.id
                         ) { meal in
                             ZStack {
-                                self.presenter.linkBuilder(for: meal) {
-                                    SearchRow(meal: meal)
-                                }.buttonStyle(PlainButtonStyle())
+                                SearchRow(meal: meal)
                             }
+                            .buttonStyle(PlainButtonStyle())
                             .padding(8)
                         }
                     }

@@ -66,11 +66,10 @@ extension DetailView {
             HStack {
                 ForEach(self.presenter.meals, id: \.id) { meal in
                     ZStack {
-                        self.presenter.linkBuilder(for: meal) {
-                          MealRow(meal: meal)
-                            .frame(width: 150, height: 150)
-                        }.buttonStyle(PlainButtonStyle())
+                        MealRow(meal: meal)
+                          .frame(width: 150, height: 150)
                     }
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
         }

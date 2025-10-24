@@ -12,6 +12,7 @@ import Core
 import Category
 import Meal
 import Home
+import MealView
 
 final class Injection: NSObject {
     
@@ -26,7 +27,14 @@ final class Injection: NSObject {
     typealias GetRandomMealUseCase = Interactor<
         Any,
         MealDomainModel,
-        GetRandomMealRepository<GetRandomMealRemoteDataSource, MealTransformer>
+        GetRandomMealRepository<GetMealRemoteDataSource, MealTransformer>
+    >
+    
+    // Tambah typealias
+    typealias GetMealByIdUseCase = Interactor<
+        Any,
+        MealDomainModel,
+        GetMealByIdRepository<MealLocalDataSource, GetMealRemoteDataSource, MealTransformer>
     >
     
     func provideRepository() -> MealRepositoryProtocol {
@@ -54,7 +62,7 @@ final class Injection: NSObject {
     }
     
     func provideGetRandomMealUseCase() -> GetRandomMealUseCase {
-        let remote = GetRandomMealRemoteDataSource(endpoint: EndPoints.Gets.random.url)
+        let remote = GetMealRemoteDataSource(endpoint: EndPoints.Gets.random.url)
         let mapper = MealTransformer()
         
         let repository = GetRandomMealRepository(
@@ -77,15 +85,23 @@ final class Injection: NSObject {
         )
     }
     
+    func provideGetMealByIdUseCase(meal: MealDomainModel) -> GetMealByIdUseCase {
+        let locale = MealLocalDataSource(realm: realm!) // realm sudah disimpan di Injection
+        let remote = GetMealRemoteDataSource(endpoint: EndPoints.Gets.meal(id: meal.id).url)
+        let mapper = MealTransformer()
+        let repo = GetMealByIdRepository(localeDataSource: locale, remoteDataSource: remote, mapper: mapper)
+        return Interactor(repository: repo)
+    }
+    
+    func provideMealInteractor(meal: MealDomainModel) -> MealInteractorProtocol {
+        let uc = provideGetMealByIdUseCase(meal: meal)
+        return MealInteractor(mealModel: meal, mealUseCase: uc)
+    }
+    
+    
     func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
         let repository: MealRepositoryProtocol = provideRepository()
         return DetailCategoryInteractor(repository: repository, category: category)
-    }
-    
-    // Hanya butuh SATU provider yang mengembalikan TIPE KONKRET-nya
-    func provideMealDetailUseCase(meal: MealModel) -> MealDetailUseCase {
-        let repository = provideRepository()
-        return MealInteractor(mealRepository: repository, meal: meal)
     }
     
     func provideMealFetchFavoriteUseCase() -> MealFetchFavoriteUseCase {

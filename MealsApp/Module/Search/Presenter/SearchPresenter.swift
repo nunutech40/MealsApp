@@ -46,10 +46,10 @@ class SearchPresenter: ObservableObject {
 }
 
 extension SearchPresenter {
-    func linkBuilder<Content: View>(
-        for meal: MealModel,
-        @ViewBuilder content: () -> Content
-    ) -> some View {
-        NavigationLink(destination: router.makeMealView(meal: meal)) { content() }
-    }
+//    func linkBuilder<Content: View>(
+//        for meal: MealModel,
+//        @ViewBuilder content: () -> Content
+//    ) -> some View {
+//        NavigationLink(destination: router.makeMealView(meal: meal)) { content() }
+//    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
+		A00E0B9D2EA92CA300411337 /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A00E0B9C2EA92CA300411337 /* MealView */; };
 		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
 		A00EF6892E9FA03E00411337 /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A00EF6882E9FA03E00411337 /* Meal */; };
@@ -92,6 +93,7 @@
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
 				A00EF6892E9FA03E00411337 /* Meal in Frameworks */,
+				A00E0B9D2EA92CA300411337 /* MealView in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0C53AC22E950176003BF52C /* Category in Frameworks */,
 				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
@@ -196,6 +198,7 @@
 				A00EF6882E9FA03E00411337 /* Meal */,
 				A00EFA912EA5F3D600411337 /* Home */,
 				A00EFDF52EA6184500411337 /* Common */,
+				A00E0B9C2EA92CA300411337 /* MealView */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -286,6 +289,7 @@
 				A00EF6872E9FA03E00411337 /* XCLocalSwiftPackageReference "../Modules/Meal" */,
 				A00EFA902EA5F3D600411337 /* XCLocalSwiftPackageReference "../Modules/Home" */,
 				A00EFDF42EA6184500411337 /* XCLocalSwiftPackageReference "../Modules/Common" */,
+				A00E0B9B2EA92CA300411337 /* XCLocalSwiftPackageReference "../Modules/MealView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -732,6 +736,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		A00E0B9B2EA92CA300411337 /* XCLocalSwiftPackageReference "../Modules/MealView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/MealView;
+		};
 		A00EF6872E9FA03E00411337 /* XCLocalSwiftPackageReference "../Modules/Meal" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Meal;
@@ -782,6 +790,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A00E0B9C2EA92CA300411337 /* MealView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MealView;
+		};
 		A00E5E2C2E4F003B009B5564 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */;

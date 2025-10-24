@@ -9,30 +9,22 @@ import SwiftUI
 import Home
 import Core
 import Category
+import MealView
 
 public final class HomeRouter: HomeRouting {
     
     public func makeMealView(for meal: MealDomainModel) -> AnyView {
-        // MAP (jangan cast)
-        let mealModel = MealModel(
-            id: meal.id,
-            title: meal.title,
-            image: meal.image,
-            category: meal.category,
-            area: meal.area,
-            instructions: meal.instructions,
-            tag: meal.tag,
-            youtube: meal.youtube,
-            source: meal.source,
-            ingredients: meal.ingredients.map { dom in
-                IngredientModel(id: dom.id, title: dom.title, idMeal: dom.idMeal)
-            },
-            favorite: meal.favorite
-        )
+        print("cek data meal in \(meal)")
+        // 1) Ambil use case by-id dari Injection
+        let uc = Injection().provideGetMealByIdUseCase(meal: meal)
         
-        let mealUsecase = Injection.init().provideMealDetailUseCase(meal: mealModel)
+        // 2) Rakit interactor pakai domain model (seed) + use case
+        let interactor = MealInteractor(mealModel: meal, mealUseCase: uc)
         
-        let presenter = MealPresenter(mealUseCase: mealUsecase)
+        // 3) Rakit presenter sesuai init aslinya
+        let presenter = MealPresenter(interactor: interactor, meal: meal)
+        
+        // 4) Bangun view
         return MealView(presenter: presenter).eraseToAnyView()
     }
     

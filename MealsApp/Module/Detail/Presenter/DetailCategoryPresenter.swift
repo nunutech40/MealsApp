@@ -44,10 +44,10 @@ class DetailCategoryPresenter: ObservableObject {
             .store(in: &cancellable)
     }
     
-    func linkBuilder<Content: View>(
-      for meal: MealModel,
-      @ViewBuilder content: () -> Content
-    ) -> some View {
-      NavigationLink(destination: router.makeMealView(for: meal)) { content() }
-    }
+//    func linkBuilder<Content: View>(
+//      for meal: MealModel,
+//      @ViewBuilder content: () -> Content
+//    ) -> some View {
+//      NavigationLink(destination: router.makeMealView(for: meal)) { content() }
+//    }
 }
