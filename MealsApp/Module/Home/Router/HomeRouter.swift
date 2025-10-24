@@ -14,7 +14,6 @@ import MealView
 public final class HomeRouter: HomeRouting {
     
     public func makeMealView(for meal: MealDomainModel) -> AnyView {
-        print("cek data meal in \(meal)")
         // 1) Ambil use case by-id dari Injection
         let uc = Injection().provideGetMealByIdUseCase(meal: meal)
         
