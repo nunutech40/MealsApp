@@ -21,7 +21,7 @@ public final class HomeRouter: HomeRouting {
         let interactor = MealInteractor(mealModel: meal, mealUseCase: uc)
         
         // 3) Rakit presenter sesuai init aslinya
-        let presenter = MealPresenter(interactor: interactor, meal: meal)
+        let presenter = MealPresenter(interactor: interactor)
         
         // 4) Bangun view
         return MealView(presenter: presenter).eraseToAnyView()
@@ -30,16 +30,15 @@ public final class HomeRouter: HomeRouting {
     public init() {}
     
     public func makeDetailView(for category: CategoryDomainModel) -> AnyView {
-        // MAP (jangan cast)
-        let categoryModel = CategoryModel(
-            id: category.id,
-            title: category.title,
-            image: category.image,
-            description: category.description
-        )
+      
+        // 1) Ambil use case by-id dari Injection
+        let uc = Injection().provideGetMealsByCategoryUseCase(category: category)
+        // 2) Rakit interactor pakai domain model (seed) + use case
+        let interactor = DetailCategoryInteractor(category: category, mealUseCase: uc)
         
-        let detailUseCase = Injection().provideGetCategoryDetail(category: categoryModel)
-        let presenter = DetailCategoryPresenter(getCategoryUseCase: detailUseCase)
+        // 3) Rakit presenter sesuai init aslinya
+        let presenter = DetailCategoryPresenter(interactor: interactor)
+        
         
         return DetailView(presenter: presenter).eraseToAnyView()
     }

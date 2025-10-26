@@ -37,6 +37,13 @@ final class Injection: NSObject {
         GetMealByIdRepository<MealLocalDataSource, GetMealRemoteDataSource, MealTransformer>
     >
     
+    // Tambah typealias
+    typealias GetMealsByCategoryUseCase = Interactor<
+        Any,
+        [MealDomainModel],
+        GetMealsByCategoryRepository<MealLocalDataSource, GetMealsRemoteDataSource, MealsTransformer>
+    >
+    
     func provideRepository() -> MealRepositoryProtocol {
         let realm = try? Realm()
         
@@ -93,15 +100,20 @@ final class Injection: NSObject {
         return Interactor(repository: repo)
     }
     
+    func provideGetMealsByCategoryUseCase(category: CategoryDomainModel) -> GetMealsByCategoryUseCase {
+        
+        print("ceek data category in provideGetMealsByCategoryUseCase; \(category)")
+        
+        let locale = MealLocalDataSource(realm: realm!) // realm sudah disimpan di Injection
+        let remote = GetMealsRemoteDataSource(endpoint: EndPoints.Gets.meals(category: category.title).url)
+        let mapper = MealsTransformer()
+        let repo = GetMealsByCategoryRepository(localeDataSource: locale, remoteDataSource: remote, mapper: mapper)
+        return Interactor(repository: repo)
+    }
+    
     func provideMealInteractor(meal: MealDomainModel) -> MealInteractorProtocol {
         let uc = provideGetMealByIdUseCase(meal: meal)
         return MealInteractor(mealModel: meal, mealUseCase: uc)
-    }
-    
-    
-    func provideGetCategoryDetail(category: CategoryModel) -> GetCategoryUseCase {
-        let repository: MealRepositoryProtocol = provideRepository()
-        return DetailCategoryInteractor(repository: repository, category: category)
     }
     
     func provideMealFetchFavoriteUseCase() -> MealFetchFavoriteUseCase {
