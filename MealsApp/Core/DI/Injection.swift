@@ -102,8 +102,6 @@ final class Injection: NSObject {
     
     func provideGetMealsByCategoryUseCase(category: CategoryDomainModel) -> GetMealsByCategoryUseCase {
         
-        print("ceek data category in provideGetMealsByCategoryUseCase; \(category)")
-        
         let locale = MealLocalDataSource(realm: realm!) // realm sudah disimpan di Injection
         let remote = GetMealsRemoteDataSource(endpoint: EndPoints.Gets.meals(category: category.title).url)
         let mapper = MealsTransformer()
