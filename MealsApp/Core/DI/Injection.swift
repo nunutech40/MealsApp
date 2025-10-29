@@ -13,6 +13,7 @@ import Category
 import Meal
 import Home
 import MealView
+import FavoriteView
 
 final class Injection: NSObject {
     
@@ -51,6 +52,13 @@ final class Injection: NSObject {
         UpdateFavoriteMealRepository<UpdateFavoriteMealLocalDataSource, MealTransformer>
     >
     
+    // Tambah typealias
+    typealias GetFavoriteMealsUseCase = Interactor<
+        Any,
+        [MealDomainModel],
+        GetFavoriteMealsRepository<ListFavoriteMealLocalDataSource, MealsTransformer>
+    >
+    
     func provideRepository() -> MealRepositoryProtocol {
         let realm = try? Realm()
         
@@ -86,19 +94,6 @@ final class Injection: NSObject {
         return Interactor(repository: repository)
     }
     
-    func provideHomeInteractor() -> HomeInteractorProtocol {
-        
-        // Ambil 'use case' granular yang sudah jadi
-        let categoriesUseCase = provideGetCategoriesUseCase()
-        let randomMealUseCase = provideGetRandomMealUseCase()
-        
-        // Rakit 'HomeInteractor'-nya
-        return HomeInteractor(
-            getCategoriesUseCase: categoriesUseCase,
-            getRandomMealUseCase: randomMealUseCase
-        )
-    }
-    
     func provideGetMealByIdUseCase(meal: MealDomainModel) -> GetMealByIdUseCase {
         let locale = MealLocalDataSource(realm: realm!) // realm sudah disimpan di Injection
         let remote = GetMealRemoteDataSource(endpoint: EndPoints.Gets.meal(id: meal.id).url)
@@ -123,10 +118,36 @@ final class Injection: NSObject {
         return Interactor(repository: repo)
     }
     
+    func provideGetFavoriteMealsUseCase() -> GetFavoriteMealsUseCase {
+        let locale = ListFavoriteMealLocalDataSource(realm: realm!) // realm sudah disimpan di Injection
+        let mapper = MealsTransformer()
+        let repo = GetFavoriteMealsRepository(localeDataSource: locale, mapper: mapper)
+        return Interactor(repository: repo)
+    }
+    
+    
+    func provideHomeInteractor() -> HomeInteractorProtocol {
+        
+        // Ambil 'use case' granular yang sudah jadi
+        let categoriesUseCase = provideGetCategoriesUseCase()
+        let randomMealUseCase = provideGetRandomMealUseCase()
+        
+        // Rakit 'HomeInteractor'-nya
+        return HomeInteractor(
+            getCategoriesUseCase: categoriesUseCase,
+            getRandomMealUseCase: randomMealUseCase
+        )
+    }
+    
     func provideMealInteractor(meal: MealDomainModel) -> MealInteractorProtocol {
         let uc = provideGetMealByIdUseCase(meal: meal)
         let updateUseCase = provideUpdateFavoriteMealUseCase(meal: meal)
         return MealInteractor(mealModel: meal, mealUseCase: uc, updateFavoriteUseCase: updateUseCase)
+    }
+    
+    func provideFavoriteMealsInteractor() -> FavoriteInteractorProtocol {
+        let uc = provideGetFavoriteMealsUseCase()
+        return FavoriteInteractor(favoriteMealsUseCase: uc)
     }
     
     func provideMealFetchFavoriteUseCase() -> MealFetchFavoriteUseCase {

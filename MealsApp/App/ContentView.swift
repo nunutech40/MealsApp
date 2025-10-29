@@ -10,6 +10,7 @@ import Category
 import Core
 import Home
 import MealView
+import FavoriteView
 
 struct ContentView: View {
 

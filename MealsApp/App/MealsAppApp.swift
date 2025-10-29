@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 import Home
-
+import FavoriteView
 
 @main
 struct MealsAppApp: SwiftUI.App {
@@ -26,7 +26,7 @@ struct MealsAppApp: SwiftUI.App {
             router: homeRouter 
         )
         self.favoritePresenter = FavoritePresenter(
-            mealFetchFavoriteUseCase: Injection().provideMealFetchFavoriteUseCase()
+            interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor
         )
         self.searchPresenter = SearchPresenter(
             searchUseCase: Injection().provideSearchMealUseCase()

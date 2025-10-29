@@ -18,6 +18,8 @@
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		A0C53AC02E950171003BF52C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53ABF2E950171003BF52C /* Core */; };
 		A0C53AC22E950176003BF52C /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0C53AC12E950176003BF52C /* Category */; };
+		A0EACA322EB1E78E00B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EACA312EB1E78E00B0E5CE /* FavoriteView */; };
+		A0EACABD2EB1E8D100B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EACABC2EB1E8D100B0E5CE /* SearchView */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,7 @@
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
 				A00EF6892E9FA03E00411337 /* Meal in Frameworks */,
+				A0EACA322EB1E78E00B0E5CE /* FavoriteView in Frameworks */,
 				A00E0B9D2EA92CA300411337 /* MealView in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0C53AC22E950176003BF52C /* Category in Frameworks */,
@@ -101,6 +104,7 @@
 				A00EFA922EA5F3D600411337 /* Home in Frameworks */,
 				A0C53AC02E950171003BF52C /* Core in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
+				A0EACABD2EB1E8D100B0E5CE /* SearchView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +203,8 @@
 				A00EFA912EA5F3D600411337 /* Home */,
 				A00EFDF52EA6184500411337 /* Common */,
 				A00E0B9C2EA92CA300411337 /* MealView */,
+				A0EACA312EB1E78E00B0E5CE /* FavoriteView */,
+				A0EACABC2EB1E8D100B0E5CE /* SearchView */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -290,6 +296,8 @@
 				A00EFA902EA5F3D600411337 /* XCLocalSwiftPackageReference "../Modules/Home" */,
 				A00EFDF42EA6184500411337 /* XCLocalSwiftPackageReference "../Modules/Common" */,
 				A00E0B9B2EA92CA300411337 /* XCLocalSwiftPackageReference "../Modules/MealView" */,
+				A0EACA302EB1E78100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */,
+				A0EACABB2EB1E8D100B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -760,6 +768,14 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Category;
 		};
+		A0EACA302EB1E78100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/FavoriteView;
+		};
+		A0EACABB2EB1E8D100B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/SearchView;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -830,6 +846,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0C538D52E94FC32003BF52C /* XCLocalSwiftPackageReference "../Modules/Category" */;
 			productName = Category;
+		};
+		A0EACA312EB1E78E00B0E5CE /* FavoriteView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0EACA302EB1E78100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */;
+			productName = FavoriteView;
+		};
+		A0EACABC2EB1E8D100B0E5CE /* SearchView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
