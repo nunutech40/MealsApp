@@ -16,9 +16,10 @@ public final class HomeRouter: HomeRouting {
     public func makeMealView(for meal: MealDomainModel) -> AnyView {
         // 1) Ambil use case by-id dari Injection
         let uc = Injection().provideGetMealByIdUseCase(meal: meal)
+        let updateUC = Injection().provideUpdateFavoriteMealUseCase(meal: meal)
         
         // 2) Rakit interactor pakai domain model (seed) + use case
-        let interactor = MealInteractor(mealModel: meal, mealUseCase: uc)
+        let interactor = MealInteractor(mealModel: meal, mealUseCase: uc, updateFavoriteUseCase: updateUC)
         
         // 3) Rakit presenter sesuai init aslinya
         let presenter = MealPresenter(interactor: interactor)
