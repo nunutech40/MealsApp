@@ -15,11 +15,15 @@ import SearchView
 struct MealsAppApp: SwiftUI.App {
     
     private let injection = Injection()
-    private let homeRouter = HomeRouter()
     
+    private let homeRouter = HomeRouter()
     private let homePresenter: HomePresenter
+    
     private let favoritePresenter: FavoritePresenter
+    
+    private let searchRouter = SearchRouter()
     private let searchPresenter: SearchMealPresenter
+    
     
     init() {
         self.homePresenter = HomePresenter(
@@ -30,7 +34,7 @@ struct MealsAppApp: SwiftUI.App {
             interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor
         )
         self.searchPresenter = SearchMealPresenter(
-            interactor: injection.provideSearchMealsInteractor() as! SearchMealInteractor
+            interactor: injection.provideSearchMealsInteractor() as! SearchMealInteractor, router: searchRouter
         )
     }
     
