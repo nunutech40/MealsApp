@@ -10,6 +10,7 @@ import Home
 import Core
 import MealView
 import SearchView
+import Common
 
 public final class SearchRouter: SearchRouting {
     

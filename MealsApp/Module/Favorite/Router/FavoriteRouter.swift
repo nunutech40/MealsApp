@@ -9,8 +9,8 @@ import SwiftUI
 import Home
 import Core
 import MealView
-import SearchView
 import FavoriteView
+import Common
 
 public final class FavoriteRouter: FavoriteRouting {
     

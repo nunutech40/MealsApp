@@ -10,6 +10,7 @@ import Home
 import Core
 import Category
 import MealView
+import Common
 
 public final class HomeRouter: HomeRouting {
     
@@ -37,15 +38,11 @@ public final class HomeRouter: HomeRouting {
         // 2) Rakit interactor pakai domain model (seed) + use case
         let interactor = DetailCategoryInteractor(category: category, mealUseCase: uc)
         
+        let router = DetailCategoryRouter()
         // 3) Rakit presenter sesuai init aslinya
-        let presenter = DetailCategoryPresenter(interactor: interactor)
+        let presenter = DetailCategoryPresenter(interactor: interactor, router: router)
         
         
         return DetailView(presenter: presenter).eraseToAnyView()
     }
-}
-
-// helper type-erasure
-public extension View {
-    func eraseToAnyView() -> AnyView { AnyView(self) }
 }
