@@ -19,6 +19,7 @@ struct MealsAppApp: SwiftUI.App {
     private let homeRouter = HomeRouter()
     private let homePresenter: HomePresenter
     
+    private let favoriteRouter = FavoriteRouter()
     private let favoritePresenter: FavoritePresenter
     
     private let searchRouter = SearchRouter()
@@ -31,7 +32,8 @@ struct MealsAppApp: SwiftUI.App {
             router: homeRouter 
         )
         self.favoritePresenter = FavoritePresenter(
-            interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor
+            interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor,
+            router: favoriteRouter
         )
         self.searchPresenter = SearchMealPresenter(
             interactor: injection.provideSearchMealsInteractor() as! SearchMealInteractor, router: searchRouter
