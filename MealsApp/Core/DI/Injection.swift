@@ -14,6 +14,7 @@ import Meal
 import Home
 import MealView
 import FavoriteView
+import SearchView
 
 final class Injection: NSObject {
     
@@ -58,6 +59,15 @@ final class Injection: NSObject {
         [MealDomainModel],
         GetFavoriteMealsRepository<ListFavoriteMealLocalDataSource, MealsTransformer>
     >
+    
+    
+    // Tambah typealias
+    typealias SearchMealsUseCase = Interactor<
+        Any,
+        [MealDomainModel],
+        SearchMealsRepository<SearchMealsLocalDataSource, SearchMealsRemoteDataSource, MealsTransformer>
+    >
+    
     
     func provideRepository() -> MealRepositoryProtocol {
         let realm = try? Realm()
@@ -125,6 +135,13 @@ final class Injection: NSObject {
         return Interactor(repository: repo)
     }
     
+    func provideSearchMealsUseCase() -> SearchMealsUseCase {
+        let locale = SearchMealsLocalDataSource(realm: realm!)
+        let remote = SearchMealsRemoteDataSource()
+        let mapper = MealsTransformer()
+        let repo = SearchMealsRepository(localeDataSource: locale, remoteDataSource: remote, mapper: mapper)
+        return Interactor(repository: repo)
+    }
     
     func provideHomeInteractor() -> HomeInteractorProtocol {
         
@@ -150,15 +167,9 @@ final class Injection: NSObject {
         return FavoriteInteractor(favoriteMealsUseCase: uc)
     }
     
-    func provideMealFetchFavoriteUseCase() -> MealFetchFavoriteUseCase {
-        let repository: MealRepositoryProtocol = provideRepository()
-        
-        return MealFavoriteInteractor(repository: repository)
-    }
-    
-    func provideSearchMealUseCase() -> SearchUseCase {
-        let repository = provideRepository()
-        return SearchInteractor(repository: repository)
+    func provideSearchMealsInteractor() -> SearchMealInteractorProtocol {
+        let uc = provideSearchMealsUseCase()
+        return SearchMealInteractor(searchMealUseCase: uc)
     }
     
 }

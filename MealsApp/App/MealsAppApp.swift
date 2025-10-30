@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 import Home
 import FavoriteView
+import SearchView
 
 @main
 struct MealsAppApp: SwiftUI.App {
@@ -18,7 +19,7 @@ struct MealsAppApp: SwiftUI.App {
     
     private let homePresenter: HomePresenter
     private let favoritePresenter: FavoritePresenter
-    private let searchPresenter: SearchPresenter
+    private let searchPresenter: SearchMealPresenter
     
     init() {
         self.homePresenter = HomePresenter(
@@ -28,8 +29,8 @@ struct MealsAppApp: SwiftUI.App {
         self.favoritePresenter = FavoritePresenter(
             interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor
         )
-        self.searchPresenter = SearchPresenter(
-            searchUseCase: Injection().provideSearchMealUseCase()
+        self.searchPresenter = SearchMealPresenter(
+            interactor: injection.provideSearchMealsInteractor() as! SearchMealInteractor
         )
     }
     

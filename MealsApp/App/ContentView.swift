@@ -11,6 +11,7 @@ import Core
 import Home
 import MealView
 import FavoriteView
+import SearchView
 
 struct ContentView: View {
 
@@ -18,7 +19,7 @@ struct ContentView: View {
     
     @EnvironmentObject var favoritePresenter: FavoritePresenter
     
-    @EnvironmentObject var searchPresenter: SearchPresenter
+    @EnvironmentObject var searchPresenter: SearchMealPresenter
     
     var body: some View {
         TabView {
