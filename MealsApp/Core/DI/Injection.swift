@@ -15,6 +15,7 @@ import Home
 import MealView
 import FavoriteView
 import SearchView
+import InfraShared
 
 final class Injection: NSObject {
     
