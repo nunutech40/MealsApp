@@ -68,16 +68,6 @@ final class Injection: NSObject {
         SearchMealsRepository<SearchMealsLocalDataSource, SearchMealsRemoteDataSource, MealsTransformer>
     >
     
-    
-    func provideRepository() -> MealRepositoryProtocol {
-        let realm = try? Realm()
-        
-        let remote: RemoteDataSource = RemoteDataSource.sharedInstance
-        let locale: LocalDataSource = LocalDataSource.sharedInstance(realm)
-        
-        return MealRepository.sharedInstance(remote, locale)
-    }
-    
     func provideGetCategoriesUseCase() -> GetCategoriesUseCase {
         
         let locale = GetCategoriesLocaleDataSource(realm: realm!)
