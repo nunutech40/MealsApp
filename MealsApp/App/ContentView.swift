@@ -13,6 +13,7 @@ import MealView
 import FavoriteView
 import SearchView
 import AboutMe
+import Common
 
 struct ContentView: View {
 
