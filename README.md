@@ -31,7 +31,8 @@ Dokumen ini merangkum arsitektur app, alur event/data (Callback vs Combine), dan
 [⬆︎ Back to Top](#top)
 
 <!-- Klik gambar → lompat ke Project Architecture -->
-[![Modular Architecture](https://github.com/user-attachments/assets/1315b256-b584-429e-8da6-8e80f7fc83d9)](#project-architecture)
+[![Modular Architecture](https://github.com/user-attachments/assets/5ea879fd-7a7e-4f67-b981-caa4aa1b1751)](#project-architecture)
+
 
 ---
 
