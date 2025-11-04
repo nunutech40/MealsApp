@@ -20,7 +20,6 @@
 		A0EADEEB2EB9B7E700B0E5CE /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEEA2EB9B7E700B0E5CE /* MealView */; };
 		A0EADEEE2EB9B98A00B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEED2EB9B98A00B0E5CE /* FavoriteView */; };
 		A0EADEF12EB9BB3600B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEF02EB9BB3600B0E5CE /* SearchView */; };
-		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +88,6 @@
 				A0EADEEE2EB9B98A00B0E5CE /* FavoriteView in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0EADE102EB9A37A00B0E5CE /* InfraShared in Frameworks */,
-				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 				A0EADE162EB9A39000B0E5CE /* Core in Frameworks */,
 				A0EADEF12EB9BB3600B0E5CE /* SearchView in Frameworks */,
 				A0EADEE82EB9B51D00B0E5CE /* Home in Frameworks */,
