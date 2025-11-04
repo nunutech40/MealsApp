@@ -522,7 +522,6 @@
 		};
 		A05E50192E49C923005A1DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A9137B33123A248A52D1444 /* Pods-MealsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,7 +554,6 @@
 		};
 		A05E501A2E49C923005A1DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AAE031F30AFE6E3BBD7FAFA /* Pods-MealsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -588,7 +586,6 @@
 		};
 		A05E501C2E49C923005A1DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB79EB26B2CF069750D7DBED /* Pods-MealsAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -608,7 +605,6 @@
 		};
 		A05E501D2E49C923005A1DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B45C0345755852588FB10A0 /* Pods-MealsAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -628,7 +624,6 @@
 		};
 		A05E501F2E49C923005A1DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E10FE8E7DD46E8E2AB4C1577 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -646,7 +641,6 @@
 		};
 		A05E50202E49C923005A1DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB8F6DA96AA98A50A959785D /* Pods-MealsApp-MealsAppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
