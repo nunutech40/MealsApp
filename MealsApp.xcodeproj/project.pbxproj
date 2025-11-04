@@ -15,13 +15,12 @@
 		A0EADE132EB9A38600B0E5CE /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE122EB9A38600B0E5CE /* Common */; };
 		A0EADE162EB9A39000B0E5CE /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE152EB9A39000B0E5CE /* Core */; };
 		A0EADE522EB9A66F00B0E5CE /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE512EB9A66F00B0E5CE /* Category */; };
-		A0EADE5E2EB9A6F700B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE5D2EB9A6F700B0E5CE /* SearchView */; };
-		A0EADE612EB9A70500B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE602EB9A70500B0E5CE /* FavoriteView */; };
 		A0EADED92EB9AEB300B0E5CE /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADED82EB9AEB300B0E5CE /* Meal */; };
-		A0EADEDF2EB9AFA100B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */; };
 		A0EADEE52EB9B27100B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEE42EB9B27100B0E5CE /* AboutMe */; };
 		A0EADEE82EB9B51D00B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEE72EB9B51D00B0E5CE /* Home */; };
 		A0EADEEB2EB9B7E700B0E5CE /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEEA2EB9B7E700B0E5CE /* MealView */; };
+		A0EADEEE2EB9B98A00B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEED2EB9B98A00B0E5CE /* FavoriteView */; };
+		A0EADEF12EB9BB3600B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEF02EB9BB3600B0E5CE /* SearchView */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -97,17 +96,16 @@
 			files = (
 				A0EADE132EB9A38600B0E5CE /* Common in Frameworks */,
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
-				A0EADE5E2EB9A6F700B0E5CE /* SearchView in Frameworks */,
 				A0EADEE52EB9B27100B0E5CE /* AboutMe in Frameworks */,
 				A0EADEEB2EB9B7E700B0E5CE /* MealView in Frameworks */,
 				A0EADED92EB9AEB300B0E5CE /* Meal in Frameworks */,
 				A0EADE522EB9A66F00B0E5CE /* Category in Frameworks */,
+				A0EADEEE2EB9B98A00B0E5CE /* FavoriteView in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
-				A0EADE612EB9A70500B0E5CE /* FavoriteView in Frameworks */,
 				A0EADE102EB9A37A00B0E5CE /* InfraShared in Frameworks */,
-				A0EADEDF2EB9AFA100B0E5CE /* FavoriteView in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 				A0EADE162EB9A39000B0E5CE /* Core in Frameworks */,
+				A0EADEF12EB9BB3600B0E5CE /* SearchView in Frameworks */,
 				A0EADEE82EB9B51D00B0E5CE /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,13 +202,12 @@
 				A0EADE122EB9A38600B0E5CE /* Common */,
 				A0EADE152EB9A39000B0E5CE /* Core */,
 				A0EADE512EB9A66F00B0E5CE /* Category */,
-				A0EADE5D2EB9A6F700B0E5CE /* SearchView */,
-				A0EADE602EB9A70500B0E5CE /* FavoriteView */,
 				A0EADED82EB9AEB300B0E5CE /* Meal */,
-				A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */,
 				A0EADEE42EB9B27100B0E5CE /* AboutMe */,
 				A0EADEE72EB9B51D00B0E5CE /* Home */,
 				A0EADEEA2EB9B7E700B0E5CE /* MealView */,
+				A0EADEED2EB9B98A00B0E5CE /* FavoriteView */,
+				A0EADEF02EB9BB3600B0E5CE /* SearchView */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -299,12 +296,12 @@
 				A0EADE112EB9A38600B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCommon" */,
 				A0EADE142EB9A39000B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */,
 				A0EADE502EB9A66E00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCategory" */,
-				A0EADE5C2EB9A6F700B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */,
 				A0EADED72EB9AEB300B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeal" */,
-				A0EADEDD2EB9AFA100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */,
 				A0EADEE32EB9B27100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppAboutMe" */,
 				A0EADEE62EB9B51D00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppHome" */,
 				A0EADEE92EB9B7E700B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeaView" */,
+				A0EADEEC2EB9B98A00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppFavoriteView" */,
+				A0EADEEF2EB9BB3600B0E5CE /* XCRemoteSwiftPackageReference "MealsAppSearchView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -750,17 +747,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		A0EADE5C2EB9A6F700B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/SearchView;
-		};
-		A0EADEDD2EB9AFA100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/FavoriteView;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -842,6 +828,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A0EADEEC2EB9B98A00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppFavoriteView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nunutech40/MealsAppFavoriteView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		A0EADEEF2EB9BB3600B0E5CE /* XCRemoteSwiftPackageReference "MealsAppSearchView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nunutech40/MealsAppSearchView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -875,22 +877,10 @@
 			package = A0EADE502EB9A66E00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCategory" */;
 			productName = Category;
 		};
-		A0EADE5D2EB9A6F700B0E5CE /* SearchView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SearchView;
-		};
-		A0EADE602EB9A70500B0E5CE /* FavoriteView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FavoriteView;
-		};
 		A0EADED82EB9AEB300B0E5CE /* Meal */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0EADED72EB9AEB300B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeal" */;
 			productName = Meal;
-		};
-		A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FavoriteView;
 		};
 		A0EADEE42EB9B27100B0E5CE /* AboutMe */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -906,6 +896,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0EADEE92EB9B7E700B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeaView" */;
 			productName = MealView;
+		};
+		A0EADEED2EB9B98A00B0E5CE /* FavoriteView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0EADEEC2EB9B98A00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppFavoriteView" */;
+			productName = FavoriteView;
+		};
+		A0EADEF02EB9BB3600B0E5CE /* SearchView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0EADEEF2EB9BB3600B0E5CE /* XCRemoteSwiftPackageReference "MealsAppSearchView" */;
+			productName = SearchView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
