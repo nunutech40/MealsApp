@@ -44,13 +44,14 @@ workflows:
           echo "Project : $PROJECT_PATH"
           echo "Scheme  : $SCHEME_NAME"
 
-          # HANYA SATU BLOK XCODEBUILD (MEMAKSAKAN -project)
+          # HANYA SATU BLOK XCODEBUILD (MENGHAPUS | XCPRETTY)
+          # Tujuannya agar LOG error yang SEBENARNYA terlihat jelas
           xcodebuild \
             "$BUILD_COMMAND" "$PROJECT_PATH" \
             -scheme "$SCHEME_NAME" \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
-            clean build | xcpretty
+            clean build
 
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
