@@ -24,7 +24,8 @@ Dokumen ini merangkum arsitektur app, alur event/data (Callback vs Combine), dan
 - [Presenter Flow](#presenter-flow)
 - [Figma Board](#figma-board)
 - [Notes](#notes)
-
+- [Dokumentasi Repository Package](#Dokumentasi-repository-package)
+  
 ---
 
 ## Modular Architecture
@@ -135,3 +136,18 @@ Dokumen ini merangkum arsitektur app, alur event/data (Callback vs Combine), dan
 - Semua diagram di atas adalah *single source of truth* arsitektur & flow.
 - Setiap perubahan arsitektur/flow, **update diagram + link** ini supaya tetap sinkron.
 - Penamaan file: `FlowChart - <Layer/Feature> - <Action/UseCase>.png`.
+
+
+
+## Dokumentasi repository package
+[⬆︎ Back to Top](#top)
+- SharedInfra: https://github.com/nunutech40/InfraSharedMealsApp.git -> 1.0.1
+- Core: https://github.com/nunutech40/MealsAppCore.git -> 1.0.1
+- Common: https://github.com/nunutech40/MealsAppCommon -> 1.0.0
+- Category: https://github.com/nunutech40/MealsAppCategory -> 1.0.1
+- Meals: https://github.com/nunutech40/MealsAppMeal -> 1.0.0
+- AboutMe: https://github.com/nunutech40/MealsAppAboutMe -> 1.0.0
+- Home: https://github.com/nunutech40/MealsAppHome -> 1.0.0
+- MealView: https://github.com/nunutech40/MealsAppMeaView -> 1.0.0
+- FavoriteView: https://github.com/nunutech40/MealsAppFavoriteView -> 1.0.0
+- SearchView: https://github.com/nunutech40/MealsAppSearchView -> 1.0.0
