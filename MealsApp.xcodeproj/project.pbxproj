@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
-		A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5E2C2E4F003B009B5564 /* Alamofire */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
 		A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yaml */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
-		A0EAD98F2EB8864000B0E5CE /* InfraShared in Frameworks */ = {isa = PBXBuildFile; productRef = A0EAD98E2EB8864000B0E5CE /* InfraShared */; };
-		A0EADC802EB8ABBF00B0E5CE /* InfraShared in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC7F2EB8ABBF00B0E5CE /* InfraShared */; };
-		A0EADC832EB8AEA500B0E5CE /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC822EB8AEA500B0E5CE /* Core */; };
-		A0EADC862EB8B13A00B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC852EB8B13A00B0E5CE /* AboutMe */; };
-		A0EADC892EB8B14900B0E5CE /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC882EB8B14900B0E5CE /* Category */; };
-		A0EADC8C2EB8B16A00B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC8B2EB8B16A00B0E5CE /* FavoriteView */; };
-		A0EADC8F2EB8B18300B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC8E2EB8B18300B0E5CE /* Home */; };
-		A0EADC922EB8B19C00B0E5CE /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC912EB8B19C00B0E5CE /* Meal */; };
-		A0EADC952EB8B1AF00B0E5CE /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC942EB8B1AF00B0E5CE /* MealView */; };
-		A0EADC982EB8B1BD00B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADC972EB8B1BD00B0E5CE /* SearchView */; };
+		A0EADD802EB99BA600B0E5CE /* InfraShared in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADD7F2EB99BA600B0E5CE /* InfraShared */; };
+		A0EADD832EB99BD100B0E5CE /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADD822EB99BD100B0E5CE /* Core */; };
+		A0EADD862EB99BFE00B0E5CE /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADD852EB99BFE00B0E5CE /* Common */; };
+		A0EADDC22EB99F1A00B0E5CE /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDC12EB99F1A00B0E5CE /* Meal */; };
+		A0EADDC52EB99F2D00B0E5CE /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDC42EB99F2D00B0E5CE /* Category */; };
+		A0EADDC82EB99F5200B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDC72EB99F5200B0E5CE /* Home */; };
+		A0EADDCB2EB99F6B00B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDCA2EB99F6B00B0E5CE /* SearchView */; };
+		A0EADDCE2EB99F8600B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDCD2EB99F8600B0E5CE /* FavoriteView */; };
+		A0EADDD12EB99F9900B0E5CE /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDD02EB99F9900B0E5CE /* MealView */; };
+		A0EADDD42EB99FAB00B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADDD32EB99FAB00B0E5CE /* AboutMe */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -96,19 +95,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
-				A0EADC982EB8B1BD00B0E5CE /* SearchView in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
-				A0EADC952EB8B1AF00B0E5CE /* MealView in Frameworks */,
-				A00E5E2D2E4F003B009B5564 /* Alamofire in Frameworks */,
-				A0EAD98F2EB8864000B0E5CE /* InfraShared in Frameworks */,
-				A0EADC862EB8B13A00B0E5CE /* AboutMe in Frameworks */,
-				A0EADC8C2EB8B16A00B0E5CE /* FavoriteView in Frameworks */,
-				A0EADC892EB8B14900B0E5CE /* Category in Frameworks */,
-				A0EADC922EB8B19C00B0E5CE /* Meal in Frameworks */,
-				A0EADC802EB8ABBF00B0E5CE /* InfraShared in Frameworks */,
-				A0EADC832EB8AEA500B0E5CE /* Core in Frameworks */,
+				A0EADDCE2EB99F8600B0E5CE /* FavoriteView in Frameworks */,
+				A0EADD802EB99BA600B0E5CE /* InfraShared in Frameworks */,
+				A0EADDCB2EB99F6B00B0E5CE /* SearchView in Frameworks */,
+				A0EADD832EB99BD100B0E5CE /* Core in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
-				A0EADC8F2EB8B18300B0E5CE /* Home in Frameworks */,
+				A0EADD862EB99BFE00B0E5CE /* Common in Frameworks */,
+				A0EADDC52EB99F2D00B0E5CE /* Category in Frameworks */,
+				A0EADDD42EB99FAB00B0E5CE /* AboutMe in Frameworks */,
+				A0EADDC22EB99F1A00B0E5CE /* Meal in Frameworks */,
+				A0EADDD12EB99F9900B0E5CE /* MealView in Frameworks */,
+				A0EADDC82EB99F5200B0E5CE /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,19 +196,18 @@
 			);
 			name = MealsApp;
 			packageProductDependencies = (
-				A00E5E2C2E4F003B009B5564 /* Alamofire */,
 				A00E5EB52E504854009B5564 /* RealmSwift */,
 				A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */,
-				A0EAD98E2EB8864000B0E5CE /* InfraShared */,
-				A0EADC7F2EB8ABBF00B0E5CE /* InfraShared */,
-				A0EADC822EB8AEA500B0E5CE /* Core */,
-				A0EADC852EB8B13A00B0E5CE /* AboutMe */,
-				A0EADC882EB8B14900B0E5CE /* Category */,
-				A0EADC8B2EB8B16A00B0E5CE /* FavoriteView */,
-				A0EADC8E2EB8B18300B0E5CE /* Home */,
-				A0EADC912EB8B19C00B0E5CE /* Meal */,
-				A0EADC942EB8B1AF00B0E5CE /* MealView */,
-				A0EADC972EB8B1BD00B0E5CE /* SearchView */,
+				A0EADD7F2EB99BA600B0E5CE /* InfraShared */,
+				A0EADD822EB99BD100B0E5CE /* Core */,
+				A0EADD852EB99BFE00B0E5CE /* Common */,
+				A0EADDC12EB99F1A00B0E5CE /* Meal */,
+				A0EADDC42EB99F2D00B0E5CE /* Category */,
+				A0EADDC72EB99F5200B0E5CE /* Home */,
+				A0EADDCA2EB99F6B00B0E5CE /* SearchView */,
+				A0EADDCD2EB99F8600B0E5CE /* FavoriteView */,
+				A0EADDD02EB99F9900B0E5CE /* MealView */,
+				A0EADDD32EB99FAB00B0E5CE /* AboutMe */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -293,18 +290,18 @@
 			mainGroup = A05E4FEB2E49C921005A1DE2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				A0EADC7E2EB8ABBF00B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */,
-				A0EADC812EB8AEA500B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */,
-				A0EADC842EB8B13A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */,
-				A0EADC872EB8B14900B0E5CE /* XCLocalSwiftPackageReference "../Modules/Category" */,
-				A0EADC8A2EB8B16A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */,
-				A0EADC8D2EB8B18300B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */,
-				A0EADC902EB8B19C00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Meal" */,
-				A0EADC932EB8B1AF00B0E5CE /* XCLocalSwiftPackageReference "../Modules/MealView" */,
-				A0EADC962EB8B1BD00B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */,
+				A0EADD7E2EB99BA600B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */,
+				A0EADD812EB99BD100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */,
+				A0EADD842EB99BFE00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCommon" */,
+				A0EADDC02EB99F1A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Meal" */,
+				A0EADDC32EB99F2D00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Category" */,
+				A0EADDC62EB99F5200B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */,
+				A0EADDC92EB99F6B00B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */,
+				A0EADDCC2EB99F8600B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */,
+				A0EADDCF2EB99F9900B0E5CE /* XCLocalSwiftPackageReference "../Modules/MealView" */,
+				A0EADDD22EB99FAB00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -751,45 +748,37 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A0EADC842EB8B13A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/AboutMe;
-		};
-		A0EADC872EB8B14900B0E5CE /* XCLocalSwiftPackageReference "../Modules/Category" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/Category;
-		};
-		A0EADC8A2EB8B16A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/FavoriteView;
-		};
-		A0EADC8D2EB8B18300B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/Home;
-		};
-		A0EADC902EB8B19C00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Meal" */ = {
+		A0EADDC02EB99F1A00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Meal" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Meal;
 		};
-		A0EADC932EB8B1AF00B0E5CE /* XCLocalSwiftPackageReference "../Modules/MealView" */ = {
+		A0EADDC32EB99F2D00B0E5CE /* XCLocalSwiftPackageReference "../Modules/Category" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Category;
+		};
+		A0EADDC62EB99F5200B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/Home;
+		};
+		A0EADDC92EB99F6B00B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/SearchView;
+		};
+		A0EADDCC2EB99F8600B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/FavoriteView;
+		};
+		A0EADDCF2EB99F9900B0E5CE /* XCLocalSwiftPackageReference "../Modules/MealView" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/MealView;
 		};
-		A0EADC962EB8B1BD00B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */ = {
+		A0EADDD22EB99FAB00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/SearchView;
+			relativePath = ../Modules/AboutMe;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.10.2;
-			};
-		};
 		A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -806,7 +795,7 @@
 				minimumVersion = 2.1.1;
 			};
 		};
-		A0EADC7E2EB8ABBF00B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */ = {
+		A0EADD7E2EB99BA600B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nunutech40/InfraSharedMealsApp.git";
 			requirement = {
@@ -814,22 +803,25 @@
 				minimumVersion = 1.0.1;
 			};
 		};
-		A0EADC812EB8AEA500B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */ = {
+		A0EADD812EB99BD100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nunutech40/MealsAppCore";
+			repositoryURL = "https://github.com/nunutech40/MealsAppCore.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.1;
 			};
 		};
+		A0EADD842EB99BFE00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCommon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nunutech40/MealsAppCommon";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A00E5E2C2E4F003B009B5564 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A00E5DE02E4EFFAD009B5564 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		A00E5EB52E504854009B5564 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A00E5EB42E504854009B5564 /* XCRemoteSwiftPackageReference "realm-swift" */;
@@ -840,47 +832,48 @@
 			package = A0A982CC2E7A9B2F00ED6C7A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
-		A0EAD98E2EB8864000B0E5CE /* InfraShared */ = {
+		A0EADD7F2EB99BA600B0E5CE /* InfraShared */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A0EADD7E2EB99BA600B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */;
 			productName = InfraShared;
 		};
-		A0EADC7F2EB8ABBF00B0E5CE /* InfraShared */ = {
+		A0EADD822EB99BD100B0E5CE /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A0EADC7E2EB8ABBF00B0E5CE /* XCRemoteSwiftPackageReference "InfraSharedMealsApp" */;
-			productName = InfraShared;
-		};
-		A0EADC822EB8AEA500B0E5CE /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A0EADC812EB8AEA500B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */;
+			package = A0EADD812EB99BD100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCore" */;
 			productName = Core;
 		};
-		A0EADC852EB8B13A00B0E5CE /* AboutMe */ = {
+		A0EADD852EB99BFE00B0E5CE /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AboutMe;
+			package = A0EADD842EB99BFE00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCommon" */;
+			productName = Common;
 		};
-		A0EADC882EB8B14900B0E5CE /* Category */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Category;
-		};
-		A0EADC8B2EB8B16A00B0E5CE /* FavoriteView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FavoriteView;
-		};
-		A0EADC8E2EB8B18300B0E5CE /* Home */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Home;
-		};
-		A0EADC912EB8B19C00B0E5CE /* Meal */ = {
+		A0EADDC12EB99F1A00B0E5CE /* Meal */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Meal;
 		};
-		A0EADC942EB8B1AF00B0E5CE /* MealView */ = {
+		A0EADDC42EB99F2D00B0E5CE /* Category */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Category;
+		};
+		A0EADDC72EB99F5200B0E5CE /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		A0EADDCA2EB99F6B00B0E5CE /* SearchView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchView;
+		};
+		A0EADDCD2EB99F8600B0E5CE /* FavoriteView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FavoriteView;
+		};
+		A0EADDD02EB99F9900B0E5CE /* MealView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MealView;
 		};
-		A0EADC972EB8B1BD00B0E5CE /* SearchView */ = {
+		A0EADDD32EB99FAB00B0E5CE /* AboutMe */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SearchView;
+			productName = AboutMe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

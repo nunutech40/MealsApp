@@ -1,5 +1,5 @@
 {
-  "originHash" : "b9051f1f7470b96fa44b9c8c1809fbe8b7906defeeaaeb105e0c65857798c2ef",
+  "originHash" : "0a87572bffcecb5d6eee6dc52ade6ca1e8f75a67b4fd0885f3cb409c4a86322d",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "3609a972a42fe3608fae360256be031c02616c20",
         "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "mealsappcommon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nunutech40/MealsAppCommon",
+      "state" : {
+        "revision" : "fd06cb4f79d8d02d5b121c0f17bc2a6d91c841c2",
+        "version" : "1.0.0"
       }
     },
     {
