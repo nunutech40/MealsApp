@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		392C79C12D09E3F5B8189857 /* Pods_MealsApp_MealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD9DAB99E60C43C58878C5 /* Pods_MealsApp_MealsAppUITests.framework */; };
 		A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A00E5EB52E504854009B5564 /* RealmSwift */; };
-		A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A0A37E162E9CEA9F002606C0 /* codemagic.yaml */; };
 		A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0A982CD2E7A9B2F00ED6C7A /* CachedAsyncImage */; };
 		A0EADE102EB9A37A00B0E5CE /* InfraShared in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE0F2EB9A37A00B0E5CE /* InfraShared */; };
 		A0EADE132EB9A38600B0E5CE /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE122EB9A38600B0E5CE /* Common */; };
@@ -64,36 +63,19 @@
 		FB8F6DA96AA98A50A959785D /* Pods-MealsApp-MealsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp-MealsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A0A982CB2E7A9AB900ED6C7A /* Exceptions for "MealsApp" folder in "MealsApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = A05E4FF32E49C921005A1DE2 /* MealsApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A05E4FF62E49C921005A1DE2 /* MealsApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A0A982CB2E7A9AB900ED6C7A /* Exceptions for "MealsApp" folder in "MealsApp" target */,
-			);
 			path = MealsApp;
 			sourceTree = "<group>";
 		};
 		A05E50072E49C923005A1DE2 /* MealsAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MealsAppTests;
 			sourceTree = "<group>";
 		};
 		A05E50112E49C923005A1DE2 /* MealsAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MealsAppUITests;
 			sourceTree = "<group>";
 		};
@@ -149,7 +131,6 @@
 				5D7033C5B14AF28A82130AD5 /* Pods-MealsAppTests.debug.xcconfig */,
 				886BFDDB9DEAED65FC5DB004 /* Pods-MealsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,10 +188,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A05E50182E49C923005A1DE2 /* Build configuration list for PBXNativeTarget "MealsApp" */;
 			buildPhases = (
-				ABB9B0B2EE5F7F7E1F1E04F2 /* [CP] Check Pods Manifest.lock */,
 				A05E4FF02E49C921005A1DE2 /* Sources */,
 				A05E4FF12E49C921005A1DE2 /* Frameworks */,
-				A05E4FF22E49C921005A1DE2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -341,14 +320,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A05E4FF22E49C921005A1DE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A37E172E9CEA9F002606C0 /* codemagic.yaml in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A05E50022E49C923005A1DE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,28 +353,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MealsApp-MealsAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABB9B0B2EE5F7F7E1F1E04F2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MealsApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
