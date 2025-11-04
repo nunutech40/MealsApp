@@ -44,10 +44,16 @@
 
 /* Begin PBXFileReference section */
 		1A9137B33123A248A52D1444 /* Pods-MealsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp.debug.xcconfig"; path = "Target Support Files/Pods-MealsApp/Pods-MealsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1FEC7C1DDE54FF16E384DADC /* Pods-MealsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp.release.xcconfig"; path = "Target Support Files/Pods-MealsApp/Pods-MealsApp.release.xcconfig"; sourceTree = "<group>"; };
+		280DF13903C98E10B8F6C028 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp-MealsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AAE031F30AFE6E3BBD7FAFA /* Pods-MealsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp.release.xcconfig"; path = "Target Support Files/Pods-MealsApp/Pods-MealsApp.release.xcconfig"; sourceTree = "<group>"; };
 		3B45C0345755852588FB10A0 /* Pods-MealsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsAppTests.release.xcconfig"; path = "Target Support Files/Pods-MealsAppTests/Pods-MealsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		536058D877315C68C1314179 /* Pods_MealsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D7033C5B14AF28A82130AD5 /* Pods-MealsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MealsAppTests/Pods-MealsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D4F7BEA2BB574E2E19C5469 /* Pods-MealsApp-MealsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp-MealsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MealsApp-MealsAppUITests/Pods-MealsApp-MealsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		886BFDDB9DEAED65FC5DB004 /* Pods-MealsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsAppTests.release.xcconfig"; path = "Target Support Files/Pods-MealsAppTests/Pods-MealsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		92F5B3828CD29A7321EE7F28 /* Pods-MealsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsApp.debug.xcconfig"; path = "Target Support Files/Pods-MealsApp/Pods-MealsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A05E4FF42E49C921005A1DE2 /* MealsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05E50042E49C923005A1DE2 /* MealsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05E500E2E49C923005A1DE2 /* MealsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,11 +85,15 @@
 		};
 		A05E50072E49C923005A1DE2 /* MealsAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MealsAppTests;
 			sourceTree = "<group>";
 		};
 		A05E50112E49C923005A1DE2 /* MealsAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MealsAppUITests;
 			sourceTree = "<group>";
 		};
@@ -129,6 +139,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73E7033C686AB9A51B8F4814 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92F5B3828CD29A7321EE7F28 /* Pods-MealsApp.debug.xcconfig */,
+				1FEC7C1DDE54FF16E384DADC /* Pods-MealsApp.release.xcconfig */,
+				280DF13903C98E10B8F6C028 /* Pods-MealsApp-MealsAppUITests.debug.xcconfig */,
+				6D4F7BEA2BB574E2E19C5469 /* Pods-MealsApp-MealsAppUITests.release.xcconfig */,
+				5D7033C5B14AF28A82130AD5 /* Pods-MealsAppTests.debug.xcconfig */,
+				886BFDDB9DEAED65FC5DB004 /* Pods-MealsAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A05E4FEB2E49C921005A1DE2 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +162,7 @@
 				A05E50112E49C923005A1DE2 /* MealsAppUITests */,
 				A05E4FF52E49C921005A1DE2 /* Products */,
 				D358925B16407E5DAFE256DE /* Frameworks */,
+				73E7033C686AB9A51B8F4814 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
