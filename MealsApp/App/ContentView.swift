@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
-import Core
 import Category
+import Core
+import Home
+import MealView
+import FavoriteView
+import SearchView
+import AboutMe
+import Common
 
 struct ContentView: View {
 
-    @EnvironmentObject var homePresenter: GetListPresenter<Any, CategoryDomainModel, Interactor<Any, [CategoryDomainModel], GetCategoriesRepository<GetCategoriesLocaleDataSource, GetCategoriesRemoteDataSource, CategoryTransformer>>>
+    @EnvironmentObject var homePresenter: HomePresenter
     
     @EnvironmentObject var favoritePresenter: FavoritePresenter
     
-    @EnvironmentObject var mealPresenter: MealPresenter
-    
-    @EnvironmentObject var searchPresenter: SearchPresenter
+    @EnvironmentObject var searchPresenter: SearchMealPresenter
     
     var body: some View {
         TabView {
@@ -37,6 +41,12 @@ struct ContentView: View {
                 FavoriteView(presenter: favoritePresenter)
             }.tabItem {
                 TabItem(imageName: "heart", title: "Favorite")
+            }
+            
+            NavigationStack {
+                AboutMeView()
+            }.tabItem {
+                TabItem(imageName: "person.crop.circle", title: "About Me")
             }
         }
     }

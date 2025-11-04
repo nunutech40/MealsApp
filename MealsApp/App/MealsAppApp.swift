@@ -7,24 +7,38 @@
 
 import SwiftUI
 import RealmSwift
-import Core
-import Category
-
-let categoryUseCase: Interactor<
-  Any,
-  [CategoryDomainModel],
-  GetCategoriesRepository<
-    GetCategoriesLocaleDataSource,
-    GetCategoriesRemoteDataSource,
-    CategoryTransformer>
-> = Injection.init().provideCategory()
+import Home
+import FavoriteView
+import SearchView
 
 @main
 struct MealsAppApp: SwiftUI.App {
-    let homePresenter = GetListPresenter(useCase: categoryUseCase)
-    let favoritePresenter = FavoritePresenter(mealFetchFavoriteUseCase: Injection.init().provideMealFetchFavoriteUseCase())
-    let searchPresenter = SearchPresenter(searchUseCase: Injection.init().provideSearchMealUseCase())
     
+    private let injection = Injection()
+    
+    private let homeRouter = HomeRouter()
+    private let homePresenter: HomePresenter
+    
+    private let favoriteRouter = FavoriteRouter()
+    private let favoritePresenter: FavoritePresenter
+    
+    private let searchRouter = SearchRouter()
+    private let searchPresenter: SearchMealPresenter
+    
+    
+    init() {
+        self.homePresenter = HomePresenter(
+            interactor: injection.provideHomeInteractor(),
+            router: homeRouter 
+        )
+        self.favoritePresenter = FavoritePresenter(
+            interactor: injection.provideFavoriteMealsInteractor() as! FavoriteInteractor,
+            router: favoriteRouter
+        )
+        self.searchPresenter = SearchMealPresenter(
+            interactor: injection.provideSearchMealsInteractor() as! SearchMealInteractor, router: searchRouter
+        )
+    }
     
     var body: some Scene {
         WindowGroup {
