@@ -19,6 +19,7 @@ This document captures the high-level architecture and the event/data flows (Cal
 - [Presenter Flow](#presenter-flow)
 - [Figma Board](#figma-board)
 - [Notes](#notes)
+- [Dokumentasi Repository Package](#Dokumentasi-repository-package)
 
 ---
 
@@ -88,3 +89,14 @@ _(FlowChart fungsi `getMeals` → `DetailCategoryPresenter`)_
   `FlowChart - <Layer/Feature> - <Action/UseCase>.png`
 
 
+## Dokumentasi repository package
+- SharedInfra: https://github.com/nunutech40/InfraSharedMealsApp.git -> 1.0.1
+- Core: https://github.com/nunutech40/MealsAppCore.git -> 1.0.1
+- Common: https://github.com/nunutech40/MealsAppCommon -> 1.0.0
+- Category: https://github.com/nunutech40/MealsAppCategory -> 1.0.1
+- Meals: https://github.com/nunutech40/MealsAppMeal -> 1.0.0
+- AboutMe: https://github.com/nunutech40/MealsAppAboutMe -> 1.0.0
+- Home: https://github.com/nunutech40/MealsAppHome -> 1.0.0
+- MealView: https://github.com/nunutech40/MealsAppMeaView -> 1.0.0
+- FavoriteView: https://github.com/nunutech40/MealsAppFavoriteView -> 1.0.0
+- SearchView: https://github.com/nunutech40/MealsAppSearchView -> 1.0.0
