@@ -19,18 +19,22 @@ workflows:
           echo "PWD=$(pwd)"
           echo "=== Struktur repo ==="
           # Mencari file proyek saja, mengabaikan xcworkspace dan Podfile
-          find . -maxdepth 2 -type f -name "*.xcodeproj"
+          # Mencari hingga kedalaman 3 untuk menemukan proyek yang berada di sub-folder
+          find . -maxdepth 3 -type f -name "*.xcodeproj"
 
       - name: Build for iOS Simulator (auto detect)
         script: |
           set -euo pipefail
-          # CARI HANYA FILE .XCODEPROJECT
+          # CARI HANYA FILE .XCODEPROJECT DENGAN MAXDEPTH 3
           PROJECT_PATH="$(find . -maxdepth 3 -name '*.xcodeproj' | head -n1 || true)"
           
-          # MENGHAPUS LOGIKA WORKSPACE_PATH
+          # JANGAN ADA LOGIKA WORKSPACE_PATH
 
           if [ -z "$PROJECT_PATH" ]; then
             echo "❌ Tidak menemukan .xcodeproj."
+            # Debug: Tampilkan isi direktori untuk membantu diagnosis
+            echo "Isi direktori:"
+            ls -alR
             exit 1
           fi
 
@@ -47,7 +51,6 @@ workflows:
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
             clean build | xcpretty
-          # MENGHAPUS BLOK 'if/else'
 
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
