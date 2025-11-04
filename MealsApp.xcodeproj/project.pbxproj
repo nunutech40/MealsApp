@@ -15,15 +15,13 @@
 		A0EADE132EB9A38600B0E5CE /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE122EB9A38600B0E5CE /* Common */; };
 		A0EADE162EB9A39000B0E5CE /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE152EB9A39000B0E5CE /* Core */; };
 		A0EADE522EB9A66F00B0E5CE /* Category in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE512EB9A66F00B0E5CE /* Category */; };
-		A0EADE582EB9A6A700B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE572EB9A6A700B0E5CE /* Home */; };
 		A0EADE5B2EB9A6C500B0E5CE /* MealView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE5A2EB9A6C500B0E5CE /* MealView */; };
 		A0EADE5E2EB9A6F700B0E5CE /* SearchView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE5D2EB9A6F700B0E5CE /* SearchView */; };
 		A0EADE612EB9A70500B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE602EB9A70500B0E5CE /* FavoriteView */; };
-		A0EADE642EB9A71600B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADE632EB9A71600B0E5CE /* AboutMe */; };
 		A0EADED92EB9AEB300B0E5CE /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADED82EB9AEB300B0E5CE /* Meal */; };
-		A0EADEDC2EB9AF8600B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEDB2EB9AF8600B0E5CE /* Home */; };
 		A0EADEDF2EB9AFA100B0E5CE /* FavoriteView in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */; };
-		A0EADEE22EB9AFBB00B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEE12EB9AFBB00B0E5CE /* AboutMe */; };
+		A0EADEE52EB9B27100B0E5CE /* AboutMe in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEE42EB9B27100B0E5CE /* AboutMe */; };
+		A0EADEE82EB9B51D00B0E5CE /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = A0EADEE72EB9B51D00B0E5CE /* Home */; };
 		DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536058D877315C68C1314179 /* Pods_MealsApp.framework */; };
 		DF6099D09AB086254B3D3015 /* Pods_MealsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A735B126B27FB1E441CB5 /* Pods_MealsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,19 +98,17 @@
 				A0EADE132EB9A38600B0E5CE /* Common in Frameworks */,
 				A00E5EB62E504854009B5564 /* RealmSwift in Frameworks */,
 				A0EADE5E2EB9A6F700B0E5CE /* SearchView in Frameworks */,
+				A0EADEE52EB9B27100B0E5CE /* AboutMe in Frameworks */,
 				A0EADE5B2EB9A6C500B0E5CE /* MealView in Frameworks */,
-				A0EADEE22EB9AFBB00B0E5CE /* AboutMe in Frameworks */,
 				A0EADED92EB9AEB300B0E5CE /* Meal in Frameworks */,
 				A0EADE522EB9A66F00B0E5CE /* Category in Frameworks */,
 				A0A982CE2E7A9B2F00ED6C7A /* CachedAsyncImage in Frameworks */,
 				A0EADE612EB9A70500B0E5CE /* FavoriteView in Frameworks */,
 				A0EADE102EB9A37A00B0E5CE /* InfraShared in Frameworks */,
-				A0EADE642EB9A71600B0E5CE /* AboutMe in Frameworks */,
 				A0EADEDF2EB9AFA100B0E5CE /* FavoriteView in Frameworks */,
 				DDF8996E9C9C377C21512C9D /* Pods_MealsApp.framework in Frameworks */,
 				A0EADE162EB9A39000B0E5CE /* Core in Frameworks */,
-				A0EADE582EB9A6A700B0E5CE /* Home in Frameworks */,
-				A0EADEDC2EB9AF8600B0E5CE /* Home in Frameworks */,
+				A0EADEE82EB9B51D00B0E5CE /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,15 +204,13 @@
 				A0EADE122EB9A38600B0E5CE /* Common */,
 				A0EADE152EB9A39000B0E5CE /* Core */,
 				A0EADE512EB9A66F00B0E5CE /* Category */,
-				A0EADE572EB9A6A700B0E5CE /* Home */,
 				A0EADE5A2EB9A6C500B0E5CE /* MealView */,
 				A0EADE5D2EB9A6F700B0E5CE /* SearchView */,
 				A0EADE602EB9A70500B0E5CE /* FavoriteView */,
-				A0EADE632EB9A71600B0E5CE /* AboutMe */,
 				A0EADED82EB9AEB300B0E5CE /* Meal */,
-				A0EADEDB2EB9AF8600B0E5CE /* Home */,
 				A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */,
-				A0EADEE12EB9AFBB00B0E5CE /* AboutMe */,
+				A0EADEE42EB9B27100B0E5CE /* AboutMe */,
+				A0EADEE72EB9B51D00B0E5CE /* Home */,
 			);
 			productName = MealsApp;
 			productReference = A05E4FF42E49C921005A1DE2 /* MealsApp.app */;
@@ -308,9 +302,9 @@
 				A0EADE592EB9A6C500B0E5CE /* XCLocalSwiftPackageReference "../Modules/MealView" */,
 				A0EADE5C2EB9A6F700B0E5CE /* XCLocalSwiftPackageReference "../Modules/SearchView" */,
 				A0EADED72EB9AEB300B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeal" */,
-				A0EADEDA2EB9AF8600B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */,
 				A0EADEDD2EB9AFA100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */,
-				A0EADEE02EB9AFBB00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */,
+				A0EADEE32EB9B27100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppAboutMe" */,
+				A0EADEE62EB9B51D00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppHome" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A05E4FF52E49C921005A1DE2 /* Products */;
@@ -765,17 +759,9 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/SearchView;
 		};
-		A0EADEDA2EB9AF8600B0E5CE /* XCLocalSwiftPackageReference "../Modules/Home" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/Home;
-		};
 		A0EADEDD2EB9AFA100B0E5CE /* XCLocalSwiftPackageReference "../Modules/FavoriteView" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/FavoriteView;
-		};
-		A0EADEE02EB9AFBB00B0E5CE /* XCLocalSwiftPackageReference "../Modules/AboutMe" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Modules/AboutMe;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -836,6 +822,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A0EADEE32EB9B27100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppAboutMe" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nunutech40/MealsAppAboutMe";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		A0EADEE62EB9B51D00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppHome" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nunutech40/MealsAppHome";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -869,10 +871,6 @@
 			package = A0EADE502EB9A66E00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppCategory" */;
 			productName = Category;
 		};
-		A0EADE572EB9A6A700B0E5CE /* Home */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Home;
-		};
 		A0EADE5A2EB9A6C500B0E5CE /* MealView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MealView;
@@ -885,26 +883,24 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteView;
 		};
-		A0EADE632EB9A71600B0E5CE /* AboutMe */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AboutMe;
-		};
 		A0EADED82EB9AEB300B0E5CE /* Meal */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0EADED72EB9AEB300B0E5CE /* XCRemoteSwiftPackageReference "MealsAppMeal" */;
 			productName = Meal;
 		};
-		A0EADEDB2EB9AF8600B0E5CE /* Home */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Home;
-		};
 		A0EADEDE2EB9AFA100B0E5CE /* FavoriteView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteView;
 		};
-		A0EADEE12EB9AFBB00B0E5CE /* AboutMe */ = {
+		A0EADEE42EB9B27100B0E5CE /* AboutMe */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A0EADEE32EB9B27100B0E5CE /* XCRemoteSwiftPackageReference "MealsAppAboutMe" */;
 			productName = AboutMe;
+		};
+		A0EADEE72EB9B51D00B0E5CE /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0EADEE62EB9B51D00B0E5CE /* XCRemoteSwiftPackageReference "MealsAppHome" */;
+			productName = Home;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

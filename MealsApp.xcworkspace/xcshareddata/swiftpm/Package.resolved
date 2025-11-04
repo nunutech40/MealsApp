@@ -1,5 +1,5 @@
 {
-  "originHash" : "8ae1420751cd142c6e4ccaae6cb226bd6e4cdc582c54c69cdab7c11694529c2c",
+  "originHash" : "32d3adbced76091e23a864a5909bd5486a91854298ed52e26325bdbf3cdaeb7c",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "3609a972a42fe3608fae360256be031c02616c20",
         "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "mealsappaboutme",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nunutech40/MealsAppAboutMe",
+      "state" : {
+        "revision" : "e1a19db6d93bc09d4c77a356006759a4fb8f5c1b",
+        "version" : "1.0.0"
       }
     },
     {
@@ -44,6 +53,15 @@
       "state" : {
         "revision" : "92aa5581eac356a98c70fa4c49c6d055710eceb6",
         "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "mealsapphome",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nunutech40/MealsAppHome",
+      "state" : {
+        "revision" : "2243f528dad966389b6c38880efbabbac90281f5",
+        "version" : "1.0.0"
       }
     },
     {
