@@ -8,6 +8,10 @@ Dokumen ini merangkum arsitektur app, alur event/data (Callback vs Combine), dan
 
 ---
 
+## Certificate:
+<img width="749" height="537" alt="Screenshot 2026-05-12 at 21 02 37" src="https://github.com/user-attachments/assets/54014a55-5cbb-4775-bae5-333b525acc20" />
+
+
 ## Table of Contents
 - [Modular Architecture](#modular-architecture)
 - [Project Architecture](#project-architecture)
